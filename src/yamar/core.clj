@@ -44,20 +44,36 @@
   [s]
   (println s))
 
-(defn go! [user-id]
+(defn scrape! [user-id]
   (loop [page-no 1
          act-list []]
     (progress (str "Fetching page #" page-no "..."))
     (let [page (-> user-id
                    (index-url page-no)
                    (fetch!))
-          max-page-no (min (scrape/max-page-no page) limit-page-no)
+          max-page-no (scrape/max-page-no page)
           act-list (into act-list (map activity (scrape/activity-list page)))]
-      (if (>= page-no max-page-no)
-        act-list
+      (if (>= page-no (min max-page-no limit-page-no))
+        (do
+         (when (> max-page-no limit-page-no)
+           (progress "Aborting; too much pages"))
+         {:user-id user-id
+          :user-name (scrape/user-name page)
+          :activities act-list})
         (do
          (progress (str "More pages to go(max will be #" max-page-no ")"))
          (recur (inc page-no) act-list))))))
+
+(defn go! [user-id dest]
+  (let [ar (scrape! user-id)
+        edn-file (str dest user-id ".edn")
+        html-file (str dest user-id ".html")]
+    (progress (str "Saving edn: " edn-file))
+    (spit edn-file
+          (pr-str ar))
+    (progress (str "Saving html " html-file))
+    (spit html-file
+          (render/render ar))))
 
 (defn- resolve-args
   [args]
@@ -70,9 +86,7 @@
 
 (defn -main [& args]
   (if-let [[user-id dest] (resolve-args args)]
-    (let [act-list (go! user-id)]
-      (spit (str dest user-id ".html")
-            (render/render act-list)))
+    (go! user-id dest)
     (show-usage)))
 
 (comment
@@ -93,6 +107,7 @@
  (map activity (scrape/activity-list page))
 
  (scrape/max-page-no page)
+ (scrape/user-name page)
 
  (def act-list (go! 1764261))
 

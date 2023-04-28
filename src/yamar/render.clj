@@ -29,13 +29,15 @@
      (apply str (map render-act act-list)))))
 
 (defn render
-  [act-list]
-  (let [year-acts (group-by :year act-list)
+  [ar]
+  (let [act-list (:activities ar)
+        user-name (:user-name ar)
+        year-acts (group-by :year act-list)
         years (sort #(compare %2 %1) (keys year-acts) )]
     (str
      index
      (html [:h1
-            [:span "活動日記"]
+            [:span (str user-name "さんの活動日記")]
             [:span.num-acts (str (count act-list) "件")]])
      (apply str (map #(render-year % year-acts) years))
      "</body></html>")))

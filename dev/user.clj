@@ -5,6 +5,6 @@
 
 (defn dev
   []
-  (core/go! 1764261)
+  #_(core/go! 1764261)
   (in-ns 'yamar.core))
 

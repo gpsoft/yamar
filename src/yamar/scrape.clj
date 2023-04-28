@@ -23,6 +23,11 @@
   [s ix]
   (str/trim (nth (str/split s #"\n") ix)))
 
+(defn user-name
+  [page]
+  (let [h1 (sel1 page [:.UsersId__FaceInfo__Name])]
+    (en/text h1)))
+
 (defn activity-list
   [page]
   (en/select page [:ul.UserActivityList__List :li :article]))
