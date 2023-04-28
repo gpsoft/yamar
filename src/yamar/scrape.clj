@@ -15,6 +15,10 @@
   [s]
   (Integer. (re-find #"\d+" s)))
 
+(defn- to-year
+  [date-str]
+  (to-int (re-find #"^\d+" date-str)))
+
 (defn- nth-str
   [s ix]
   (str/trim (nth (str/split s #"\n") ix)))
@@ -78,5 +82,14 @@
 (defn act-date
   [act]
   (let [s (sel1 act [:span.ActivityItem__Date])
-        txt (en/text s)]
-    (nth-str txt 1)))
+        txt (en/text s)
+        date-str (nth-str txt 1)]
+    [date-str (to-year date-str)]))
+
+(defn max-page-no
+  [page]
+  (let [lis (en/select page [:div.UsersId__Pagination :li.number])]
+    (->> lis
+        (map en/text)
+        (map to-int)
+        (apply max))))
