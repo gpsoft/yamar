@@ -25,9 +25,16 @@ $ vim src/yamar/core.clj
 $ clj -M -m yamar.core
 ```
 
-### Release
+## Release
 
 ```
 $ clj -T:build clean
 $ clj -T:build uber
+```
+
+## Usage
+
+```
+$ java -jar yamar.jar USERID [DESTINATION]
+$ java -jar yamar.jar 1764261 docs/
 ```
