@@ -28,17 +28,17 @@
   (en/html-resource (java.net.URL. url)))
 
 (defn- mk-activity
-  [act]
-  (let [act-id (scrape/activity-id act)
-        [act-date year] (scrape/act-date act)]
+  [act-node]
+  (let [act-id (scrape/activity-id act-node)
+        [act-date year] (scrape/act-date act-node)]
     {:activity-id act-id
      :activity-url (act-url act-id)
-     :thumbnail-url (scrape/thumbnail-url act)
-     :num-photos (scrape/num-photos act)
-     :elapse (scrape/elapse act)
-     :distance (scrape/distance act)
-     :altitude (scrape/altitude act)
-     :heading (scrape/heading act)
+     :thumbnail-url (scrape/thumbnail-url act-node)
+     :num-photos (scrape/num-photos act-node)
+     :elapse (scrape/elapse act-node)
+     :distance (scrape/distance act-node)
+     :altitude (scrape/altitude act-node)
+     :heading (scrape/heading act-node)
      :act-date act-date
      :year year}))
 
@@ -85,7 +85,7 @@
                    (index-url page-no)
                    (fetch!))
           max-page-no (scrape/max-page-no page)
-          page-act-list (map mk-activity (scrape/activity-list page))
+          page-act-list (map mk-activity (scrape/act-node-list page))
           [act-list id-set found-dup?]
           (append-activities act-list id-set page-act-list )]
       (if (done? page-no max-page-no found-dup?)
@@ -130,15 +130,15 @@
  (def page (let [url (index-url 1764261)]
              (fetch! url)))
 
- (map scrape/activity-id (scrape/activity-list page))
- (map scrape/thumbnail-url (scrape/activity-list page))
- (map scrape/num-photos (scrape/activity-list page))
- (map scrape/elapse (scrape/activity-list page))
- (map scrape/distance (scrape/activity-list page))
- (map scrape/altitude (scrape/activity-list page))
- (map scrape/heading (scrape/activity-list page))
- (map scrape/act-date (scrape/activity-list page))
- (map mk-activity (scrape/activity-list page))
+ (map scrape/activity-id (scrape/act-node-list page))
+ (map scrape/thumbnail-url (scrape/act-node-list page))
+ (map scrape/num-photos (scrape/act-node-list page))
+ (map scrape/elapse (scrape/act-node-list page))
+ (map scrape/distance (scrape/act-node-list page))
+ (map scrape/altitude (scrape/act-node-list page))
+ (map scrape/heading (scrape/act-node-list page))
+ (map scrape/act-date (scrape/act-node-list page))
+ (map mk-activity (scrape/act-node-list page))
 
  (scrape/max-page-no page)
  (scrape/user-name page)

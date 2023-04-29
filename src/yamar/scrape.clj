@@ -28,65 +28,66 @@
   (let [h1 (sel1 page [:.UsersId__FaceInfo__Name])]
     (en/text h1)))
 
-(defn activity-list
+(defn act-node-list
   [page]
   (en/select page [:ul.UserActivityList__List :li :article]))
 
 (defn activity-id
-  [act]
-  (let [a (sel1 act [:a.ActivityItem__Thumbnail])
+  [act-node]
+  (let [a (sel1 act-node [:a.ActivityItem__Thumbnail])
         href (val1 a :href)
         match (re-find #"/(\d+)$" href)]
-    (when match (to-int (second match)))))
+    (when match
+      (to-int (second match)))))
 
 (defn thumbnail-url
-  [act]
-  (let [f (sel1 act [:a.ActivityItem__Thumbnail :figure.ActivityItem__Thumbnail__Img])
+  [act-node]
+  (let [f (sel1 act-node [:a.ActivityItem__Thumbnail :figure.ActivityItem__Thumbnail__Img])
         src (val1 f :data-src)]
     ;; data-src属性値がURLなんだけど、
     ;; これはJSで作ってるので、取れない。
     src))
 
 (defn- counter-text
-  [act ix]
-  (let [spans (en/select act [:span.CounterCapsule__Count])
+  [act-node ix]
+  (let [spans (en/select act-node [:span.CounterCapsule__Count])
         txt (en/text (nth spans ix))]
     txt))
 
 (defn- record-text
-  [act ix]
-  (let [spans (en/select act [:span.ActivityCounters__Count__Record])
+  [act-node ix]
+  (let [spans (en/select act-node [:span.ActivityCounters__Count__Record])
         txt (en/text (nth spans ix))]
     txt))
 
 (defn num-photos
-  [act]
-  (let [txt (counter-text act 0)]
+  [act-node]
+  (let [txt (counter-text act-node 0)]
     (to-int txt)))
 
 (defn elapse
-  [act]
-  (let [txt (record-text act 0)]
+  [act-node]
+  (let [txt (record-text act-node 0)]
     txt))
 
 (defn distance
-  [act]
-  (let [txt (record-text act 1)]
+  [act-node]
+  (let [txt (record-text act-node 1)]
     (nth-str txt 1)))
 
 (defn altitude
-  [act]
-  (let [txt (record-text act 2)]
+  [act-node]
+  (let [txt (record-text act-node 2)]
     (nth-str txt 1)))
 
 (defn heading
-  [act]
-  (let [h (sel1 act [:h3.ActivityItem__Heading])]
+  [act-node]
+  (let [h (sel1 act-node [:h3.ActivityItem__Heading])]
     (en/text h)))
 
 (defn act-date
-  [act]
-  (let [s (sel1 act [:span.ActivityItem__Date])
+  [act-node]
+  (let [s (sel1 act-node [:span.ActivityItem__Date])
         txt (en/text s)
         date-str (nth-str txt 1)]
     [date-str (to-year date-str)]))
