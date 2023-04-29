@@ -4,7 +4,8 @@
    [net.cgrand.enlive-html :as en]
    [yamar.scrape :as scrape]
    [yamar.render :as render]
-   [yamar.util :as u]))
+   [yamar.util :as u])
+  (:gen-class))
 
 (def ^:private yamap-url-base "https://yamap.com")
 (def ^:private limit-page-no 10)
