@@ -22,16 +22,20 @@ $ vim src/yamar/core.clj
 $ clj -M -m yamar.core
 ```
 
-## Release
+## リリース
 
 ```
 $ clj -T:build clean
 $ clj -T:build uber
 ```
 
-## Usage
+## 使い方
 
 ```
 $ java -jar yamar.jar USERID [DESTINATION]
 $ java -jar yamar.jar 1764261 docs/
 ```
+
+## サンプル
+
+[サンプルページ](https://gpsoft.github.io/yamar/1764261.html)
