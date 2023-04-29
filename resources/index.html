@@ -23,13 +23,13 @@ body {
 .powered-by {
 	display: inline-block;
 	position: absolute;
-	bottom: 1em;;
-	right: 1em;;
+	bottom: 16px;
+	right: 16px;
 	font-size: 10px;
 }
 .container {
 	max-width: 860px;
-	min-width: 780px;
+	min-width: 770px;
 	margin: 0 auto;
 	padding-bottom: 32px;
 }
@@ -79,7 +79,7 @@ article + article .link {
 	padding: 8px 0;
 }
 .link {
-	width: 30em;
+	width: 600px;
 	text-decoration: none;
 	color: #336699;
 	font-size: 1.3em;
@@ -112,6 +112,34 @@ article + article .link {
 	background-color: #eee;
 }
 .lav-value {
+}
+@media (max-width:800px) {
+	.container {
+		max-width: 100%;
+		min-width: 360px;
+	}
+	.main-line > * {
+		display: block;
+	}
+	.sub-line1 > * {
+		width: 7em;
+	}
+	.act-date {
+		padding-bottom: 0;
+	}
+	.sub-line1 {
+		margin-left: 0;
+		text-align: right;
+	}
+	article + article .link {
+		border-top: none;
+	}
+	article + article {
+		border-top: 1px dashed #888;
+	}
+	.link {
+		width: 100%;
+	}
 }
 </style>
 </head>
