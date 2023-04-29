@@ -3,7 +3,8 @@
    [clojure.pprint :as pp]
    [net.cgrand.enlive-html :as en]
    [yamar.scrape :as scrape]
-   [yamar.render :as render]))
+   [yamar.render :as render]
+   [yamar.util :as u]))
 
 (def ^:private yamap-url-base "https://yamap.com")
 (def ^:private limit-page-no 10)
@@ -66,11 +67,10 @@
 
 (defn go! [user-id dest]
   (let [ar (scrape! user-id)
-        edn-file (str dest user-id ".edn")
-        html-file (str dest user-id ".html")]
+        edn-file (u/resolve-path dest (str user-id ".edn"))
+        html-file (u/resolve-path dest (str user-id ".html"))]
     (progress (str "Saving edn: " edn-file))
-    (spit edn-file
-          (pr-str ar))
+    (u/write-edn! edn-file ar)
     (progress (str "Saving html " html-file))
     (spit html-file
           (render/render ar))))
@@ -109,10 +109,14 @@
  (scrape/max-page-no page)
  (scrape/user-name page)
 
- (def act-list (go! 1764261))
+ (def ar (scrape! 1764261))
 
- (pp/pprint act-list)
- (spit "index.html" (render/render act-list))
+ (pp/pprint ar)
+ (spit "index.html" (render/render (:activities ar)))
 
+ (let [ar (u/read-edn! "docs/1764261.edn")]
+   (->> ar
+        (render/render)
+        (spit "index.html")))
 
  )

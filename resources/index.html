@@ -19,20 +19,28 @@ body {
 	padding: 24px;
 	color: #333;
 }
+.container {
+	max-width: 860px;
+	min-width: 780px;
+	margin: 0 auto;
+}
 h1 {
 	font-size: 20px;
 	margin-bottom: 8px;
 }
-h1 span.num-acts {
+span.num-items {
 	margin-left: 8px;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: normal;
 	border: 1px solid #888;
 	border-radius: 4px;
 	padding: 0 4px;
+	position: relative;
+	bottom: 2px;
 }
 h2.year {
-	font-size: 18px;
+	font-size: 20px;
+	margin-top: 24px;
 	margin-bottom: 4px;
 }
 article {
@@ -65,7 +73,7 @@ article + article .link {
 	width: 30em;
 	text-decoration: none;
 	color: #336699;
-	font-size: 1.2em;
+	font-size: 1.3em;
 	font-weight: bold;
 	padding: 6px 0;
 }
@@ -81,6 +89,22 @@ article + article .link {
 .altitude {
 	width: 8em;
 }
+.label-and-value {
+	display: inline-block;
+	border: 1px solid #ccc;
+	font-size: 0.9em;
+}
+.label-and-value > * {
+	display: inline-block;
+	padding: 0 4px;
+}
+.lav-label {
+	color: #555;
+	background-color: #eee;
+}
+.lav-value {
+}
 </style>
 </head>
 <body>
+	<div class="container">
