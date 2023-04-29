@@ -18,11 +18,20 @@
 body {
 	padding: 24px;
 	color: #333;
+	position: relative;
+}
+.powered-by {
+	display: inline-block;
+	position: absolute;
+	bottom: 1em;;
+	right: 1em;;
+	font-size: 10px;
 }
 .container {
 	max-width: 860px;
 	min-width: 780px;
 	margin: 0 auto;
+	padding-bottom: 32px;
 }
 h1 {
 	font-size: 20px;
@@ -107,4 +116,7 @@ article + article .link {
 </style>
 </head>
 <body>
+	<div class="powered-by">
+		このページは、<a href="https://github.com/gpsoft/yamar">yamar</a>を使って自動生成されています。
+	</div>
 	<div class="container">
