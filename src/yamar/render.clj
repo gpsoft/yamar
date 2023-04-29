@@ -5,12 +5,13 @@
    [yamar.util :as u]))
 
 (def ^:private index "index.html")
+(def ^:private script "script.js")
 
-(defn- num-items
+(defn- num-items-v
   [num-items]
   [:span.num-items (str num-items "件")])
 
-(defn- label-and-value
+(defn- label-and-value-v
   [label value]
   [:div.label-and-value
    [:div.lav-label label]
@@ -19,28 +20,27 @@
 (defn- render-act
   [act]
   (let [{:keys [act-date activity-url heading elapse distance altitude]} act]
-    (html [:article
-           [:div.main-line
-            [:div.act-date act-date]
-            [:a.link {:href activity-url}
-             heading]]
-           [:div.sub-line1
-            [:div.elapse
-             (label-and-value "所要時間" elapse)]
-            [:div.distance
-             (label-and-value "距離" (str distance "km"))]
-            [:div.altitude
-             (label-and-value "標高" (str altitude "m"))]]
-           ])))
+    [:article
+     [:div.main-line
+      [:div.act-date act-date]
+      [:a.link {:href activity-url}
+       heading]]
+     [:div.sub-line1
+      [:div.elapse
+       (label-and-value-v "所要時間" elapse)]
+      [:div.distance
+       (label-and-value-v "距離" (str distance "km"))]
+      [:div.altitude
+       (label-and-value-v "標高" (str altitude "m"))]]]))
 
-(defn- render-year
+(defn- year-v
   [year year-acts]
   (let [act-list (u/rev-sort :act-date (get year-acts year))]
-    (str
-     (html [:h2.year
-            [:span (str year "年")]
-            (num-items (count act-list))])
-     (apply str (map render-act act-list)))))
+    [:div.year-wrap
+     [:h2.year
+      [:span (str year "年")]
+      (num-items-v (count act-list))]
+     (map render-act act-list)]))
 
 (defn render
   [ar]
@@ -48,12 +48,15 @@
         user-name (:user-name ar)
         year-acts (group-by :year act-list)
         years (u/rev-sort (keys year-acts))
-        html-str (-> (io/resource index)
-                           slurp)]
+        html-str (u/read-resource! index)
+        script-str (u/read-resource! script)]
     (str
      html-str
-     (html [:h1
-            [:span (str user-name "さんの活動日記")]
-            (num-items (count act-list))])
-     (apply str (map #(render-year % year-acts) years))
-     "</div></body></html>")))
+     (html [:div.container
+            [:h1
+             [:span (str user-name "さんの活動日記")]
+             (num-items-v (count act-list))]
+            (map #(year-v % year-acts) years)])
+     "<script>"
+     script-str
+     "</script></body></html>")))

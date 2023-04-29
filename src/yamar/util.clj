@@ -36,6 +36,11 @@
   (let [text (with-out-str (pp/pprint data))]
     (spit fpath-str text)))
 
+(defn read-resource!
+  [path-str]
+  (-> (io/resource path-str)
+      slurp))
+
 (defn open-browser!
   [url-str]
   (let [desktop (Desktop/getDesktop)
