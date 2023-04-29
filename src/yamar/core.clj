@@ -26,7 +26,7 @@
       [html-raw html-nodes])
   (en/html-resource (java.net.URL. url)))
 
-(defn- activity
+(defn- mk-activity
   [act]
   (let [act-id (scrape/activity-id act)
         [act-date year] (scrape/act-date act)]
@@ -42,38 +42,71 @@
      :year year}))
 
 (defn- progress
-  [s]
-  (println s))
+  [& args]
+  (println (apply str args)))
 
-(defn scrape! [user-id]
+(defn db!
+  [edn-file]
+  (progress "Reading archive from DB: " edn-file)
+  (let [db (u/read-edn! edn-file)
+        num-acts (count (:activities db))]
+    (if (empty? db)
+      (progress "No DB found")
+      (progress "Found " num-acts " activities"))
+    db))
+
+(defn- append-activities
+  [to-list id-set from-list]
+  (let [new-act-list (remove #(id-set (:activity-id %)) from-list)]
+    [(into to-list new-act-list)
+     (into id-set (map :activities new-act-list))
+     (< (count new-act-list) (count from-list))]))
+
+(defn- done?
+  [current-page-no max-page-no found-dup?]
+  (let [done-with-all-pages (>= current-page-no max-page-no)
+        too-many-pages (>= current-page-no limit-page-no)]
+    (when found-dup?
+      (progress "Done with new activities"))
+    (when done-with-all-pages
+      (progress "Done with all pages"))
+    (when too-many-pages
+      (progress "Aborting; too many pages"))
+    (or found-dup? done-with-all-pages too-many-pages)))
+
+(defn scrape!
+  [user-id db]
   (loop [page-no 1
-         act-list []]
-    (progress (str "Fetching page #" page-no "..."))
+         act-list (get db :activities [])
+         id-set (set (map :activity-id act-list))]
+    (progress "Fetching page #" page-no "...")
     (let [page (-> user-id
                    (index-url page-no)
                    (fetch!))
           max-page-no (scrape/max-page-no page)
-          act-list (into act-list (map activity (scrape/activity-list page)))]
-      (if (>= page-no (min max-page-no limit-page-no))
+          page-act-list (map mk-activity (scrape/activity-list page))
+          [act-list id-set found-dup?]
+          (append-activities act-list id-set page-act-list )]
+      (if (done? page-no max-page-no found-dup?)
+        {:user-id user-id
+         :user-name (scrape/user-name page)
+         :activities act-list}
         (do
-         (when (> max-page-no limit-page-no)
-           (progress "Aborting; too much pages"))
-         {:user-id user-id
-          :user-name (scrape/user-name page)
-          :activities act-list})
-        (do
-         (progress (str "More pages to go(max will be #" max-page-no ")"))
-         (recur (inc page-no) act-list))))))
+         (progress "More pages to go(max will be #" max-page-no ")")
+         (recur (inc page-no) act-list id-set))))))
 
 (defn go! [user-id dest]
-  (let [ar (scrape! user-id)
-        edn-file (u/resolve-path dest (str user-id ".edn"))
-        html-file (u/resolve-path dest (str user-id ".html"))]
-    (progress (str "Saving edn: " edn-file))
+  (let [edn-file (u/resolve-path dest (str user-id ".edn"))
+        html-file (u/resolve-path dest (str user-id ".html"))
+        db (db! edn-file)
+        ar (scrape! user-id db)
+        ]
+    (progress "Saving edn: " edn-file)
     (u/write-edn! edn-file ar)
-    (progress (str "Saving html " html-file))
+    (progress "Saving html " html-file)
     (spit html-file
-          (render/render ar))))
+          (render/render ar)))
+  )
 
 (defn- resolve-args
   [args]
@@ -104,12 +137,14 @@
  (map scrape/altitude (scrape/activity-list page))
  (map scrape/heading (scrape/activity-list page))
  (map scrape/act-date (scrape/activity-list page))
- (map activity (scrape/activity-list page))
+ (map mk-activity (scrape/activity-list page))
 
  (scrape/max-page-no page)
  (scrape/user-name page)
 
- (def ar (scrape! 1764261))
+ (go! 1764261 "docs/")
+
+ (def ar (scrape! 1764261 {}))
 
  (pp/pprint ar)
  (spit "index.html" (render/render (:activities ar)))

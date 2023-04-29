@@ -9,6 +9,12 @@
 
 (defn tap! [v] (pp/pprint v) v)
 
+(defn rev-sort
+  ([coll]
+   (sort #(compare %2 %1) coll))
+  ([keyfn coll]
+   (sort-by keyfn #(compare %2 %1) coll)))
+
 (defn resolve-path
   [base-str part-str]
   (let [d (io/file base-str)]

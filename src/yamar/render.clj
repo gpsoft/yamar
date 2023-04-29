@@ -1,7 +1,8 @@
 (ns yamar.render
   (:require
    [clojure.java.io :as io]
-   [hiccup.core :refer [html]]))
+   [hiccup.core :refer [html]]
+   [yamar.util :as u]))
 
 (def ^:private index "index.html")
 
@@ -34,7 +35,7 @@
 
 (defn- render-year
   [year year-acts]
-  (let [act-list (get year-acts year)]
+  (let [act-list (u/rev-sort :act-date (get year-acts year))]
     (str
      (html [:h2.year
             [:span (str year "年")]
@@ -46,7 +47,7 @@
   (let [act-list (:activities ar)
         user-name (:user-name ar)
         year-acts (group-by :year act-list)
-        years (sort #(compare %2 %1) (keys year-acts) )
+        years (u/rev-sort (keys year-acts))
         html-str (-> (io/resource index)
                            slurp)]
     (str
