@@ -78,8 +78,15 @@ article + article .link {
 	display: inline-block;
 	vertical-align: top;
 }
-.sub-line1 {
+.sub-line1,
+.sub-line2 {
 	margin-left: 8em;
+}
+.sub-line1 {
+	margin-bottom: 4px;
+}
+.sub-line2 {
+	position: relative;
 }
 .act-date {
 	width: 8em;
@@ -120,6 +127,34 @@ article + article .link {
 }
 .lav-value {
 }
+.description,
+.description-float {
+	font-size: 0.9em;
+	font-family: serif;
+	white-space: pre-line;
+	overflow-y: hidden;
+	padding: 0 4px;
+}
+.description {
+	max-height: 3.2em;
+	background: linear-gradient(270deg, #fff, 60%, #f8f8f8);
+}
+.description-float {
+	display: none;
+	position: absolute;
+	top: 0;
+	background-color: #eee;
+	box-shadow: 1px 2px #aaa;
+}
+@media (min-width:801px) {
+	.sub-line2:hover .description {
+		visibility: hidden;
+	}
+	.sub-line2:hover .description-float {
+		display: block;
+		z-index: 1;
+	}
+}
 @media (max-width:800px) {
 	.container {
 		max-width: 100%;
@@ -137,6 +172,12 @@ article + article .link {
 	.sub-line1 {
 		margin-left: 0;
 		text-align: right;
+	}
+	.sub-line2 {
+		margin-left: 12px;
+	}
+	.description {
+		max-height: unset;
 	}
 	article + article .link {
 		border-top: none;

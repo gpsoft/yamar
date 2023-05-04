@@ -201,7 +201,7 @@
         (spit "index.html")))
 
  (act-url 23213302)
- (def page (let [url (act-url 23213302)]
+ (def page (let [url (act-url 22343551)]
              (fetch! url)))
  (scrape/details page)
 

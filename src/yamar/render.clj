@@ -19,7 +19,8 @@
 
 (defn- render-act
   [act]
-  (let [{:keys [act-date activity-url heading elapse distance altitude]} act]
+  (let [{:keys [act-date activity-url heading elapse distance altitude details]} act
+        {:keys [description]} details]
     [:article
      [:div.main-line
       [:div.act-date act-date]
@@ -31,7 +32,12 @@
       [:div.distance
        (label-and-value-v "距離" (str distance "km"))]
       [:div.altitude
-       (label-and-value-v "標高" (str altitude "m"))]]]))
+       (label-and-value-v "標高" (str altitude "m"))]]
+     [:div.sub-line2
+      [:div.description
+       description]
+      [:div.description-float
+       description]]]))
 
 (defn- year-v
   [year year-acts]
