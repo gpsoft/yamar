@@ -73,20 +73,28 @@ article + article .link {
 .main-line {
 	margin-bottom: 2px;
 }
-.main-line > *,
-.sub-line1 > * {
-	display: inline-block;
-	vertical-align: top;
+.sub-line1,
+.sub-line2,
+.desc-line {
+	margin-left: 8em;
 }
 .sub-line1,
 .sub-line2 {
-	margin-left: 8em;
+	/*margin-bottom: 4px;*/
 }
-.sub-line1 {
-	margin-bottom: 4px;
-}
-.sub-line2 {
+.desc-line {
 	position: relative;
+}
+.main-line > *,
+.sub-line1 > *,
+.sub-line2 > * {
+	display: inline-block;
+	vertical-align: top;
+}
+.sub-line1 > *,
+.sub-line2 > * {
+	margin-right: 8px;
+	margin-bottom: 4px;
 }
 .act-date {
 	width: 8em;
@@ -104,13 +112,13 @@ article + article .link {
 	background-color: #e2f0ff;
 }
 .elapse {
-	width: 10em;
+	/*width: 10em;*/
 }
 .distance {
-	width: 8em;
+	/*width: 8em;*/
 }
 .altitude {
-	width: 8em;
+	/*width: 8em;*/
 }
 .label-and-value {
 	display: inline-block;
@@ -143,14 +151,15 @@ article + article .link {
 	display: none;
 	position: absolute;
 	top: 0;
-	background-color: #eee;
+	font-weight: bold;
+	background-color: #eeeeeedd;
 	box-shadow: 1px 2px #aaa;
 }
 @media (min-width:801px) {
-	.sub-line2:hover .description {
+	.desc-line:hover .description {
 		visibility: hidden;
 	}
-	.sub-line2:hover .description-float {
+	.desc-line:hover .description-float {
 		display: block;
 		z-index: 1;
 	}
@@ -163,17 +172,16 @@ article + article .link {
 	.main-line > * {
 		display: block;
 	}
-	.sub-line1 > * {
-		width: 7em;
+	.sub-line1 > *,
+	.sub-line2 > * {
+		/*width: 7em;*/
 	}
 	.act-date {
 		padding-bottom: 0;
 	}
-	.sub-line1 {
-		margin-left: 0;
-		text-align: right;
-	}
-	.sub-line2 {
+	.sub-line1,
+	.sub-line2,
+	.desc-line {
 		margin-left: 12px;
 	}
 	.description {

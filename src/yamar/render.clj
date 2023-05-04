@@ -20,7 +20,7 @@
 (defn- render-act
   [act]
   (let [{:keys [act-date activity-url heading elapse distance altitude details]} act
-        {:keys [description]} details]
+        {:keys [description rest-time]} details]
     [:article
      [:div.main-line
       [:div.act-date act-date]
@@ -29,11 +29,16 @@
      [:div.sub-line1
       [:div.elapse
        (label-and-value-v "所要時間" elapse)]
+      [:div.rest-time
+       (label-and-value-v "休憩" rest-time)]
       [:div.distance
        (label-and-value-v "距離" (str distance "km"))]
       [:div.altitude
        (label-and-value-v "標高" (str altitude "m"))]]
-     [:div.sub-line2
+     #_[:div.sub-line2
+      [:div.rest-time
+       (label-and-value-v "休憩時間" rest-time)]]
+     [:div.desc-line
       [:div.description
        description]
       [:div.description-float
