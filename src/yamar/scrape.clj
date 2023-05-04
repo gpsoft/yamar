@@ -1,13 +1,14 @@
 (ns yamar.scrape
   (:require
    [clojure.string :as str]
-   [net.cgrand.enlive-html :as en]))
+   [net.cgrand.enlive-html :as en]
+   [yamar.util :as u]))
 
 (defn- sel1
   [nodes selector]
   (first (en/select nodes selector)))
 
-(defn- val1
+(defn- attr1
   [node attr]
   (first (en/attr-values node attr)))
 
@@ -20,8 +21,12 @@
   (to-int (re-find #"^\d+" date-str)))
 
 (defn- nth-str
-  [s ix]
-  (str/trim (nth (str/split s #"\n") ix)))
+  [txt ix]
+  (str/trim (nth (str/split txt #"\n") ix "")))
+
+(defn- second-text
+  [node]
+  (nth-str (en/text node) 1))
 
 (defn user-name
   [page]
@@ -35,7 +40,7 @@
 (defn activity-id
   [act-node]
   (let [a (sel1 act-node [:a.ActivityItem__Thumbnail])
-        href (val1 a :href)
+        href (attr1 a :href)
         match (re-find #"/(\d+)$" href)]
     (when match
       (to-int (second match)))))
@@ -43,7 +48,7 @@
 (defn thumbnail-url
   [act-node]
   (let [f (sel1 act-node [:a.ActivityItem__Thumbnail :figure.ActivityItem__Thumbnail__Img])
-        src (val1 f :data-src)]
+        src (attr1 f :data-src)]
     ;; data-src属性値がURLなんだけど、
     ;; これはJSで作ってるので、取れない。
     src))
@@ -99,3 +104,69 @@
         (map en/text)
         (map to-int)
         (apply max))))
+
+(defn- cover-url
+  [page]
+  (-> page
+      (sel1 [:div.ActivityDetailTabLayout__Image :img])
+      (attr1 :src)
+      (u/split-url)
+      first))
+
+(defn- rest-time
+  [page]
+  (-> page
+      (sel1 [:.CourseTimeItem__Total__RestTime :.CourseTimeItem__Total__Number])
+      (en/text)))
+
+(defn- passed-point
+  [pt-node]
+  (let [nm (sel1 pt-node [:.CourseTimeItem__PassedPoint__Name])
+        times (en/select pt-node [:.CourseTimeItem__PassedPoint__Time])]
+    [(second-text nm) (mapv second-text times)]))
+
+(defn- passed-point-list
+  [page]
+  (-> page
+      (en/select [:.CourseTimeItem__PassedPoint])
+      (->> (map passed-point))))
+
+(defn- description
+  [page]
+  (-> page
+      (sel1 [:.ActivitiesId__Description :.ActivitiesId__Description__Body :span])
+      (en/text)))
+
+(defn- photo
+  [photo-node]
+  (let [path (sel1 photo-node [:.ActivitiesId__Photo__Link])
+        caption (sel1 photo-node [:.ActivitiesId__Photo__Caption])]
+    {:url-path (attr1 path :href)
+     :caption (en/text caption)}))
+
+(defn- photo-list
+  [page]
+  (-> page
+      (en/select [:.ActivitiesId__Photo])
+      (->> (map photo))))
+(defn details
+  [page]
+  (let [photos (photo-list page)]
+    {:cover-url (cover-url page)
+     :rest-time (rest-time page)
+     :passed-points (passed-point-list page)
+     :description (description page)
+     :photos photos})
+  )
+
+(comment
+ 
+ ; https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/a8e2e488-745c-49d8-9460-68d7f62d96d5?t=resize&w=480
+
+ (require '[yamar.core :as core])
+ (-> core/page
+     (photo-list)
+     #_(en/select [:.ActivitiesId__Photo])
+     #_(description))
+ 
+ )

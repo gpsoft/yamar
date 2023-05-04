@@ -155,4 +155,10 @@
         (render/render)
         (spit "index.html")))
 
+ (act-url 23886620)
+ (def page (let [url (act-url 23886620)]
+             (fetch! url)))
+ (scrape/details page)
+
  )
+
