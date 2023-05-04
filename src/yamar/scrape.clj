@@ -12,13 +12,9 @@
   [node attr]
   (first (en/attr-values node attr)))
 
-(defn- to-int
-  [s]
-  (Integer. (re-find #"\d+" s)))
-
 (defn- to-year
   [date-str]
-  (to-int (re-find #"^\d+" date-str)))
+  (u/to-int (re-find #"^\d+" date-str)))
 
 (defn- nth-str
   [txt ix]
@@ -43,7 +39,7 @@
         href (attr1 a :href)
         match (re-find #"/(\d+)$" href)]
     (when match
-      (to-int (second match)))))
+      (u/to-int (second match)))))
 
 (defn thumbnail-url
   [act-node]
@@ -68,7 +64,7 @@
 (defn num-photos
   [act-node]
   (let [txt (counter-text act-node 0)]
-    (to-int txt)))
+    (u/to-int txt)))
 
 (defn elapse
   [act-node]
@@ -102,7 +98,8 @@
   (let [lis (en/select page [:div.UsersId__Pagination :li.number])]
     (->> lis
         (map en/text)
-        (map to-int)
+        (map u/to-int)
+        (cons 0)  ; need at least one element for max
         (apply max))))
 
 (defn- cover-url
@@ -116,8 +113,10 @@
 (defn- rest-time
   [page]
   (-> page
-      (sel1 [:.CourseTimeItem__Total__RestTime :.CourseTimeItem__Total__Number])
-      (en/text)))
+      (en/select [:.CourseTimeItem__Total__RestTime :.CourseTimeItem__Total__Number])
+      (->> (map en/text)
+           (map u/pad00)
+           (str/join ":"))))
 
 (defn- passed-point
   [pt-node]
@@ -149,15 +148,16 @@
   (-> page
       (en/select [:.ActivitiesId__Photo])
       (->> (map photo))))
+
 (defn details
   [page]
-  (let [photos (photo-list page)]
-    {:cover-url (cover-url page)
-     :rest-time (rest-time page)
-     :passed-points (passed-point-list page)
-     :description (description page)
-     :photos photos})
-  )
+  (when page
+    (let [photos (photo-list page)]
+      {:cover-url (cover-url page)
+       :rest-time (rest-time page)
+       :passed-points (passed-point-list page)
+       :description (description page)
+       :photos photos})))
 
 (comment
  

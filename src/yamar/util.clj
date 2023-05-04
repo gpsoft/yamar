@@ -10,6 +10,16 @@
 
 (defn tap! [v] (pp/pprint v) v)
 
+(defn to-int
+  [s]
+  (Integer. (re-find #"\d+" s)))
+
+(defn pad00
+  [s]
+  (->> s
+       to-int
+       (format "%02d")))
+
 (defn rev-sort
   ([coll]
    (sort #(compare %2 %1) coll))
@@ -24,12 +34,12 @@
         (.resolve part-str)
         (.toString))))
 (defn read-edn!
-  [fpath-str]
+  [fpath-str not-found]
   (if (.exists (io/file fpath-str))
     (-> fpath-str
         (slurp)
         (edn/read-string))
-    {}))
+    not-found))
 
 (defn write-edn!
   [fpath-str data]

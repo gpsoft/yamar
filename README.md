@@ -3,9 +3,9 @@
 ## 機能
 
 - Yamapの活動日記をスクレイピングして、アーカイブする
-- `<USERID>.edn` ...DB
-- `<USERID>.html` ...一覧ページ
-- `<USERID>/<ACTIVITYID>.jpg` ...各活動日記のカバー画像
+- `<USER-ID>.edn` ...DB
+- `<USER-ID>.html` ...一覧ページ
+- `<USER-ID>/<ACTIVITY-ID>.jpg` ...各活動日記のカバー画像
 
 ## メモ
 
@@ -32,8 +32,12 @@ $ clj -T:build uber
 ## 使い方
 
 ```
-$ java -jar yamar.jar USERID [DESTINATION]
-$ java -jar yamar.jar 1764261 docs/
+Usage: java -jar yamar.jar [OPTIONS] USERID
+
+Options:
+  -d, --destination DIR  docs/  Destination directory
+  -D, --details          false  Archive in details
+  -h, --help             false  Show usage
 ```
 
 ## サンプル

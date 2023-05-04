@@ -1,6 +1,8 @@
 (ns yamar.core
   (:require
    [clojure.pprint :as pp]
+   [clojure.tools.cli :as cli]
+   [clojure.string :as str]
    [net.cgrand.enlive-html :as en]
    [yamar.scrape :as scrape]
    [yamar.render :as render]
@@ -9,6 +11,14 @@
 
 (def ^:private yamap-url-base "https://yamap.com")
 (def ^:private limit-page-no 10)
+
+(def ^:private cli-options
+  [["-d" "--destination DIR" "Destination directory"
+    :default "docs/"]
+   ["-D" "--details" "Archive in details"
+    :default false]
+   ["-h" "--help" "Show usage"
+    :default false]])
 
 (defn- index-url
   ([user-id]
@@ -25,7 +35,9 @@
   #_(let [html-raw (slurp url)
           html-nodes (en/html-snippet html-raw)]
       [html-raw html-nodes])
-  (en/html-resource (java.net.URL. url)))
+  (try
+   (en/html-resource (java.net.URL. url))
+   (catch Exception e nil)))
 
 (defn- mk-activity
   [act-node]
@@ -49,7 +61,7 @@
 (defn db!
   [edn-file]
   (progress "Reading archive from DB: " edn-file)
-  (let [db (u/read-edn! edn-file)
+  (let [db (u/read-edn! edn-file {})
         num-acts (count (:activities db))]
     (if (empty? db)
       (progress "No DB found")
@@ -70,9 +82,9 @@
     (when found-dup?
       (progress "Done with new activities"))
     (when done-with-all-pages
-      (progress "Done with all pages"))
+      (progress "Done with all index pages"))
     (when too-many-pages
-      (progress "Aborting; too many pages"))
+      (progress "Aborting; too many index pages"))
     (or found-dup? done-with-all-pages too-many-pages)))
 
 (defn scrape!
@@ -80,7 +92,7 @@
   (loop [page-no 1
          act-list (get db :activities [])
          id-set (set (map :activity-id act-list))]
-    (progress "Fetching page #" page-no "...")
+    (progress "Fetching index page #" page-no "...")
     (let [page (-> user-id
                    (index-url page-no)
                    (fetch!))
@@ -93,35 +105,68 @@
          :user-name (scrape/user-name page)
          :activities act-list}
         (do
-         (progress "More pages to go(max will be #" max-page-no ")")
+         (progress "More index pages to go(max will be #" max-page-no ")")
          (recur (inc page-no) act-list id-set))))))
 
-(defn go! [user-id dest]
+(defn scrape-details!
+  [act]
+  (if (:has-details? act)
+    act
+    (let [act-id (:activity-id act)
+          _ (progress "Fetching activity page for " act-id)
+          page (-> act-id
+                   (act-url)
+                   (fetch!))
+          _ (Thread/sleep 5000)
+          details (scrape/details page)]
+      (assoc act
+             :has-details? (some? details)
+             :details details))))
+
+(defn go-details! [db]
+  (let [act-list (:activities db)]
+    (if (empty? act-list)
+      db
+      (assoc db :activities (mapv scrape-details! act-list)))))
+
+(defn go! [user-id dest details?]
   (let [edn-file (u/resolve-path dest (str user-id ".edn"))
         html-file (u/resolve-path dest (str user-id ".html"))
         db (db! edn-file)
-        ar (scrape! user-id db)
-        ]
+        db (if details?
+             (go-details! db)
+             (scrape! user-id db))]
     (progress "Saving edn: " edn-file)
-    (u/write-edn! edn-file ar)
+    (u/write-edn! edn-file db)
     (progress "Saving html " html-file)
     (spit html-file
-          (render/render ar)))
+          (render/render db)))
   )
 
-(defn- resolve-args
-  [args]
-  (if (nil? args) nil
-    [(first args) (nth args 1 "./")]))
-
-(defn- show-usage
-  []
-  (println "usage: yamar USERID [DESTINATION]"))
+(defn- show-usage!
+  [options-summary]
+  (println)
+  (println "Usage: yamar [OPTIONS] USER-ID")
+  (println)
+  (println "Options:")
+  (println options-summary))
 
 (defn -main [& args]
-  (if-let [[user-id dest] (resolve-args args)]
-    (go! user-id dest)
-    (show-usage)))
+  (let [{:keys [options arguments errors summary]}
+        (cli/parse-opts args cli-options)
+        user-id (first arguments)
+        destination (:destination options)
+        err-user-id? (when-not user-id
+                       (println "Missing argument: USER-ID")
+                       true)
+        err-options? (when errors
+                       (println (str/join \newline errors))
+                       true)]
+    (if (or err-user-id?
+            err-options?
+            (:help options))
+      (show-usage! summary)
+      (go! user-id destination (:details options)))))
 
 (comment
 
@@ -143,22 +188,27 @@
  (scrape/max-page-no page)
  (scrape/user-name page)
 
- (go! 1764261 "docs/")
+ (go! 1764261 "docs/" false)
 
  (def ar (scrape! 1764261 {}))
 
  (pp/pprint ar)
  (spit "index.html" (render/render (:activities ar)))
 
- (let [ar (u/read-edn! "docs/1764261.edn")]
+ (let [ar (u/read-edn! "docs/1764261.edn" {})]
    (->> ar
         (render/render)
         (spit "index.html")))
 
- (act-url 23886620)
- (def page (let [url (act-url 23886620)]
+ (act-url 23213302)
+ (def page (let [url (act-url 23213302)]
              (fetch! url)))
  (scrape/details page)
+
+ (cli/parse-opts
+  ["--help"
+   "-d" "html/"
+   "23886620"] cli-options)
 
  )
 
