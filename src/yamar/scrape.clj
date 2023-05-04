@@ -133,8 +133,9 @@
 (defn- description
   [page]
   (-> page
-      (sel1 [:.ActivitiesId__Description :.ActivitiesId__Description__Body :span])
-      (en/text)))
+      (en/select [:.ActivitiesId__Description :.ActivitiesId__Description__Body :> :*])
+      (->> (map en/text)
+           (str/join ""))))
 
 (defn- photo
   [photo-node]
@@ -165,7 +166,7 @@
 
  (require '[yamar.core :as core])
  (-> core/page
-     (photo-list)
+     (description)
      #_(en/select [:.ActivitiesId__Photo])
      #_(description))
  
