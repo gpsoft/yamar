@@ -33,9 +33,56 @@ body {
 	margin: 0 auto;
 	padding-bottom: 32px;
 }
+.heading {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 h1 {
 	font-size: 20px;
 	margin-bottom: 8px;
+}
+.filter-wrap {
+	width: 200px;
+}
+.filter-wrap > * {
+	vertical-align: middle;
+}
+.filter-on {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #336699;
+	border-radius: 4px;
+}
+.filter-on,
+.filter-off {
+	cursor: pointer;
+}
+.filter-off,
+.filter-input {
+	display: none;
+}
+body.filter-enabled .filter-on {
+	display: none;
+}
+body.filter-enabled .filter-off {
+	display: inline-block;
+	width: 32px;
+	height: 26px;
+	text-align: center;
+	border: 3px solid #336699;
+	border-radius: 4px;
+	margin-right: 4px;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3ElEQVR4nO2UPQoCMRBGX2rFMyhYidew0Ut4A1t3vYzYWaiHUfQSYiXYKBFlwCC7kJ/dDUoeDATCN/kyMwwkEsXomuJ3DBxEsAEU/ijJoSWnNT3gLMI8wMBCclyAvqt4BNyBBzDxeDxU/yb3/IFZwYzAHq4l0QnoWGjawF40u8AZck7oY9iKrmVJfVvmPFRjj/tKyEp+aFZoTo0oo8dFsa1i6GyGsszA664R9Ndud971yUAoOrWAz9ANYg7hFLjK+RjDgJZYNbkDMB6+ATMioKXkQyKxBFqxHk/8F0+FjI7HSrv0iQAAAABJRU5ErkJggg==") #deefff center no-repeat;
+	background-size: contain;
+}
+body.filter-enabled .filter-input {
+	display: inline-block;
+	width: calc(100% - 36px);
+	border: 1px solid #336699;
+	padding: 4px;
 }
 span.num-items {
 	margin-left: 8px;
@@ -147,6 +194,9 @@ article + article .link {
 	max-height: 3.2em;
 	background: linear-gradient(270deg, #fff, 60%, #f8f8f8);
 }
+body.filter-enabled .description {
+	max-height: unset;
+}
 .description-float {
 	display: none;
 	position: absolute;
@@ -155,11 +205,12 @@ article + article .link {
 	background-color: #eeeeeedd;
 	box-shadow: 1px 2px #aaa;
 }
+
 @media (min-width:801px) {
-	.desc-line:hover .description {
+	body:not(.filter-enabled) .desc-line:hover .description {
 		visibility: hidden;
 	}
-	.desc-line:hover .description-float {
+	body:not(.filter-enabled) .desc-line:hover .description-float {
 		display: block;
 		z-index: 1;
 	}
@@ -203,7 +254,7 @@ article + article .link {
 	<div class="powered-by">
 		このページは、<a href="https://github.com/gpsoft/yamar">yamar</a>を使って自動生成されています。
 	</div>
-<div class="container"><h1><span>gyuponさんの活動日記</span><span class="num-items">64件</span></h1><div class="year-wrap"><h2 class="year"><span>2023年</span><span class="num-items">15件</span></h2><article><div class="main-line"><div class="act-date">2023.04.30(日)</div><a class="link" href="https://yamap.com/activities/23886620">ゴールデンウィーク。黄金山 2023-04-30</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">03:18</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">53</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">8.7km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">318m</div></div></div></div><div class="desc-line"><div class="description">2023-04-30(日)17:30 快晴
+<div class="container"><div class="heading"><h1><span>gyuponさんの活動日記</span><span class="num-items">64件</span></h1><div class="filter-wrap"><div class="filter-on">フィルターモード</div><div class="filter-off"></div><input class="filter-input" type="text" /></div></div><div class="year-wrap"><h2 class="year"><span>2023年</span><span class="num-items">15件</span></h2><div class="article-list"><article><div class="main-line"><div class="act-date">2023.04.30(日)</div><a class="link" href="https://yamap.com/activities/23886620">ゴールデンウィーク。黄金山 2023-04-30</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">03:18</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">53</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">8.7km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">318m</div></div></div></div><div class="desc-line"><div class="description">2023-04-30(日)17:30 快晴
 ゴールデンウィークに黄金山で夕日と夜景を楽しむ</div><div class="description-float">2023-04-30(日)17:30 快晴
 ゴールデンウィークに黄金山で夕日と夜景を楽しむ</div></div></article><article><div class="main-line"><div class="act-date">2023.04.23(日)</div><a class="link" href="https://yamap.com/activities/23742009">新緑に誘われて。日浦山 2023-04-23(pon)</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">03:02</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">01:02</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">4.0km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">548m</div></div></div></div><div class="desc-line"><div class="description">2023-04-23(日)10:00 晴れ
 今朝は久しぶりに空気が澄んでたので山へ
@@ -379,7 +430,7 @@ Yamap99座目はクマン岳
 登り初めは絵下山
 登山3年目。事故なく楽しめますように</div><div class="description-float">2023-01-01(日)11:15 晴れ
 登り初めは絵下山
-登山3年目。事故なく楽しめますように</div></div></article></div><div class="year-wrap"><h2 class="year"><span>2022年</span><span class="num-items">32件</span></h2><article><div class="main-line"><div class="act-date">2022.12.28(水)</div><a class="link" href="https://yamap.com/activities/21640369">問題は日浦山に登るかどうかではなく、どう登るかだ、みたいな。日浦山 2022-12-28(pon)</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">03:12</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">01:11</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">4.2km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">476m</div></div></div></div><div class="desc-line"><div class="description">2022-12-28(水)11:30 晴れ
+登山3年目。事故なく楽しめますように</div></div></article></div></div><div class="year-wrap"><h2 class="year"><span>2022年</span><span class="num-items">32件</span></h2><div class="article-list"><article><div class="main-line"><div class="act-date">2022.12.28(水)</div><a class="link" href="https://yamap.com/activities/21640369">問題は日浦山に登るかどうかではなく、どう登るかだ、みたいな。日浦山 2022-12-28(pon)</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">03:12</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">01:11</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">4.2km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">476m</div></div></div></div><div class="desc-line"><div class="description">2022-12-28(水)11:30 晴れ
 登り納めは、迷わず日浦山
 成本の郵便局から登るコースに初チャレンジ
 
@@ -1299,7 +1350,7 @@ No.17から1,2,3,…,16の順につついて行くのが最短だろうか(ワ�
 電波塔にかかった首飾りの真ん中を通って下山
 気温5℃くらいだと思うけど、それほど寒さは感じなかった
 
-・絵下(えげ)山</div></div></article></div><div class="year-wrap"><h2 class="year"><span>2021年</span><span class="num-items">17件</span></h2><article><div class="main-line"><div class="act-date">2021.12.18(土)</div><a class="link" href="https://yamap.com/activities/14827791">寒いっ! 松笠山・二ヶ城山 2021-12-18(pon)</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">05:17</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">01:14</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">7.7km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">763m</div></div></div></div><div class="desc-line"><div class="description">こんな寒い日に登山なんて、と思いつつ、なぜか目覚ましが鳴る前に起床
+・絵下(えげ)山</div></div></article></div></div><div class="year-wrap"><h2 class="year"><span>2021年</span><span class="num-items">17件</span></h2><div class="article-list"><article><div class="main-line"><div class="act-date">2021.12.18(土)</div><a class="link" href="https://yamap.com/activities/14827791">寒いっ! 松笠山・二ヶ城山 2021-12-18(pon)</a></div><div class="sub-line1"><div class="elapse"><div class="label-and-value"><div class="lav-label">所要時間</div><div class="lav-value">05:17</div></div></div><div class="rest-time"><div class="label-and-value"><div class="lav-label">休憩</div><div class="lav-value">01:14</div></div></div><div class="distance"><div class="label-and-value"><div class="lav-label">距離</div><div class="lav-value">7.7km</div></div></div><div class="altitude"><div class="label-and-value"><div class="lav-label">標高</div><div class="lav-value">763m</div></div></div></div><div class="desc-line"><div class="description">こんな寒い日に登山なんて、と思いつつ、なぜか目覚ましが鳴る前に起床
 今日は、いつもよりちょっと北へ進出して、松笠山と二ヶ城山を目指す
 JR芸備線・戸坂駅から、八畳岩、松笠山、菰口憩の森、二ヶ城山を経由して、
 口田登山口(?)へ降りる作戦(帰りは安芸矢口駅)
@@ -1627,12 +1678,20 @@ Aルートは、階段あり、岩場ありで、眺望ポイントや休憩ポ�
 序盤でヘビさんと出会い、展望台付近はハチさんも多くて、ドキドキしながら進行。
 諫山以降は平和。
 「ヤッホー」と叫ぶ男性の声が聞こえたのと、女性一人とすれ違った以外は、人影なし。
-石灰石鉱山からの重機の音、爆破音、サイレンなどが絶え間なく聞こえるのが残念。</div></div></article></div></div><script>function toggleCollapsed(wrap) {
+石灰石鉱山からの重機の音、爆破音、サイレンなどが絶え間なく聞こえるのが残念。</div></div></article></div></div></div><script type="text/javascript">function toggleCollapsed(wrap) {
 	const toggle = wrap.classList.contains('collapsed');
-	wrap.querySelectorAll('article').forEach(a=>{
-		a.style.display = toggle ? 'block' : 'none';
-	});
+	wrap.querySelector('.article-list').style.display = toggle ? 'block' : 'none';
 	wrap.classList.toggle('collapsed');
+}
+function updateFilter(inp) {
+	const enabled = document.body.classList.contains('filter-enabled');
+	const kw = inp.value;
+	document.querySelectorAll('article').forEach((a)=>{
+		const h = a.querySelector('.link').innerText;
+		const d = a.querySelector('.description').innerText;
+		const hidden = enabled && kw.length>0 && !h.match(kw) && !d.match(kw);
+		a.style.display = hidden ? 'none' : 'block';
+	});
 }
 window.addEventListener('load', ()=>{
 	document.querySelectorAll('.year-wrap .num-items').forEach((btn,ix)=>{
@@ -1642,6 +1701,17 @@ window.addEventListener('load', ()=>{
 			btn.scrollIntoView();
 		});
 		if ( ix > 0 ) toggleCollapsed(wrap);
+	});
+	document.querySelectorAll('.filter-on, .filter-off').forEach((btn)=>{
+		btn.addEventListener('click', ()=>{
+			document.body.classList.toggle('filter-enabled');
+			updateFilter(document.querySelector('.filter-input'));
+		});
+	});
+	document.querySelectorAll('.filter-input').forEach((inp)=>{
+		inp.addEventListener('keyup', ()=>{
+			updateFilter(inp);
+		});
 	});
 });
 </script></body></html>
