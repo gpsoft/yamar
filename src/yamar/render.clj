@@ -51,7 +51,8 @@
      [:h2.year
       [:span (str year "年")]
       (num-items-v (count act-list))]
-     (map render-act act-list)]))
+     [:div.article-list
+      (map render-act act-list)]]))
 
 (defn render
   [ar]
@@ -64,10 +65,17 @@
     (str
      html-str
      (html [:div.container
-            [:h1
-             [:span (str user-name "さんの活動日記")]
-             (num-items-v (count act-list))]
+            [:div.heading
+             [:h1
+              [:span (str user-name "さんの活動日記")]
+              (num-items-v (count act-list))]
+             [:div.filter-wrap
+              [:div.filter-on
+               "フィルターモード"]
+              [:div.filter-off ""]
+              [:input {:type "text"
+                       :class "filter-input"}]]]
             (map #(year-v % year-acts) years)])
-     "<script>"
+     "<script type=\"text/javascript\">"
      script-str
      "</script></body></html>")))

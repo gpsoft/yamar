@@ -33,9 +33,56 @@ body {
 	margin: 0 auto;
 	padding-bottom: 32px;
 }
+.heading {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 h1 {
 	font-size: 20px;
 	margin-bottom: 8px;
+}
+.filter-wrap {
+	width: 200px;
+}
+.filter-wrap > * {
+	vertical-align: middle;
+}
+.filter-on {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #336699;
+	border-radius: 4px;
+}
+.filter-on,
+.filter-off {
+	cursor: pointer;
+}
+.filter-off,
+.filter-input {
+	display: none;
+}
+body.filter-enabled .filter-on {
+	display: none;
+}
+body.filter-enabled .filter-off {
+	display: inline-block;
+	width: 32px;
+	height: 26px;
+	text-align: center;
+	border: 3px solid #336699;
+	border-radius: 4px;
+	margin-right: 4px;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3ElEQVR4nO2UPQoCMRBGX2rFMyhYidew0Ut4A1t3vYzYWaiHUfQSYiXYKBFlwCC7kJ/dDUoeDATCN/kyMwwkEsXomuJ3DBxEsAEU/ijJoSWnNT3gLMI8wMBCclyAvqt4BNyBBzDxeDxU/yb3/IFZwYzAHq4l0QnoWGjawF40u8AZck7oY9iKrmVJfVvmPFRjj/tKyEp+aFZoTo0oo8dFsa1i6GyGsszA664R9Ndud971yUAoOrWAz9ANYg7hFLjK+RjDgJZYNbkDMB6+ATMioKXkQyKxBFqxHk/8F0+FjI7HSrv0iQAAAABJRU5ErkJggg==") #deefff center no-repeat;
+	background-size: contain;
+}
+body.filter-enabled .filter-input {
+	display: inline-block;
+	width: calc(100% - 36px);
+	border: 1px solid #336699;
+	padding: 4px;
 }
 span.num-items {
 	margin-left: 8px;
@@ -147,6 +194,9 @@ article + article .link {
 	max-height: 3.2em;
 	background: linear-gradient(270deg, #fff, 60%, #f8f8f8);
 }
+body.filter-enabled .description {
+	max-height: unset;
+}
 .description-float {
 	display: none;
 	position: absolute;
@@ -155,11 +205,12 @@ article + article .link {
 	background-color: #eeeeeedd;
 	box-shadow: 1px 2px #aaa;
 }
+
 @media (min-width:801px) {
-	.desc-line:hover .description {
+	body:not(.filter-enabled) .desc-line:hover .description {
 		visibility: hidden;
 	}
-	.desc-line:hover .description-float {
+	body:not(.filter-enabled) .desc-line:hover .description-float {
 		display: block;
 		z-index: 1;
 	}
