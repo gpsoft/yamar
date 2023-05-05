@@ -30,14 +30,11 @@
       [:div.elapse
        (label-and-value-v "所要時間" elapse)]
       [:div.rest-time
-       (label-and-value-v "休憩" rest-time)]
+       (label-and-value-v "休憩時間" rest-time)]
       [:div.distance
        (label-and-value-v "距離" (str distance "km"))]
       [:div.altitude
        (label-and-value-v "標高" (str altitude "m"))]]
-     #_[:div.sub-line2
-      [:div.rest-time
-       (label-and-value-v "休憩時間" rest-time)]]
      [:div.desc-line
       [:div.description
        description]

@@ -110,13 +110,17 @@
       (u/split-url)
       first))
 
+(defn- mk-time
+  ([m] (mk-time m "00"))
+  ([m h]
+   (str (u/pad00 h) ":" (u/pad00 m))))
+
 (defn- rest-time
   [page]
   (-> page
       (en/select [:.CourseTimeItem__Total__RestTime :.CourseTimeItem__Total__Number])
       (->> (map en/text)
-           (map u/pad00)
-           (str/join ":"))))
+           (apply mk-time))))
 
 (defn- passed-point
   [pt-node]
