@@ -6,7 +6,8 @@
    [lambdaisland.uri :as uri])
   (:import
    [java.awt Desktop]
-   [java.net URI]))
+   [java.net URI]
+   [java.io File]))
 
 (defn tap! [v] (pp/pprint v) v)
 
@@ -33,6 +34,13 @@
         (.toPath)
         (.resolve part-str)
         (.toString))))
+
+(defn mkdir
+  [path-str]
+  (-> path-str
+      (File.)
+      (.mkdirs)))
+
 (defn read-edn!
   [fpath-str not-found]
   (if (.exists (io/file fpath-str))
@@ -50,6 +58,15 @@
   [path-str]
   (-> (io/resource path-str)
       slurp))
+
+(defn wget
+  [url-str fpath-str]
+  (try
+   (with-open [in (io/input-stream url-str)
+               out (io/output-stream fpath-str)]
+     (io/copy in out)
+     url-str)
+   (catch Exception e nil)))
 
 (defn open-browser!
   [url-str]

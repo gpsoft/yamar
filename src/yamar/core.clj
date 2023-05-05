@@ -20,6 +20,10 @@
    ["-h" "--help" "Show usage"
     :default false]])
 
+(defn- progress
+  [& args]
+  (println (apply str args)))
+
 (defn- index-url
   ([user-id]
    (index-url user-id 1))
@@ -30,6 +34,12 @@
   [act-id]
   (str yamap-url-base "/activities/" act-id))
 
+(defn- thumbnail-url
+  [cover-url]
+  (u/join-url cover-url {:t "crop"
+                         :w 300
+                         :h 300}))
+
 (defn- fetch!
   [url]
   #_(let [html-raw (slurp url)
@@ -37,7 +47,9 @@
       [html-raw html-nodes])
   (try
    (en/html-resource (java.net.URL. url))
-   (catch Exception e nil)))
+   (catch Exception e
+     (progress "** Failed!")
+     nil)))
 
 (defn- mk-activity
   [act-node]
@@ -53,10 +65,6 @@
      :heading (scrape/heading act-node)
      :act-date act-date
      :year year}))
-
-(defn- progress
-  [& args]
-  (println (apply str args)))
 
 (defn db!
   [edn-file]
@@ -123,20 +131,53 @@
              :has-details? (some? details)
              :details details))))
 
+(defn save-cover!
+  [dir act]
+  (if (:thumbnail-url act)
+    act
+    (let [cover-url (get-in act [:details :cover-url])
+          act-id (:activity-id act)
+          thumb-file (u/resolve-path dir (str act-id ".jpg"))
+          _ (progress "Fetching cover image for " act-id)
+          thumb-url (u/wget (thumbnail-url cover-url)
+                            thumb-file)
+          _ (Thread/sleep 5000)]
+      (if thumb-url
+        (assoc act
+               :thumbnail-url thumb-url)
+        (do
+         (progress "** Failed!")
+         act)))))
+
 (defn go-details! [db]
   (let [act-list (:activities db)]
     (if (empty? act-list)
       db
-      (assoc db :activities (mapv scrape-details! act-list)))))
+      (assoc db
+             :activities (mapv scrape-details! act-list)))))
+
+(defn go-covers! [cover-dir db]
+  (let [act-list (:activities db)]
+    (if (empty? act-list)
+      db
+      (assoc db
+             :activities (mapv #(save-cover! cover-dir %) act-list)))))
 
 (defn go! [user-id dest details?]
   (let [edn-file (u/resolve-path dest (str user-id ".edn"))
         html-file (u/resolve-path dest (str user-id ".html"))
+        cover-dir (u/resolve-path dest user-id)
         db (db! edn-file)
         db (if details?
              (go-details! db)
-             (scrape! user-id db))]
+             (scrape! user-id db))
+        db (if details?
+             (do
+              (u/mkdir cover-dir)
+              (go-covers! cover-dir db))
+             db)]
     (progress "Saving edn: " edn-file)
+    (u/mkdir dest)
     (u/write-edn! edn-file db)
     (progress "Saving html " html-file)
     (spit html-file
