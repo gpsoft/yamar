@@ -111,7 +111,7 @@ article {
 	margin-bottom: 8px;
 	font-size: 16px;
 }
-article + article .act-date,
+article + article .act-date-time,
 article + article .link {
 }
 article + article .link {
@@ -119,7 +119,9 @@ article + article .link {
 }
 .main-line {
 	margin-bottom: 2px;
+	position: relative;
 }
+.main-line,
 .sub-line1,
 .sub-line2,
 .desc-line {
@@ -143,9 +145,18 @@ article + article .link {
 	margin-right: 8px;
 	margin-bottom: 4px;
 }
-.act-date {
+.act-date-time {
 	width: 8em;
 	padding: 8px 0;
+	position: absolute;
+	left: -8em;
+}
+.act-date {
+	font-weight: bold;
+}
+.act-time {
+	font-size: 0.9em;
+	padding-left: 1.3em;
 }
 .link {
 	width: 600px;
@@ -228,8 +239,20 @@ body.filter-enabled .description {
 	.sub-line2 > * {
 		/*width: 7em;*/
 	}
-	.act-date {
+	.act-date-time {
+		position: static;
 		padding-bottom: 0;
+		width: 100%;
+	}
+	.act-date-time > * {
+		display: inline-block;
+		margin-right: 4px;
+	}
+	.act-time {
+		padding-left: 0;
+	}
+	.main-line {
+		margin-left: 0;
 	}
 	.sub-line1,
 	.sub-line2,

@@ -123,9 +123,9 @@
            (apply mk-time))))
 
 (defn- passed-point
-  [pt-node]
-  (let [nm (sel1 pt-node [:.CourseTimeItem__PassedPoint__Name])
-        times (en/select pt-node [:.CourseTimeItem__PassedPoint__Time])]
+  [pp-node]
+  (let [nm (sel1 pp-node [:.CourseTimeItem__PassedPoint__Name])
+        times (en/select pp-node [:.CourseTimeItem__PassedPoint__Time])]
     [(second-text nm) (mapv second-text times)]))
 
 (defn- passed-point-list
@@ -133,6 +133,13 @@
   (-> page
       (en/select [:.CourseTimeItem__PassedPoint])
       (->> (map passed-point))))
+
+(defn- sta-end-time
+  [pp-list]
+  (let [[_ [sta]] (first pp-list)
+        [_ [end]] (last pp-list)]
+    (when (and sta end)
+      [sta end])))
 
 (defn- description
   [page]
@@ -157,15 +164,17 @@
 (defn details
   [page]
   (when page
-    (let [photos (photo-list page)]
+    (let [photos (photo-list page)
+          pp-list (passed-point-list page)]
       {:cover-url (cover-url page)
        :rest-time (rest-time page)
-       :passed-points (passed-point-list page)
+       :passed-points pp-list
+       :sta-end-time (sta-end-time pp-list)
        :description (description page)
        :photos photos})))
 
 (comment
- 
+
  ; https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/a8e2e488-745c-49d8-9460-68d7f62d96d5?t=resize&w=480
 
  (require '[yamar.core :as core])
@@ -173,5 +182,16 @@
      (description)
      #_(en/select [:.ActivitiesId__Photo])
      #_(description))
+
+ (let [edn-file "docs/1764261.edn"
+       ar (u/read-edn! edn-file {})
+       act-list (:activities ar)]
+   (when-not (empty? act-list)
+     (->> act-list
+          (mapv #(let [pp-list (get-in % [:details :passed-points])]
+                   (assoc-in % [:details :sta-end-time] (sta-end-time pp-list))))
+          (assoc ar :activities)
+          (u/write-edn! edn-file))
+     nil))
  
  )

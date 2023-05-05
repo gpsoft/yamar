@@ -19,27 +19,33 @@
 
 (defn- render-act
   [act]
-  (let [{:keys [act-date activity-url heading elapse distance altitude details]} act
-        {:keys [description rest-time]} details]
+  (let [{:keys [has-details? act-date activity-url heading elapse distance altitude details]} act
+        {:keys [description rest-time sta-end-time]} details]
     [:article
      [:div.main-line
-      [:div.act-date act-date]
+      [:div.act-date-time
+       [:div.act-date act-date]
+       (when (and has-details? sta-end-time)
+         (let [[sta end] sta-end-time]
+           [:div.act-time (str sta "〜" end)]))]
       [:a.link {:href activity-url}
        heading]]
      [:div.sub-line1
       [:div.elapse
        (label-and-value-v "所要時間" elapse)]
-      [:div.rest-time
-       (label-and-value-v "休憩時間" rest-time)]
+      (when has-details?
+        [:div.rest-time
+         (label-and-value-v "休憩時間" rest-time)])
       [:div.distance
        (label-and-value-v "距離" (str distance "km"))]
       [:div.altitude
        (label-and-value-v "標高" (str altitude "m"))]]
-     [:div.desc-line
-      [:div.description
-       description]
-      [:div.description-float
-       description]]]))
+     (when has-details? 
+       [:div.desc-line
+        [:div.description
+         description]
+        [:div.description-float
+         description]])]))
 
 (defn- year-v
   [year year-acts]
