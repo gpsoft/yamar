@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamap活動日記</title>
 <style>
+/* reset */
 *,
 *::before,
 *::after {
@@ -15,17 +16,12 @@
 * {
   box-sizing:border-box
 }
+
+/* main layout */
 body {
 	padding: 24px;
 	color: #333;
 	position: relative;
-}
-.powered-by {
-	display: inline-block;
-	position: absolute;
-	bottom: 16px;
-	right: 16px;
-	font-size: 10px;
 }
 .container {
 	max-width: 860px;
@@ -33,6 +29,17 @@ body {
 	margin: 0 auto;
 	padding-bottom: 32px;
 }
+
+/* footer */
+.powered-by {
+	display: inline-block;
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	font-size: 10px;
+}
+
+/* main heading */
 .heading {
 	display: flex;
 	flex-direction: row;
@@ -94,6 +101,8 @@ span.num-items {
 	position: relative;
 	bottom: 2px;
 }
+
+/* sub heading */
 h2.year {
 	font-size: 20px;
 	margin-top: 24px;
@@ -106,26 +115,51 @@ h2.year {
 	background-color: #336699;
 	color: #fff;
 }
+
+/* article */
 article {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 8px;
 	margin-left: 20px;
 	margin-bottom: 8px;
 	font-size: 16px;
 }
-article + article .act-date-time,
-article + article .link {
+.side-pane {
+	width: 8em;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
 }
-article + article .link {
+.main-pane {
+	flex-grow: 1;
+}
+article + article .main-pane {
 	border-top: 1px dashed #888;
 }
+
+/* side pane */
+.act-date-time {
+	padding: 6px 0;
+	text-align: right;
+}
+.act-date {
+	/*font-weight: bold;*/
+}
+.act-time {
+	font-size: 0.9em;
+}
+.thumbnail {
+	flex-grow: 1;
+	width: 100%;
+	height: 112px;
+	background: url("") top right no-repeat;
+	background-size: 96px;
+}
+
+/* main pane */
 .main-line {
 	margin-bottom: 2px;
-	position: relative;
-}
-.main-line,
-.sub-line1,
-.sub-line2,
-.desc-line {
-	margin-left: 8em;
 }
 .sub-line1,
 .sub-line2 {
@@ -134,49 +168,24 @@ article + article .link {
 .desc-line {
 	position: relative;
 }
-.main-line > *,
 .sub-line1 > *,
 .sub-line2 > * {
 	display: inline-block;
 	vertical-align: top;
-}
-.sub-line1 > *,
-.sub-line2 > * {
 	margin-right: 8px;
 	margin-bottom: 4px;
 }
-.act-date-time {
-	width: 8em;
-	padding: 8px 0;
-	position: absolute;
-	left: -8em;
-}
-.act-date {
-	font-weight: bold;
-}
-.act-time {
-	font-size: 0.9em;
-	padding-left: 1.3em;
-}
 .link {
-	width: 600px;
-	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	padding: 6px 0;
 	color: #336699;
 	font-size: 1.3em;
 	font-weight: bold;
-	padding: 6px 0;
+	text-decoration: none;
 }
 .link:hover {
 	background-color: #e2f0ff;
-}
-.elapse {
-	/*width: 10em;*/
-}
-.distance {
-	/*width: 8em;*/
-}
-.altitude {
-	/*width: 8em;*/
 }
 .label-and-value {
 	display: inline-block;
@@ -194,6 +203,9 @@ article + article .link {
 .lav-value {
 	font-family: "Courier New", monospace;
 }
+.desc-line {
+	background: linear-gradient(270deg, #fff, 60%, #f8f8f8);
+}
 .description,
 .description-float {
 	font-size: 0.9em;
@@ -203,22 +215,28 @@ article + article .link {
 	padding: 0 4px;
 }
 .description {
-	max-height: 3.2em;
-	background: linear-gradient(270deg, #fff, 60%, #f8f8f8);
+	height: 96px;
 }
 body.filter-enabled .description {
-	max-height: unset;
+	height: unset;
 }
 .description-float {
 	display: none;
 	position: absolute;
 	top: 0;
+	width: 100%;
+	min-height: 96px;
 	font-weight: bold;
 	background-color: #eeeeeedd;
 	box-shadow: 1px 2px #aaa;
 }
 
 @media (min-width:801px) {
+	body:not(.filter-enabled) .description {
+		background: linear-gradient(180deg, #000, #000 70%, #fff);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
 	body:not(.filter-enabled) .desc-line:hover .description {
 		visibility: hidden;
 	}
@@ -232,17 +250,22 @@ body.filter-enabled .description {
 		max-width: 100%;
 		min-width: 360px;
 	}
-	.main-line > * {
-		display: block;
+	article {
+		flex-wrap: wrap;
+		gap: 0;
 	}
-	.sub-line1 > *,
-	.sub-line2 > * {
-		/*width: 7em;*/
+	article + article {
+		border-top: 1px dashed #888;
+	}
+	article + article .main-pane {
+		border-top: none;
+	}
+	.side-pane {
+		width: 100%;
 	}
 	.act-date-time {
-		position: static;
+		text-align: left;
 		padding-bottom: 0;
-		width: 100%;
 	}
 	.act-date-time > * {
 		display: inline-block;
@@ -251,8 +274,8 @@ body.filter-enabled .description {
 	.act-time {
 		padding-left: 0;
 	}
-	.main-line {
-		margin-left: 0;
+	.thumbnail {
+		display: none;
 	}
 	.sub-line1,
 	.sub-line2,
@@ -260,16 +283,7 @@ body.filter-enabled .description {
 		margin-left: 12px;
 	}
 	.description {
-		max-height: unset;
-	}
-	article + article .link {
-		border-top: none;
-	}
-	article + article {
-		border-top: 1px dashed #888;
-	}
-	.link {
-		width: 100%;
+		height: unset;
 	}
 }
 </style>

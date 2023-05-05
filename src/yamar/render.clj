@@ -1,6 +1,5 @@
 (ns yamar.render
   (:require
-   [clojure.java.io :as io]
    [hiccup.core :refer [html]]
    [yamar.util :as u]))
 
@@ -18,48 +17,52 @@
    [:div.lav-value value]])
 
 (defn- render-act
-  [act]
-  (let [{:keys [has-details? act-date activity-url heading elapse distance altitude details]} act
+  [act user-id]
+  (let [{:keys [activity-id has-details? act-date activity-url heading elapse distance altitude details]} act
         {:keys [description rest-time sta-end-time]} details]
     [:article
-     [:div.main-line
+     [:div.side-pane
       [:div.act-date-time
        [:div.act-date act-date]
        (when (and has-details? sta-end-time)
          (let [[sta end] sta-end-time]
            [:div.act-time (str sta "〜" end)]))]
-      [:a.link {:href activity-url}
-       heading]]
-     [:div.sub-line1
-      [:div.elapse
-       (label-and-value-v "所要時間" elapse)]
-      (when has-details?
-        [:div.rest-time
-         (label-and-value-v "休憩時間" rest-time)])
-      [:div.distance
-       (label-and-value-v "距離" (str distance "km"))]
-      [:div.altitude
-       (label-and-value-v "標高" (str altitude "m"))]]
-     (when has-details? 
-       [:div.desc-line
-        [:div.description
-         description]
-        [:div.description-float
-         description]])]))
+      [:div.thumbnail {:style (str "background-image:url('" user-id "/" activity-id ".jpg')")}]]
+     [:div.main-pane
+      [:div.main-line
+       [:a.link {:href activity-url}
+        heading]]
+      [:div.sub-line1
+       [:div.elapse
+        (label-and-value-v "所要時間" elapse)]
+       (when has-details?
+         [:div.rest-time
+          (label-and-value-v "休憩時間" rest-time)])
+       [:div.distance
+        (label-and-value-v "距離" (str distance "km"))]
+       [:div.altitude
+        (label-and-value-v "標高" (str altitude "m"))]]
+      (when has-details? 
+        [:div.desc-line
+         [:div.description
+          description]
+         [:div.description-float
+          description]])]]))
 
 (defn- year-v
-  [year year-acts]
+  [year year-acts user-id]
   (let [act-list (u/rev-sort :act-date (get year-acts year))]
     [:div.year-wrap
      [:h2.year
       [:span (str year "年")]
       (num-items-v (count act-list))]
      [:div.article-list
-      (map render-act act-list)]]))
+      (map #(render-act % user-id) act-list)]]))
 
 (defn render
   [ar]
   (let [act-list (:activities ar)
+        user-id (:user-id ar)
         user-name (:user-name ar)
         year-acts (group-by :year act-list)
         years (u/rev-sort (keys year-acts))
@@ -78,7 +81,7 @@
               [:div.filter-off ""]
               [:input {:type "text"
                        :class "filter-input"}]]]
-            (map #(year-v % year-acts) years)])
+            (map #(year-v % year-acts user-id) years)])
      "<script type=\"text/javascript\">"
      script-str
      "</script></body></html>")))

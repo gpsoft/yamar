@@ -11,7 +11,7 @@ function updateFilter(inp) {
 		const d = a.querySelector('.description');
 		const dtxt = d ? d.innerText : '';
 		const hidden = enabled && kw.length>0 && !htxt.match(kw) && !dtxt.match(kw);
-		a.style.display = hidden ? 'none' : 'block';
+		a.style.display = hidden ? 'none' : 'flex';
 	});
 }
 window.addEventListener('load', ()=>{
