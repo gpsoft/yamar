@@ -4,3 +4,6 @@ target/
 .clj-kondo/
 .lsp/
 .nrepl-port
+
+docs/
+!docs/1764261.html
