@@ -85,7 +85,8 @@
                "フィルターモード"]
               [:div.filter-off ""]
               [:input {:type "text"
-                       :class "filter-input"}]]]
+                       :class "filter-input"
+                       :placeholder "検索キーワード"}]]]
             (map #(year-v % year-acts user-id) years)])
      "<script type=\"text/javascript\">"
      script-str

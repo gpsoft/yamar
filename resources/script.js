@@ -30,8 +30,10 @@ window.addEventListener('load', ()=>{
 		});
 	});
 	document.querySelectorAll('.filter-input').forEach((inp)=>{
-		inp.addEventListener('keyup', ()=>{
-			updateFilter(inp);
+		['keyup', 'cut', 'paste'].forEach(ev=>{
+			inp.addEventListener(ev, ()=>{
+				updateFilter(inp);
+			});
 		});
 	});
 });
