@@ -7,7 +7,7 @@ function updateFilter(inp) {
 	const enabled = document.body.classList.contains('filter-enabled');
 	const kw = inp.value;
 	document.querySelectorAll('article').forEach((a)=>{
-		const htxt = a.querySelector('.link').innerText;
+		const htxt = a.querySelector('.act-link').innerText;
 		const d = a.querySelector('.description');
 		const dtxt = d ? d.innerText : '';
 		const hidden = enabled && kw.length>0 && !htxt.match(kw) && !dtxt.match(kw);

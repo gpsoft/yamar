@@ -111,6 +111,7 @@
       (if (done? page-no max-page-no found-dup?)
         {:user-id user-id
          :user-name (scrape/user-name page)
+         :mypage-url (index-url user-id)
          :activities act-list}
         (do
          (progress "More index pages to go(max will be #" max-page-no ")")

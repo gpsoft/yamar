@@ -27,10 +27,11 @@
        (when (and has-details? sta-end-time)
          (let [[sta end] sta-end-time]
            [:div.act-time (str sta "〜" end)]))]
-      [:div.thumbnail {:style (str "background-image:url('" user-id "/" activity-id ".jpg')")}]]
+      (when has-details?
+        [:div.thumbnail {:style (str "background-image:url('" user-id "/" activity-id ".jpg')")}])]
      [:div.main-pane
       [:div.main-line
-       [:a.link {:href activity-url}
+       [:a.act-link {:href activity-url}
         heading]]
       [:div.sub-line1
        [:div.elapse
@@ -64,6 +65,7 @@
   (let [act-list (:activities ar)
         user-id (:user-id ar)
         user-name (:user-name ar)
+        mypage-url (:mypage-url ar)
         year-acts (group-by :year act-list)
         years (u/rev-sort (keys year-acts))
         html-str (u/read-resource! index)
@@ -73,7 +75,10 @@
      (html [:div.container
             [:div.heading
              [:h1
-              [:span (str user-name "さんの活動日記")]
+              [:span
+               [:a.mypage-link {:href mypage-url}
+                user-name]
+               "さんの活動日記"]
               (num-items-v (count act-list))]
              [:div.filter-wrap
               [:div.filter-on

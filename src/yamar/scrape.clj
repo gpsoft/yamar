@@ -193,5 +193,12 @@
           (assoc ar :activities)
           (u/write-edn! edn-file))
      nil))
- 
+
+ (let [edn-file "docs/1764261.edn"
+       ar (u/read-edn! edn-file {})
+       user-id (:user-id ar)]
+   (-> ar
+       (assoc :mypage-url (str "https://yamap.com/users/" user-id))
+       (->> (u/write-edn! edn-file))))
+
  )
