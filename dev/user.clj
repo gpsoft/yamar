@@ -80,6 +80,9 @@
                 [:div.name-hira name_hira]]
                [:a.link-gmap {:href (str "https://www.google.co.jp/maps/?q=" lng "," lat)
                     :target "_blank"}
+                ""]
+               [:a.link-gearth {:href (str "https://earth.google.com/web/@" lng "," lat, ",0a,200000d,1y,-30h,80t,0r")
+                    :target "_blank"}
                 ""]]
               [:div.highlights highlights]
               [:div.description description]]])]
