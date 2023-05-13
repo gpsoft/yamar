@@ -81,7 +81,7 @@
                [:a.link-gmap {:href (str "https://www.google.co.jp/maps/?q=" lng "," lat)
                     :target "_blank"}
                 ""]
-               [:a.link-gearth {:href (str "https://earth.google.com/web/@" lng "," lat, ",18a,200000d,1y,-30h,70t,0r")
+               [:a.link-gearth {:href (str "https://earth.google.com/web/@" lng "," lat, ",200a,200000d,1y,0h,75t,0r")
                     :target "_blank"}
                 ""]]
               [:div.highlights highlights]
