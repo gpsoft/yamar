@@ -6,4 +6,6 @@ target/
 .nrepl-port
 
 docs/
-!docs/1764261.html
+!docs/1764261.*
+!docs/1764261/
+!docs/hiroshima.html
