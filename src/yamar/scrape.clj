@@ -108,7 +108,7 @@
       (sel1 [:div.ActivityDetailTabLayout__Image :img])
       (attr1 :src)
       (u/split-url)
-      first))
+      #_first))
 
 (defn- mk-time
   ([m] (mk-time m "00"))
@@ -167,6 +167,8 @@
     (let [photos (photo-list page)
           pp-list (passed-point-list page)]
       {:cover-url (cover-url page)
+       ;; :cover-url can be either string
+       ;; or tuple [url-string q-map]
        :rest-time (rest-time page)
        :passed-points pp-list
        :sta-end-time (sta-end-time pp-list)

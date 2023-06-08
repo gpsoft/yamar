@@ -36,9 +36,14 @@
 
 (defn- thumbnail-url
   [cover-url]
-  (u/join-url cover-url {:t "crop"
+  (let [url-str (if (vector? cover-url) (first cover-url) cover-url)
+        st (:st (second cover-url))
+        e (:e (second cover-url))]
+    (u/join-url url-str {:st st
+                         :e e
+                         :t "crop"
                          :w 300
-                         :h 300}))
+                         :h 300})))
 
 (defn- fetch!
   [url]
@@ -140,7 +145,7 @@
           act-id (:activity-id act)
           thumb-file (u/resolve-path dir (str act-id ".jpg"))
           _ (progress "Fetching cover image for " act-id)
-          thumb-url (u/wget (thumbnail-url cover-url)
+          thumb-url (u/wget (u/tap! (thumbnail-url cover-url))
                             thumb-file)
           _ (Thread/sleep 5000)]
       (if thumb-url
