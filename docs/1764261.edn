@@ -1,4 +1,4 @@
-{ :user-id "1764261",
+{:user-id "1764261",
  :user-name "gyupon",
  :mypage-url "https://yamap.com/users/1764261?page=1",
  :activities
@@ -3868,4 +3868,72 @@
    :activity-url "https://yamap.com/activities/24262132",
    :act-date "2023.05.14(日)",
    :altitude "290",
-   :heading "モンベルへの道。水尻遊歩道 2023-05-14"}]}
+   :heading "モンベルへの道。水尻遊歩道 2023-05-14"}
+  {:has-details? true,
+   :activity-id 24666367,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/image2.yamap.co.jp/production/7313bdc9-a3c4-4e48-b592-c72c96306a99?st=SP7WEKR7wXD_8BgofkP0FQ&e=1686232800&t=crop&w=300&h=300",
+   :year 2023,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/image2.yamap.co.jp/production/7313bdc9-a3c4-4e48-b592-c72c96306a99"
+     {:e "1686232800",
+      :h "1080",
+      :st "SP7WEKR7wXD_8BgofkP0FQ",
+      :t "resize",
+      :w "1620",
+      :q "60"}
+     nil],
+    :rest-time "51:01",
+    :passed-points (["" ["07:13"]] ["" ["13:00"]]),
+    :sta-end-time ["07:13" "13:00"],
+    :description
+    "2023-06-03(土)6:30 快晴\n似島一周(ニノイチ)サイクリング\n約11kmの周回コースを左回りで\n\n思ったよりアップダウンが多いけど、どれも短めなので平気\nトイレ事情も良好\nいいとこだ",
+    :photos
+    ({:url-path "/activities/24666367/article#image-337467423",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467455",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467481",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467505",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467504",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467508",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467500",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467471",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467488",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467513",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467458",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467517",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467495",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467483",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467492",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467497",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467447",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467477",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467502",
+      :caption ""}
+     {:url-path "/activities/24666367/article#image-337467461",
+      :caption ""})},
+   :num-photos 20,
+   :elapse "05:46",
+   :distance "18.3",
+   :activity-url "https://yamap.com/activities/24666367",
+   :act-date "2023.06.03(土)",
+   :altitude "897",
+   :heading "ニノイチ。似島 2023-06-03"}]}
