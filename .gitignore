@@ -5,7 +5,7 @@ target/
 .lsp/
 .nrepl-port
 
-docs/
+docs/*
 !docs/1764261.*
 !docs/1764261/
 !docs/hiroshima.html
