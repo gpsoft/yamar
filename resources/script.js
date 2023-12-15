@@ -1,7 +1,7 @@
-function toggleCollapsed(wrap) {
-	const toggle = wrap.classList.contains('collapsed');
+function toggleCollapsed(wrap, toggle) {
+	if ( toggle === undefined ) toggle = wrap.classList.contains('collapsed');
 	wrap.querySelector('.article-list').style.display = toggle ? 'block' : 'none';
-	wrap.classList.toggle('collapsed');
+	wrap.classList.toggle('collapsed', !toggle);
 }
 function updateFilter(inp) {
 	const enabled = document.body.classList.contains('filter-enabled');
@@ -12,6 +12,10 @@ function updateFilter(inp) {
 		const dtxt = d ? d.innerText : '';
 		const hidden = enabled && kw.length>0 && !htxt.match(kw) && !dtxt.match(kw);
 		a.style.display = hidden ? 'none' : 'flex';
+		if ( enabled && !hidden ) {
+			const wrap = a.closest('.year-wrap');
+			toggleCollapsed(wrap, true);
+		}
 	});
 }
 window.addEventListener('load', ()=>{
