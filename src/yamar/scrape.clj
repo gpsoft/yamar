@@ -111,8 +111,8 @@
       #_first))
 
 (defn- mk-time
-  ([m] (mk-time m "00"))
-  ([m h]
+  ([m] (mk-time "00" m))
+  ([h m]
    (str (u/pad00 h) ":" (u/pad00 m))))
 
 (defn- rest-time

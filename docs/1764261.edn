@@ -713,7 +713,7 @@
    :details
    {:cover-url
     "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/8fcec234-8972-4c89-8650-bdfec642e904",
-    :rest-time "00:01",
+    :rest-time "01:00",
     :passed-points
     (["" ["10:02"]]
      ["柚木城山" ["10:34" "10:42"]]
@@ -3884,7 +3884,7 @@
       :w "1620",
       :q "60"}
      nil],
-    :rest-time "51:01",
+    :rest-time "01:51",
     :passed-points (["" ["07:13"]] ["" ["13:00"]]),
     :sta-end-time ["07:13" "13:00"],
     :description
@@ -3947,7 +3947,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/1c4d8129-e87e-4d30-a51c-2eeead71254f"
      {:h "1080", :t "resize", :w "1920", :q "60"}
      nil],
-    :rest-time "35:01",
+    :rest-time "01:35",
     :passed-points
     (["" ["11:26"]]
      ["日ノ浦山登山口（Dルート）" ["11:31" "11:40"]]
@@ -4035,7 +4035,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/d8ee2714-1b15-44a7-b819-828173715753"
      {:h "1080", :t "resize", :w "1620", :q "60"}
      nil],
-    :rest-time "26:01",
+    :rest-time "01:26",
     :passed-points
     (["" ["07:46"]]
      ["南登山口" ["07:46" "07:51"]]
@@ -4127,7 +4127,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/39e18a56-448e-4f5b-84a4-c706e75b6ffc"
      {:h "1080", :t "resize", :w "1620", :q "60"}
      nil],
-    :rest-time "33:01",
+    :rest-time "01:33",
     :passed-points
     (["" ["11:52"]]
      ["展望ポイント" ["13:16" "13:37"]]
@@ -4259,7 +4259,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/47bcc864-08de-4a04-89e0-c7ee067573fb"
      {:h "1080", :t "resize", :w "1619", :q "60"}
      nil],
-    :rest-time "41:01",
+    :rest-time "01:41",
     :passed-points
     (["" ["11:19"]]
      ["登山口" ["11:19" "11:21"]]
@@ -4304,7 +4304,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/feaf5ff0-5c73-4632-a424-30562612b426"
      {:h "1080", :t "resize", :w "1619", :q "60"}
      nil],
-    :rest-time "19:02",
+    :rest-time "02:19",
     :passed-points
     (["" ["09:15"]]
      ["天応駅" ["09:31" "09:32"]]
@@ -4371,7 +4371,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/efbf7eae-4b51-41f0-b0fe-899c1ef9d3d2"
      {:h "1080", :t "resize", :w "1620", :q "60"}
      nil],
-    :rest-time "51:01",
+    :rest-time "01:51",
     :passed-points
     (["" ["09:01"]]
      ["おむすび岩" ["09:59" "10:57"]]
@@ -4421,7 +4421,7 @@
     ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/57e8e1d2-dc04-43cf-a876-2d285df5f0f6"
      {:h "1080", :t "resize", :w "1620", :q "60"}
      nil],
-    :rest-time "51:01",
+    :rest-time "01:51",
     :passed-points
     (["" ["09:27"]]
      ["奥野原登山口" ["09:48" "09:50"]]
