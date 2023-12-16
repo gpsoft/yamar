@@ -4360,4 +4360,104 @@
    :activity-url "https://yamap.com/activities/27695996",
    :act-date "2023.10.24(火)",
    :altitude "616",
-   :heading "筋肉痛必至。烏帽子岩山 2023-10-24(pon)"}]}
+   :heading "筋肉痛必至。烏帽子岩山 2023-10-24(pon)"}
+  {:has-details? true,
+   :activity-id 28685588,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/efbf7eae-4b51-41f0-b0fe-899c1ef9d3d2?t=crop&w=300&h=300",
+   :year 2023,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/efbf7eae-4b51-41f0-b0fe-899c1ef9d3d2"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "51:01",
+    :passed-points
+    (["" ["09:01"]]
+     ["おむすび岩" ["09:59" "10:57"]]
+     ["大野権現山" ["11:52" "12:58"]]
+     ["権現山登山口" ["13:56" "13:59"]]
+     ["" ["14:10"]]),
+    :sta-end-time ["09:01" "14:10"],
+    :description
+    "2023-12-09(土)9:00 晴のち曇り\n旬を逃してしまったけど、大野権現山へ\n\n先人のアドバイスを参考に、渡ノ瀬ダム経由のルートを選択\nナビがあるとはいえ、慣れない道のドライブは緊張する\n道を間違ったり、際どい離合があったりしつつ、\n何とか駐車場に到着\nはぁ疲れた\n\n遠かったけど、トイレもあるし、\nちゃんとした駐車場に停めて登山できるのは助かる",
+    :photos
+    ({:url-path "/activities/28685588/article#image-393847439",
+      :caption "いきなり到着、おむすび岩"}
+     {:url-path "/activities/28685588/article#image-393847449",
+      :caption "南西方面"}
+     {:url-path "/activities/28685588/article#image-393847442",
+      :caption "あの岩肌が三倉岳らしい"}
+     {:url-path "/activities/28685588/article#image-393921230",
+      :caption "ベニマンサク湖の向こうがロックガーデン方面。さらに奥の美形は経小屋山"}
+     {:url-path "/activities/28685588/article#image-393847455",
+      :caption "大野権現山。2つの標高を持つ山? 以前、広島南アルプスから見た姿が美しかったのを覚えている"}
+     {:url-path "/activities/28685588/article#image-393847436",
+      :caption "野貝原山。廃墟となった、のうが高原のリゾートホテルが見える"}
+     {:url-path "/activities/28685588/article#image-393959504",
+      :caption "大峯山"}
+     {:url-path "/activities/28685588/article#image-393847456",
+      :caption "下山します"}
+     {:url-path "/activities/28685588/article#image-393847490",
+      :caption ""}
+     {:url-path "/activities/28685588/article#image-393847479",
+      :caption ""}
+     {:url-path "/activities/28685588/article#image-393847472",
+      :caption "いいとこでした"})},
+   :num-photos 11,
+   :elapse "05:08",
+   :distance "5.8",
+   :activity-url "https://yamap.com/activities/28685588",
+   :act-date "2023.12.09(土)",
+   :altitude "429",
+   :heading "登山は登山口に立つまでが9割。大野権現山 2023-12-09"}
+  {:has-details? true,
+   :activity-id 28553411,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/57e8e1d2-dc04-43cf-a876-2d285df5f0f6?t=crop&w=300&h=300",
+   :year 2023,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/57e8e1d2-dc04-43cf-a876-2d285df5f0f6"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "51:01",
+    :passed-points
+    (["" ["09:27"]]
+     ["奥野原登山口" ["09:48" "09:50"]]
+     ["水丸山" ["11:12" "11:40"]]
+     ["弥仙山" ["12:26" "13:30"]]
+     ["" ["14:32"]]),
+    :sta-end-time ["09:27" "14:32"],
+    :description
+    "2023-12-02(土)9:30 晴れ\n瀬野川公園から水ヶ丸山・弥仙山を周回\n\n国土地理院の地図を印刷して、\nGPS見ちゃダメ縛りで行く\n\n往路は、ひたすら尾根を登る\n地形が単調なので距離感がつかめない\nここが511mピークに違いない、と思った場所は、\nあとで確認すると130m(距離じゃなく高度で)も下だった\nどうりで山頂が遠いわけだ\n本物の511mピークは岩場で、眺望あり\n\n水ヶ丸山から弥仙山への縦走路は、道幅が広く快適\n途中に霧ヶ峰展望地あり\n\n弥仙山山頂で眺望を楽しみながら昼食\nセノハラ峠まで戻って、復路は谷筋を下る\nしばらくは滑りやすい急傾斜だが、\n標高340m付近で沢を渡ったあとは歩きやすくなる\nここでも、モノクロ印刷した地図では沢が判別できず、\n位置がつかめなかった\n\nGPSは偉大だ",
+    :photos
+    ({:url-path "/activities/28553411/article#image-392130735",
+      :caption "511mピークから、鷹ノ巣山方面"}
+     {:url-path "/activities/28553411/article#image-392130698",
+      :caption "今日の相棒は、ターちゃん"}
+     {:url-path "/activities/28553411/article#image-392130736",
+      :caption "霧ヶ峰展望地から"}
+     {:url-path "/activities/28553411/article#image-392130737",
+      :caption "八世以山や長者山などの未踏エリア"}
+     {:url-path "/activities/28553411/article#image-392130713",
+      :caption "弥仙山652m。標高は水ヶ丸山に負けてるけど、眺望はこっちの圧勝"}
+     {:url-path "/activities/28553411/article#image-392130725",
+      :caption ""}
+     {:url-path "/activities/28553411/article#image-392130732",
+      :caption "広島大学、鏡山、三永水源地"}
+     {:url-path "/activities/28553411/article#image-392130718",
+      :caption "鷹ノ巣山?"}
+     {:url-path "/activities/28553411/article#image-392130687",
+      :caption "とび島海道の島が見えてる気がするけど、大崎下島かな?"}
+     {:url-path "/activities/28553411/article#image-392130697",
+      :caption "白木山"}
+     {:url-path "/activities/28553411/article#image-392130700",
+      :caption "隣の小倉山かと思ったけど、もっと手前の小ピークだな。奥に龍王山"})},
+   :num-photos 11,
+   :elapse "05:05",
+   :distance "6.9",
+   :activity-url "https://yamap.com/activities/28553411",
+   :act-date "2023.12.02(土)",
+   :altitude "705",
+   :heading "GPSに頼らず。水ヶ丸山・弥仙山 2023-12-02(pon)"}]}

@@ -8,6 +8,7 @@ all:
 	@echo make run
 	@echo make run-details
 	@echo make uber
+	@echo make watch
 
 .PHONY: $(CMD_LIST)
 .SILENT: $(CMD_LIST)
@@ -24,6 +25,11 @@ run-details:
 uber:
 	clojure -T:build clean
 	clojure -T:build uber
+
+watch:
+	clojure -M -m yamar.core 1677239
+	clojure -M -m yamar.core 717451
+	clojure -M -m yamar.core 1764261
 
 %:
 	@:
