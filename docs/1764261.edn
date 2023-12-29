@@ -4460,4 +4460,147 @@
    :activity-url "https://yamap.com/activities/28553411",
    :act-date "2023.12.02(土)",
    :altitude "705",
-   :heading "GPSに頼らず。水ヶ丸山・弥仙山 2023-12-02(pon)"}]}
+   :heading "GPSに頼らず。水ヶ丸山・弥仙山 2023-12-02(pon)"}
+  {:has-details? true,
+   :activity-id 28934405,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/9c5ba0d3-0ea8-4dfa-871e-774b889e52c6?t=crop&w=300&h=300",
+   :year 2023,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/9c5ba0d3-0ea8-4dfa-871e-774b889e52c6"
+     {:h "1080", :t "resize", :w "1920", :q "60"}
+     nil],
+    :rest-time "00:57",
+    :passed-points
+    (["" ["12:25"]]
+     ["日浦山" ["13:12" "14:05"]]
+     ["観音免公園" ["15:05"]]
+     ["日ノ浦山登山口（Dルート）" ["15:06" "15:14"]]
+     ["観音免公園" ["15:14"]]
+     ["" ["15:17"]]),
+    :sta-end-time ["12:25" "15:17"],
+    :description
+    "2023-12-26(火)12:30 晴れ\n日浦山サイクリングに続く第二部は登山\n\n往路は、成本からの尾根コース\n復路は、初めてのCルート\n\nCルートは、平成30年豪雨の影響で不通だったようだが、\n分岐点を通過するたびに気になっていた\n整備してくれた皆様に感謝します\nありがとうございます",
+    :photos
+    ({:url-path "/activities/28934405/article#image-397174651",
+      :caption "成本の階段からスタート"}
+     {:url-path "/activities/28934405/article#image-397163001",
+      :caption "長い階段だけど、上まで登り切らずに…"}
+     {:url-path "/activities/28934405/article#image-397163007",
+      :caption "左の尾根道へ"}
+     {:url-path "/activities/28934405/article#image-397163008",
+      :caption "「えっ」と声が漏れるほどキレイに履かれた道。優しさに包まれる"}
+     {:url-path "/activities/28934405/article#image-397162994",
+      :caption "落ち着く場所"}
+     {:url-path "/activities/28934405/article#image-397163002",
+      :caption "ありがとう"}
+     {:url-path "/activities/28934405/article#image-397163009",
+      :caption "感謝、感謝"}
+     {:url-path "/activities/28934405/article#image-397163004",
+      :caption "もうすぐ地獄岩。サイクリングの疲れで、両脚とも痙攣気味"}
+     {:url-path "/activities/28934405/article#image-397162992",
+      :caption "今日の相棒はクロちゃん"}
+     {:url-path "/activities/28934405/article#image-397162998",
+      :caption "山頂。たっぷりの日差しで暖かい"}
+     {:url-path "/activities/28934405/article#image-397163003",
+      :caption "いざCルートへ。楽しみ～"}
+     {:url-path "/activities/28934405/article#image-397163012",
+      :caption "倒木や突き出た枝などに赤ペンキ。人と山への気配りのバランス"}
+     {:url-path "/activities/28934405/article#image-397163005",
+      :caption "最初のシダゾーンを抜けてご対面。シダゾーンは数か所あるが、どれも短いので助かる"}
+     {:url-path "/activities/28934405/article#image-397163006",
+      :caption "Cルート、良かった。気に入りました"}
+     {:url-path "/activities/28934405/article#image-397163010",
+      :caption "これから、どのルートを使うか、ますます迷うことになりそう"})},
+   :num-photos 15,
+   :elapse "02:51",
+   :distance "2.7",
+   :activity-url "https://yamap.com/activities/28934405",
+   :act-date "2023.12.26(火)",
+   :altitude "388",
+   :heading "念願のCルート。日浦山 2023-12-26(pon)"}
+  {:has-details? true,
+   :activity-id 28934402,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/b8062ddf-9d90-46e3-929c-7019c1d8ee95?t=crop&w=300&h=300",
+   :year 2023,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/b8062ddf-9d90-46e3-929c-7019c1d8ee95"
+     {:h "1080", :t "resize", :w "1920", :q "60"}
+     nil],
+    :rest-time "00:03",
+    :passed-points
+    (["" ["10:30"]]
+     ["海田市駅" ["10:31"]]
+     ["Bルート登山口" ["10:37" "10:39"]]
+     ["Aルート登山口" ["10:44" "10:47"]]
+     ["観音免公園" ["10:59" "11:02"]]
+     ["登山口" ["11:19" "11:22"]]
+     ["登山口" ["11:59" "12:02"]]
+     ["登山口" ["12:02" "12:05"]]
+     ["Bルート登山口" ["12:13"]]
+     ["" ["12:20"]]),
+    :sta-end-time ["10:30" "12:20"],
+    :description
+    "2023-12-26(火)10:30 曇のち晴\nチャリで日浦山(の周囲)を周回する\n\nすべての登山口を見て回るという野望は捨て、\n標高差の少ない道を選択\n南側に比べると、北側の道は車が少なくて走りやすかった\n\nもちろん、第二部では登山もする",
+    :photos
+    ({:url-path "/activities/28934402/article#image-397019041",
+      :caption "左回り。海田市駅スタート"}
+     {:url-path "/activities/28934402/article#image-397019057",
+      :caption "線路沿いを東へ進むと、よく活動日記に登場するパン屋"}
+     {:url-path "/activities/28934402/article#image-397019049",
+      :caption "少し戻って山側へ入ると、Bルートの入口。前の道は県道274号"}
+     {:url-path "/activities/28934402/article#image-397019054",
+      :caption "県道を東へ進むと熊野神社"}
+     {:url-path "/activities/28934402/article#image-397019046",
+      :caption "その先で左折"}
+     {:url-path "/activities/28934402/article#image-397019067",
+      :caption "矢印の先、ひまわり観音を目指して進めば、Aルートの入口"}
+     {:url-path "/activities/28934402/article#image-397019065",
+      :caption ""}
+     {:url-path "/activities/28934402/article#image-397019058",
+      :caption "県道に戻って、さらに東へ進み、成本地区へ"}
+     {:url-path "/activities/28934402/article#image-397019053",
+      :caption "二神歯科医院の角を左折して登っていくと(行かんけど)、砂防ダムの左手から入山できる"}
+     {:url-path "/activities/28934402/article#image-397019059",
+      :caption "約100m先の階段の先にも入山ポイントあり。こっちは尾根"}
+     {:url-path "/activities/28934402/article#image-397019050",
+      :caption "さらに県道を進んで、海田町ふるさと館、観音免公園への分岐"}
+     {:url-path "/activities/28934402/article#image-397019066",
+      :caption "ここがCルート、Dルートの入口"}
+     {:url-path "/activities/28934402/article#image-397019072",
+      :caption
+      "次は影地区。成り行きで電波塔の南に迷い込んだ。258mピークから南東へ伸びるルートには、この辺から取り付くのかな? 引き返す"}
+     {:url-path "/activities/28934402/article#image-397019078",
+      :caption "影コースの入口"}
+     {:url-path "/activities/28934402/article#image-397019064",
+      :caption "電波塔の方へ南下すると、途中にいくつか入山ポイントがあった(写真なし)。この墓地の奥からも行けそう"}
+     {:url-path "/activities/28934402/article#image-397019048",
+      :caption "引き返して、為角へ向かおう"}
+     {:url-path "/activities/28934402/article#image-397019045",
+      :caption "県道84号を避け、畑賀川を右手に見ながら北上"}
+     {:url-path "/activities/28934402/article#image-397019052",
+      :caption "舗装路だけど、一応、中国自然歩道"}
+     {:url-path "/activities/28934402/article#image-397019076",
+      :caption ""}
+     {:url-path "/activities/28934402/article#image-397019075",
+      :caption ""}
+     {:url-path "/activities/28934402/article#image-397019061",
+      :caption "左は砂防ダムの作業用道路かな? 右へ"}
+     {:url-path "/activities/28934402/article#image-397019055",
+      :caption "ここを登っていくと(行かんけど)、砂防ダムの右手に為角の登山口がある"}
+     {:url-path "/activities/28934402/article#image-397019079",
+      :caption "この先、心臓破りの坂"}
+     {:url-path "/activities/28934402/article#image-397019080",
+      :caption "そして、本日、最後の登山口。ここから登るのが最短かな? まぁまぁ急登だけど"}
+     {:url-path "/activities/28934402/article#image-397019069",
+      :caption "向かいは、岩滝山への登山口。左へ進むと船越中。一旦、下まで降りて、第二部へ"})},
+   :num-photos 25,
+   :elapse "01:49",
+   :distance "10.6",
+   :activity-url "https://yamap.com/activities/28934402",
+   :act-date "2023.12.26(火)",
+   :altitude "237",
+   :heading "ヒノイチ。日浦山サイクリング 2023-12-26(pon)"}]}
