@@ -4604,9 +4604,31 @@
    :act-date "2023.12.26(火)",
    :altitude "237",
    :heading "ヒノイチ。日浦山サイクリング 2023-12-26(pon)"}
-  {:activity-id 29065519,
-   :thumbnail-url nil,
+  {:has-details? true,
+   :activity-id 29065519,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/73a16968-ec36-4c28-ae25-b1fce451ece8?t=crop&w=300&h=300",
    :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/73a16968-ec36-4c28-ae25-b1fce451ece8"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "00:00",
+    :passed-points
+    (["" ["10:57"]] ["坂登山口" ["11:13" "11:18"]] ["" ["11:39"]]),
+    :sta-end-time ["10:57" "11:39"],
+    :description
+    "2024-01-02(火)11:00 晴れ\n総頭川の上流、かつての砥場遊歩道入口を偵察\nこの遊歩道は、市光山と子の岳の間で中国自然歩道に合流する\n\n上流側の砂防ダムは完成してるけど、\n残念ながら、まだ立入禁止になっている\nいまは下流側の工事中\nそれが終わってから、通行解禁になるのかな?\n\nあらためて国土交通省の資料を見ると、\n川の反対側に新しい町道を付けるみたい\n先は長そう",
+    :photos
+    ({:url-path "/activities/29065519/article#image-399099747",
+      :caption "国土交通省の資料。黄色が完成済み、赤が工事中"}
+     {:url-path "/activities/29065519/article#image-399033191",
+      :caption "下流側は工事中。迂回路はあるので、先に進むことは可能"}
+     {:url-path "/activities/29065519/article#image-399033193",
+      :caption "上流側の砂防ダム2基は完成している"}
+     {:url-path "/activities/29065519/article#image-399033190",
+      :caption "しかし立入禁止。かつて、この先に砥場遊歩道があったのかな?"})},
    :num-photos 4,
    :elapse "00:41",
    :distance "1.7",
@@ -4614,9 +4636,40 @@
    :act-date "2024.01.02(火)",
    :altitude "117",
    :heading "偵察。総頭川上流 2024-01-02"}
-  {:activity-id 29055449,
-   :thumbnail-url nil,
+  {:has-details? true,
+   :activity-id 29055449,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/2968e2cd-3ab5-4e63-9e56-4238a04fa1a6?t=crop&w=300&h=300",
    :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/2968e2cd-3ab5-4e63-9e56-4238a04fa1a6"
+     {:h "1080", :t "resize", :w "1763", :q "60"}
+     nil],
+    :rest-time "01:13",
+    :passed-points
+    (["" ["10:32"]]
+     ["登山口" ["10:32" "10:33"]]
+     ["登山口" ["10:37" "10:41"]]
+     ["絵下山" ["11:25" "11:46"]]
+     ["絵下山" ["13:09" "13:14"]]
+     ["登山口" ["14:05" "14:10"]]
+     ["登山口" ["14:13" "14:14"]]
+     ["" ["14:14"]]),
+    :sta-end-time ["10:32" "14:14"],
+    :description
+    "2024-01-01(月)10:30 晴時々曇\n昨年に続き、元旦から絵下山へ\n登山4年目。事故なく楽しめますように",
+    :photos
+    ({:url-path "/activities/29055449/article#image-398569214",
+      :caption ""}
+     {:url-path "/activities/29055449/article#image-398569396",
+      :caption ""}
+     {:url-path "/activities/29055449/article#image-398569315",
+      :caption ""}
+     {:url-path "/activities/29055449/article#image-398569162",
+      :caption ""}
+     {:url-path "/activities/29055449/article#image-398569243",
+      :caption ""})},
    :num-photos 5,
    :elapse "03:42",
    :distance "4.9",
