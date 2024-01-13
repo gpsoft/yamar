@@ -4603,4 +4603,24 @@
    :activity-url "https://yamap.com/activities/28934402",
    :act-date "2023.12.26(火)",
    :altitude "237",
-   :heading "ヒノイチ。日浦山サイクリング 2023-12-26(pon)"}]}
+   :heading "ヒノイチ。日浦山サイクリング 2023-12-26(pon)"}
+  {:activity-id 29065519,
+   :thumbnail-url nil,
+   :year 2024,
+   :num-photos 4,
+   :elapse "00:41",
+   :distance "1.7",
+   :activity-url "https://yamap.com/activities/29065519",
+   :act-date "2024.01.02(火)",
+   :altitude "117",
+   :heading "偵察。総頭川上流 2024-01-02"}
+  {:activity-id 29055449,
+   :thumbnail-url nil,
+   :year 2024,
+   :num-photos 5,
+   :elapse "03:42",
+   :distance "4.9",
+   :activity-url "https://yamap.com/activities/29055449",
+   :act-date "2024.01.01(月)",
+   :altitude "412",
+   :heading "謹賀新年。絵下山 2024-01-01"}]}
