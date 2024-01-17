@@ -4676,4 +4676,52 @@
    :activity-url "https://yamap.com/activities/29055449",
    :act-date "2024.01.01(月)",
    :altitude "412",
-   :heading "謹賀新年。絵下山 2024-01-01"}]}
+   :heading "謹賀新年。絵下山 2024-01-01"}
+  {:has-details? true,
+   :activity-id 29237946,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/382a733a-d0f9-499f-b7b0-5a4e90bf6d65?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/382a733a-d0f9-499f-b7b0-5a4e90bf6d65"
+     {:h "1080", :t "resize", :w "1920", :q "60"}
+     nil],
+    :rest-time "01:27",
+    :passed-points
+    (["" ["09:34"]]
+     ["呉ポートピア駅" ["09:37" "09:40"]]
+     ["登山口" ["09:48" "09:52"]]
+     ["天狗城山" ["10:23" "10:26"]]
+     ["展望ポイント" ["10:26" "10:38"]]
+     ["天狗城山" ["10:38" "10:41"]]
+     ["中天狗" ["10:50" "11:03"]]
+     ["小松尾山" ["11:19" "11:30"]]
+     ["市光山" ["11:44" "11:51"]]
+     ["天地峠" ["12:40" "12:51"]]
+     ["天狗岩" ["13:23" "13:55"]]
+     ["呉ポートピア駅" ["15:29"]]
+     ["" ["15:31"]]),
+    :sta-end-time ["09:34" "15:31"],
+    :description
+    "2024-01-08(月)9:30 曇り\n天地峠を通ってみたいので、天狗城山から天狗岩へ縦走する\n天地峠は、総頭川(坂地区)と天地川(小屋浦地区)、それぞれの上流に位置する峠\n\n呉ポーの駐車場スタート\n天狗城山から、絵下山方面への縦走路を進み、市光山の先で砥場遊歩道へ分岐\nさらにその先で天地峠へ分岐する\n\n天地峠の前後は、思ったより平和な道だった\nツルツル地面の急勾配区間があるので注意が必要だが、\n道幅もまぁまぁ広いし、道迷いの心配も無かった(いまの時期だけか)\n\n砥場遊歩道が通行禁止になってなかったのが不思議\n出口の砂防ダム周辺は、まだ立入禁止のはずだが…\n砂防ダムを迂回できるのかな?\n\n天狗岩のあとは、西谷遊歩道で小屋浦へ下山した\n正式な開通の告知はまだみたいだけど、\n問題なく使える\nただし、坂町の遊歩道あるあるで、階段が長い",
+    :photos
+    ({:url-path "/activities/29237946/article#image-400917039",
+      :caption "今日の天気予報はウェザーニュースに軍配。tenki.jpは日中ずっと☀"}
+     {:url-path "/activities/29237946/article#image-400917057",
+      :caption "相棒はクーちゃん"}
+     {:url-path "/activities/29237946/article#image-400917042",
+      :caption "天地峠への分岐"}
+     {:url-path "/activities/29237946/article#image-400917038",
+      :caption "展望岩あり"}
+     {:url-path "/activities/29237946/article#image-400917053",
+      :caption "天地峠に到着"}
+     {:url-path "/activities/29237946/article#image-400917036",
+      :caption "西谷遊歩道からの眺望"})},
+   :num-photos 6,
+   :elapse "05:56",
+   :distance "10.4",
+   :activity-url "https://yamap.com/activities/29237946",
+   :act-date "2024.01.08(月)",
+   :altitude "853",
+   :heading "天狗に始まり、天狗に終わる。天地峠 2024-01-08(pon)"}]}
