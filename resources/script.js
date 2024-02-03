@@ -34,10 +34,8 @@ window.addEventListener('load', ()=>{
 		});
 	});
 	document.querySelectorAll('.filter-input').forEach((inp)=>{
-		['keyup', 'cut', 'paste'].forEach(ev=>{
-			inp.addEventListener(ev, ()=>{
-				updateFilter(inp);
-			});
+		inp.addEventListener('input', ()=>{
+			updateFilter(inp);
 		});
 	});
 });
