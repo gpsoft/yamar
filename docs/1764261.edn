@@ -4724,4 +4724,47 @@
    :activity-url "https://yamap.com/activities/29237946",
    :act-date "2024.01.08(月)",
    :altitude "853",
-   :heading "天狗に始まり、天狗に終わる。天地峠 2024-01-08(pon)"}]}
+   :heading "天狗に始まり、天狗に終わる。天地峠 2024-01-08(pon)"}
+  {:has-details? true,
+   :activity-id 29825660,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/1e80720f-d54f-4616-9001-de492ec1ed5c?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/1e80720f-d54f-4616-9001-de492ec1ed5c"
+     {:h "1080", :t "resize", :w "1440", :q "60"}
+     nil],
+    :rest-time "01:32",
+    :passed-points
+    (["" ["08:26"]]
+     ["日浦山" ["09:14" "09:28"]]
+     ["登山口" ["10:15" "10:16"]]
+     ["蓮華寺山" ["11:30" "11:51"]]
+     ["高城山" ["12:53" "13:33"]]
+     ["登山口" ["14:22" "14:26"]]
+     ["瀬野駅" ["14:39" "14:47"]]
+     ["" ["14:47"]]),
+    :sta-end-time ["08:26" "14:47"],
+    :description
+    "2024-02-12(月)8:30 曇のち晴\n日浦山から蓮華寺山、高城山へ縦走する\n\n前回、10.4kmも歩いたのに、コース定数「ふつう」と言われたので、\nついカッとなって「きつい」に挑戦してしまった\n蓮華寺山のあとはペースが落ち、高城山へのラストの登りは両脚痙攣寸前\n\nこの調子だと、安芸アルプスや広島南アルプスの縦走は無理だ\nペース配分とか水分補給頻度とか調整せんといけん",
+    :photos
+    ({:url-path "/activities/29825660/article#image-408842145",
+      :caption "今日のパートナーは、ターちゃん"}
+     {:url-path "/activities/29825660/article#image-408421406",
+      :caption "いつもと反対側から見る日浦山は新鮮"}
+     {:url-path "/activities/29825660/article#image-408844249",
+      :caption "風と空を失った五輪塔"}
+     {:url-path "/activities/29825660/article#image-408421404",
+      :caption "五輪塔から見る、為角の田園が好き"}
+     {:url-path "/activities/29825660/article#image-408849528",
+      :caption "高城テーマパーク"}
+     {:url-path "/activities/29825660/article#image-408421429",
+      :caption "水ヶ丸山と弥仙山"})},
+   :num-photos 6,
+   :elapse "06:20",
+   :distance "11.0",
+   :activity-url "https://yamap.com/activities/29825660",
+   :act-date "2024.02.12(月)",
+   :altitude "1079",
+   :heading "さすがに「きつい」。日浦山〜高城山 2024-02-12(pon)"}]}
