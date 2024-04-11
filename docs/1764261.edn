@@ -5075,4 +5075,84 @@
    :activity-url "https://yamap.com/activities/30404049",
    :act-date "2024.03.16(土)",
    :altitude "341",
-   :heading "地図なし活動。鷹の条山 2024-03-16"}]}
+   :heading "地図なし活動。鷹の条山 2024-03-16"}
+  {:has-details? true,
+   :activity-id 30858857,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/image2.yamap.co.jp/production/a05de46a-755d-44fa-8c70-282904e4240d?st=QJkLy22xYHACo4jL6sOu5A&e=1712836800&t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/image2.yamap.co.jp/production/a05de46a-755d-44fa-8c70-282904e4240d"
+     {:e "1712836800",
+      :h "1080",
+      :st "QJkLy22xYHACo4jL6sOu5A",
+      :t "resize",
+      :w "1920",
+      :q "60"}
+     nil],
+    :rest-time "01:57",
+    :passed-points
+    (["" ["09:29"]]
+     ["登山口" ["09:33" "09:44"]]
+     ["陀峯山" ["11:58" "13:10"]]
+     ["展望ポイント" ["13:36" "13:51"]]
+     ["登山口" ["14:46" "14:49"]]
+     ["" ["14:51"]]),
+    :sta-end-time ["09:29" "14:51"],
+    :description
+    "2024-04-10(水)9:30 快晴\n仕事の無い平日。三倉岳か陀峯山で迷った結果、陀峯山へ\n初めてなので、オーソドックスに右回りの周回コースで\n\nダイナミックな眺望が素晴らしく、\n普段は黙々と頂上を目指して登ってしまう自分が、\n最初の分岐ポイントまで、コースタイムの2倍かかってしまった\n記念スタンプ通りの「絶景」\n\n舗装路区間を除けば、往路も復路も、\n眺望あり、適度な緊張感ありで、退屈しない\n難所が多そうでビビってたけど、行ってよかった\n\n■\n\n入山ポイントにはリボンが多めに付いてて、分かりやすくなってた\n側溝を飛び越えたりする必要は無い\n\n序盤は、ザレた岩場の急斜面が多くて滑りやすいけど、\n慎重に歩けば問題ないレベル\n\n目印や明瞭な踏み跡が無いので、コース取りは少し難しいかも\n標高140m付近の大岩は、右に巻くのが正解\n\n舗装路区間の各所にショートカットがあるが、\n時間的、体力的、距離的に、それほど効果は無い印象\n\n下山ポイントの目印は、\n天狗岩の広場の左手にあるオレンジ色の大岩\n\n下山も、コース取りに確信が持てないまま下る\n標高180m付近で立派な鎖に出会ってホッとした\nそのあとは、リボンや鎖が導いてくれる",
+    :photos
+    ({:url-path "/activities/30858857/article#image-423348424",
+      :caption "丈ノ内展望所"}
+     {:url-path "/activities/30858857/article#image-423348408",
+      :caption "頭蓋骨みたいな岩があるとこ"}
+     {:url-path "/activities/30858857/article#image-423348414",
+      :caption "303mピーク"}
+     {:url-path "/activities/30858857/article#image-423348426",
+      :caption "羅漢石を右手に見ながら登る"}
+     {:url-path "/activities/30858857/article#image-423348410",
+      :caption "今日の相棒はクーちゃん"}
+     {:url-path "/activities/30858857/article#image-423348407",
+      :caption "横顔"}
+     {:url-path "/activities/30858857/article#image-423362091",
+      :caption "山頂"}
+     {:url-path "/activities/30858857/article#image-423348416",
+      :caption "北側の眺望"}
+     {:url-path "/activities/30858857/article#image-423348423",
+      :caption "南西側"}
+     {:url-path "/activities/30858857/article#image-423348418",
+      :caption "星空観望所"}
+     {:url-path "/activities/30858857/article#image-423348427",
+      :caption "山頂駐車場の脇にある岩場で昼食"}
+     {:url-path "/activities/30858857/article#image-423348425",
+      :caption "とびしま方面。目を引く採石場は、上蒲刈島"}
+     {:url-path "/activities/30858857/article#image-423348429",
+      :caption "連なって見える、上下の黒島。いまは廃棄物処理に利用されているとのこと"}
+     {:url-path "/activities/30858857/article#image-423348417",
+      :caption "石鎚山"}
+     {:url-path "/activities/30858857/article#image-423358368",
+      :caption "倉橋島の火山"}
+     {:url-path "/activities/30858857/article#image-423348420",
+      :caption "丈ノ内展望所から頭頂部を見下ろす。ちょっと怖い"}
+     {:url-path "/activities/30858857/article#image-423348413",
+      :caption "西側"}
+     {:url-path "/activities/30858857/article#image-423348415",
+      :caption "東側に、天狗岩と早瀬大橋"}
+     {:url-path "/activities/30858857/article#image-423348412",
+      :caption "あの岩の上に"}
+     {:url-path "/activities/30858857/article#image-423362937",
+      :caption "立った"}
+     {:url-path "/activities/30858857/article#image-423364215",
+      :caption "下山途中の山桜(咲いてたら美しかっただろう)"}
+     {:url-path "/activities/30858857/article#image-423348452",
+      :caption "このルート最後の撮影スポット"}
+     {:url-path "/activities/30858857/article#image-423348406",
+      :caption "右手に羅漢石"})},
+   :num-photos 23,
+   :elapse "05:21",
+   :distance "6.8",
+   :activity-url "https://yamap.com/activities/30858857",
+   :act-date "2024.04.10(水)",
+   :altitude "560",
+   :heading "スタンプ通り。陀峯山 2024-04-10(pon)"}]}
