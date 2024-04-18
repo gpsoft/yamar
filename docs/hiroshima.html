@@ -87,7 +87,7 @@ h1 {
     font-family: serif;
     font-size: 0.8em;
 }
-.fav {
+.fav-toggle {
     display: inline-block;
     width: 32px;
     height: 40px;
@@ -98,9 +98,13 @@ h1 {
     background-size: contain;
     cursor: pointer;
 }
-.fav.filter-enabled {
+.fav-toggle.filter-enabled {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAADsAAAA7AF5KHG9AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAd5JREFUWIXtlb9rFFEUhb9dFosVo7IYCWsatRFjJYikkgT/BFvFQi0sLAUrLfwDFGwsLa0ES8FasJIk9goqpFB3BSNJ5LOYu/IcZn/MZNZF8MBhZ++duee8N3fua6gk6AMHmC6+AXODP80pi41Fa0j8NPCpZq0FYGNSAz3gS80G2kXBmb+C/wb2amAhODMDV4ErszLQCAPX4vqvG1gBTgLHgQtViwybA3m0gS5wEDgUvJHk7wAd4GuwB3wAvo+trKbsm6Gbi7fUh06Ox+q+XI1u5PppfFIDA15Xt0cI76q3hzxbiwHUVbVXIN6L3LDnCg1UacKXwFZB/EfkSqGKgTPA0bjeDQLMR27qBlbj9w2wDJwFXkdspWyxST/DFOeBe8B9YCdiy8BN4FzpahWacL5irrYm3KyYK8Q/fRx3gEfBTuUqFXqgZTYRN5Mh9NlsAubHb+2T8KK6ngi/Cg6wHvfUbuCE+jQR+hi70FQb6iX1XZJ/oZ6qw8B+9a66FfFt9YE6V7DC9ph7Sxk4Fqt6n6zqeezEsHc84KL6pGC3FssYeJsUWHP0KTfq1FxL6gxqTmRAs86+Zdb1ZcUHbKqX/fOLGWvgZ2zhkT0I53nYrB92xhl4pi7VKJznUmj8jv0Cexl7LOF10RsAAAAASUVORK5CYII=');
     background-color: #336699;
+}
+.mountain.fav .name::before {
+    content: "★";
+    display: inline;
 }
 </style>
 </head>
@@ -120,10 +124,11 @@ h1 {
             3001, 3689, 3691, 4096, 4214, 458,
             4588, 4599, 4716, 5822, 6948, 7095,
             7703, 7858, 808, 9148,
-			12966, 12988, 12984, 15188, 2371, 10309, 10245,
+            12966, 12988, 12984, 15188, 2371, 10309, 10245,
+            10577, 10409, 13920, 14070, 6217, 14085,
         ];
         window.addEventListener('load', ()=>{
-            document.querySelector('.fav').addEventListener('click', (ev)=>{
+            document.querySelector('.fav-toggle').addEventListener('click', (ev)=>{
                 const btn = ev.target;
                 const toggle = btn.classList.contains('filter-enabled');
                 btn.classList.toggle('filter-enabled');
@@ -136,10 +141,14 @@ h1 {
                     if ( !favs.includes(id) ) m.style.display = 'none';
                 });
             });
+            document.querySelectorAll('.mountain').forEach(m=>{
+                const id = m.getAttribute('data-id')-0;
+                if ( favs.includes(id) ) m.classList.add('fav');
+            });
         });
     </script>
 
-    <div class="fav" title="注目の山のみ表示する。"></div>
+    <div class="fav-toggle" title="注目の山のみ表示する。"></div>
 
 
 <div class="container"><h1>広島県の山</h1><div class="mt-list">
