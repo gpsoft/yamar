@@ -7,6 +7,7 @@ all:
 	@echo make dev
 	@echo make run
 	@echo make run-details
+	@echo make sync
 	@echo make uber
 	@echo make watch
 
@@ -21,6 +22,13 @@ run:
 
 run-details:
 	clojure -M -m yamar.core -D $(USERID)
+
+sync:
+	clojure -M -m yamar.core 1764261
+	clojure -M -m yamar.core -D 1764261
+	git add .
+	git com -m "Sync"
+	git sta
 
 uber:
 	clojure -T:build clean
