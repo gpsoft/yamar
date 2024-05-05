@@ -5246,4 +5246,78 @@
    :activity-url "https://yamap.com/activities/31034051",
    :act-date "2024.04.17(水)",
    :altitude "419",
-   :heading "Walk in C-sharp minor. 日浦山 2024-04-17(pon)"}]}
+   :heading "Walk in C-sharp minor. 日浦山 2024-04-17(pon)"}
+  {:has-details? true,
+   :activity-id 31303427,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/c322cc71-160c-4591-bca7-22cf07219b86?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/c322cc71-160c-4591-bca7-22cf07219b86"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "01:17",
+    :passed-points
+    (["" ["09:29"]]
+     ["天満桟橋前バス停" ["09:29"]]
+     ["かもめ館バス停" ["09:36"]]
+     ["神峰山登山口" ["09:36" "09:38"]]
+     ["かもめ館" ["09:38" "09:45"]]
+     ["かもめ館バス停" ["09:45" "09:49"]]
+     ["神峰山登山口" ["09:49"]]
+     ["展望台" ["11:03" "11:07"]]
+     ["石鎚神社 分所" ["11:07" "11:18"]]
+     ["神峰山 第２展望台" ["11:18" "11:20"]]
+     ["神峰山" ["11:20" "11:23"]]
+     ["薬師堂" ["11:23" "11:24"]]
+     ["神峰山 第３展望台" ["11:24" "12:17"]]
+     ["薬師堂" ["12:17"]]
+     ["神峰山" ["12:17" "12:22"]]
+     ["神峰山 第２展望台" ["12:22" "12:23"]]
+     ["石鎚神社 分所" ["12:23"]]
+     ["展望台" ["12:24" "12:25"]]
+     ["神峰山 第１展望台" ["12:28" "12:40"]]
+     ["石鎚神社 分所" ["12:44"]]
+     ["展望台" ["12:44" "12:55"]]
+     ["神峰山登山口" ["13:54"]]
+     ["かもめ館バス停" ["13:55" "14:00"]]
+     ["かもめ館" ["14:00" "14:03"]]
+     ["かもめ館バス停" ["14:03" "14:04"]]
+     ["天満桟橋前バス停" ["14:11"]]
+     ["" ["14:12"]]),
+    :sta-end-time ["09:29" "14:12"],
+    :description
+    "2024-04-28(日)9:30 晴れ\n岳浦山、七国見山に続く、島山登山の第三弾は神峰山\n\n竹原港から高速船で大崎上島・木江(天満港)へ渡る\n帰りの船は約5時間後\n時間は十分あるはずだけど、少々気が急く\nつづら折りでコツコツと高度を上げていく山道\n日差しも強く、思いのほかバテたけど、景色はバツグン",
+    :photos
+    ({:url-path "/activities/31303427/article#image-430097548",
+      :caption "契島(ちぎりじま)"}
+     {:url-path "/activities/31303427/article#image-430097533",
+      :caption "春らしく霞んだ遠景"}
+     {:url-path "/activities/31303427/article#image-430306363",
+      :caption "つづら無限折り"}
+     {:url-path "/activities/31303427/article#image-430097551",
+      :caption "海は穏やか"}
+     {:url-path "/activities/31303427/article#image-430097562",
+      :caption "展望台に漂着"}
+     {:url-path "/activities/31303427/article#image-430097554",
+      :caption "全員集合!"}
+     {:url-path "/activities/31303427/article#image-430097561",
+      :caption "元気回復"}
+     {:url-path "/activities/31303427/article#image-430097566",
+      :caption "山頂駐車場から"}
+     {:url-path "/activities/31303427/article#image-430097550",
+      :caption "来島海峡大橋(肉眼では、こんな風には見えない)"}
+     {:url-path "/activities/31303427/article#image-430097558",
+      :caption "The 多島美"}
+     {:url-path "/activities/31303427/article#image-430097565",
+      :caption "山肌にシダ"}
+     {:url-path "/activities/31303427/article#image-430097552",
+      :caption "竹原港まで24分"})},
+   :num-photos 12,
+   :elapse "04:43",
+   :distance "4.9",
+   :activity-url "https://yamap.com/activities/31303427",
+   :act-date "2024.04.28(日)",
+   :altitude "523",
+   :heading "タイムリミットまで5時間。神峰山 2024-04-28"}]}
