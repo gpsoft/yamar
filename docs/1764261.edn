@@ -5320,4 +5320,69 @@
    :activity-url "https://yamap.com/activities/31303427",
    :act-date "2024.04.28(日)",
    :altitude "523",
-   :heading "タイムリミットまで5時間。神峰山 2024-04-28"}]}
+   :heading "タイムリミットまで5時間。神峰山 2024-04-28"}
+  {:has-details? true,
+   :activity-id 31455751,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/4c5fb89e-6eee-41c3-b6ac-d678ccadd3b8?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/4c5fb89e-6eee-41c3-b6ac-d678ccadd3b8"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "02:06",
+    :passed-points
+    (["" ["08:15"]]
+     ["展望台下登山口" ["08:15" "08:31"]]
+     ["雲月山" ["10:19"]]
+     ["高山" ["11:53" "12:25"]]
+     ["岩倉山" ["12:48" "13:12"]]
+     ["東屋" ["13:30" "13:46"]]
+     ["展望台下登山口" ["13:46" "13:49"]]
+     ["" ["13:49"]]),
+    :sta-end-time ["08:15" "13:49"],
+    :description
+    "2024-05-02(木)8:15 晴れ\n4月20日に予定されていた山焼きは中止になった、との情報を得て、雲月山へ\n\n右回りで周回するルートを選択\n駐車場からのビューにまず感動\n登る前からワクワクが止まらない\nまぁ、それを言うなら、家を出たときから興奮しっぱなしだが…\nいつも通り、コースタイムより長めで計画を立てたのに、\nそれを1時間半もオーバーしてしまった\n\n\n復習メモ:\n南東方向に見える、スキー場のある山は、高杉山(ユートピアサイオト)\nその左は、天狗石山\n北東方向に、いかにも三瓶山の男、女、子、孫を思わせる山容の山があるが、これは大江高山\n三瓶山は、その右に見えている\nさらに右には大山があるはずだが、手前の琴引山や大万木山に隠れてるようだ\n高山と岩倉山の間の鞍部からは、北側の江津市にある風力発電の風車群が見える\nこれは深入山から見える風車とは別物\n\nドライブメモ:\n広島市内から車で行く場合、2箇所に離合困難な区間がある\n　・県道113号から県道11号に合流する手前約2km\n　・下の駐車場の手前約1km\n軽自動車同士なら、カーブのふくらみを利用して凌げるかな\n",
+    :photos
+    ({:url-path "/activities/31455751/article#image-433296556",
+      :caption "まずは、谷底へ下る"}
+     {:url-path "/activities/31455751/article#image-433296527",
+      :caption "朝の日差し"}
+     {:url-path "/activities/31455751/article#image-433296546",
+      :caption "森の緑にハッとする"}
+     {:url-path "/activities/31455751/article#image-433296530",
+      :caption "縦走路"}
+     {:url-path "/activities/31455751/article#image-433296551",
+      :caption "鞍部から東屋へのトレイル"}
+     {:url-path "/activities/31455751/article#image-433296533",
+      :caption "例のシンボルが見えた"}
+     {:url-path "/activities/31455751/article#image-432567133",
+      :caption "三瓶山かと思いきや、別の山だった"}
+     {:url-path "/activities/31455751/article#image-432569510",
+      :caption "こっちが三瓶山"}
+     {:url-path "/activities/31455751/article#image-432565487",
+      :caption "みんなで登頂"}
+     {:url-path "/activities/31455751/article#image-432572544",
+      :caption "大山方向(肉眼では、こんなには見えない)"}
+     {:url-path "/activities/31455751/article#image-432788644",
+      :caption "熊笹越しの縦走路"}
+     {:url-path "/activities/31455751/article#image-432788633",
+      :caption "サイオトのスキー場(高杉山)と、その左に天狗石山"}
+     {:url-path "/activities/31455751/article#image-434440598",
+      :caption "県境に沿って歩いてきた"}
+     {:url-path "/activities/31455751/article#image-432788623",
+      :caption "江津市の風力発電。その向こうは日本海(のはず)"}
+     {:url-path "/activities/31455751/article#image-432791914",
+      :caption "鞍部の前後は急登だけど、苦にならない"}
+     {:url-path "/activities/31455751/article#image-432788628",
+      :caption "点在する茂みが、平尾台のピナクルとダブる"}
+     {:url-path "/activities/31455751/article#image-432788624",
+      :caption "ずっと歩いていたい"})},
+   :num-photos 17,
+   :elapse "05:34",
+   :distance "3.4",
+   :activity-url "https://yamap.com/activities/31455751",
+   :act-date "2024.05.02(木)",
+   :altitude "271",
+   :heading "ずっと歩いていたい。雲月山 2024-05-02"}]}
