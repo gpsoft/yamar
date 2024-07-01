@@ -39,6 +39,7 @@ watch:
 	clojure -M -m yamar.core 717451
 	clojure -M -m yamar.core 1764261
 	clojure -M -m yamar.core 2960462
+	clojure -M -m yamar.core 1766454
 
 %:
 	@:
