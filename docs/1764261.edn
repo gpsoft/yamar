@@ -5385,4 +5385,80 @@
    :activity-url "https://yamap.com/activities/31455751",
    :act-date "2024.05.02(木)",
    :altitude "271",
-   :heading "ずっと歩いていたい。雲月山 2024-05-02"}]}
+   :heading "ずっと歩いていたい。雲月山 2024-05-02"}
+  {:has-details? true,
+   :activity-id 33481365,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/85ec0514-456e-4762-b20f-6d56bf934dc6?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/85ec0514-456e-4762-b20f-6d56bf934dc6"
+     {:h "1080", :t "resize", :w "1623", :q "60"}
+     nil],
+    :rest-time "01:45",
+    :passed-points
+    (["" ["07:18"]]
+     ["大山火の神岳温泉足湯" ["07:27"]]
+     ["豪円湯院" ["07:27" "07:29"]]
+     ["大山火の神岳温泉足湯" ["07:29"]]
+     ["とやま旅館" ["07:29" "07:31"]]
+     ["行者登山口" ["07:48"]]
+     ["大神山神社" ["07:48"]]
+     ["大神山神社奥宮" ["07:48" "07:53"]]
+     ["大神山神社" ["07:53"]]
+     ["下宝珠越" ["08:33" "08:44"]]
+     ["中宝珠越" ["09:21" "09:40"]]
+     ["上宝珠越" ["10:43" "11:18"]]
+     ["中宝珠越" ["12:20" "12:31"]]
+     ["下宝珠越" ["12:54" "13:03"]]
+     ["" ["14:05"]]),
+    :sta-end-time ["07:18" "14:05"],
+    :description
+    "2024-08-01(木)7:30 晴れ\n初めての大山。ユートピアコースで三鈷峰、避難小屋、象ヶ鼻を巡る\n\nしかし、持参した水分が少なすぎ、\n三鈷峰まであと30分というところで撤退\n\n行程としては計画の半分しか達成してないが、\n満天の星空と、間近で見る北壁は、素晴らしかった\n\n---\n\n反省メモ:\n\n前日22:30に広島を出発し、下道で180km\n2:00に第5駐車場に到着\n\n豪円山のろし台に移動して、星空観測\n運よく流れ星を撮影でき、上機嫌で駐車場へ戻ろうとしたとき、\n高さ1mくらいの土手をプチ滑落して、右足首を少し痛める\n\n4:00から車内で仮眠\nしかし、興奮と慣れない寝床で、ほとんど寝れない\n\n7:30 山行スタート\nデコボコで滑りやすい路面が多く、足首やヒザをねじりがち\nいつもより早く、あちこちの筋肉が痙攣し始める\n水分補給ペースを上げ、慎重に歩を進める\n\n9:30 中宝珠越手前の眺望ポイントで撮影タイム\nこのとき取り出した双眼鏡を失くしてしまったらしい\nケースにしまった記憶が無い\n下山後に空ケースに気づいた\n\n10:45 上宝珠越で長めの休憩\nこの時点で、750mLの水筒が空っぽ\n残りの水は600mL + アミノ酸ゼリー1個\n撤退を決意\n\n11:10 決意に反して、さらに100mほど進んでしまう\n右脳で三鈷峰を見上げ、左脳で、これまで通過してきたロープ場やアップダウンを思い返し、\nようやくUターン\n\n下山もペースは上がらない\n水を節約しながら、何とか下宝珠越の先の林道出会いに到着\n大神山神社に自販機あったっけ? 大山寺参道まで無い?\n豪円山手前の駐車場に自販機があったはず\n迷った末、林道へエスケープ\n\n3か月ぶりの登山\nほぼ徹夜明け\n高地とは言え、気温は30℃前後\n無風の快晴",
+    :photos
+    ({:url-path "/activities/33481365/article#image-461290069",
+      :caption "豪円山のろし台から、南に大山シルエット。秋の地味な星座たち"}
+     {:url-path "/activities/33481365/article#image-462308654",
+      :caption "夏の星座は沈み始め。デネブとベガ"}
+     {:url-path "/activities/33481365/article#image-462309393",
+      :caption "東から昇るスバルを追うアルデバラン。月、木星、火星。スバルの右は天王星らしい"}
+     {:url-path "/activities/33481365/article#image-461290078",
+      :caption "カシオペア座、二重星団エイチとカイ、アンドロメダ"}
+     {:url-path "/activities/33481365/article#image-461290076",
+      :caption "運よく流れ星をキャッチ"}
+     {:url-path "/activities/33481365/article#image-462062336",
+      :caption "夜明け"}
+     {:url-path "/activities/33481365/article#image-462062356",
+      :caption "朝日が剣ヶ峰を照らす"}
+     {:url-path "/activities/33481365/article#image-462062404",
+      :caption "登頂開始。石畳の参道"}
+     {:url-path "/activities/33481365/article#image-462312273",
+      :caption "ユートピアコースには、平らな足の置き場が少ない"}
+     {:url-path "/activities/33481365/article#image-462062411",
+      :caption "宝珠尾根に出るまでは薄暗い中を進む"}
+     {:url-path "/activities/33481365/article#image-462062406",
+      :caption "尾根に出てからもキツイが、ようやく北壁とご対面"}
+     {:url-path "/activities/33481365/article#image-462062392",
+      :caption "中宝珠越の手前まで来ると、三鈷峰もしっかり見える"}
+     {:url-path "/activities/33481365/article#image-462062385",
+      :caption "今日は、てんくらA"}
+     {:url-path "/activities/33481365/article#image-462062360",
+      :caption "大山町方面。左は孝霊山"}
+     {:url-path "/activities/33481365/article#image-462300138",
+      :caption "米子・境港方面"}
+     {:url-path "/activities/33481365/article#image-462062409",
+      :caption "これを見るために、ユートピアコースを選んだ"}
+     {:url-path "/activities/33481365/article#image-462062369",
+      :caption "しかし、ユートピアへの道は遠く"}
+     {:url-path "/activities/33481365/article#image-462062393",
+      :caption "上宝珠越で撤退"}
+     {:url-path "/activities/33481365/article#image-462062367",
+      :caption "溝口IC付近の展望駐車場から見る、伯耆富士。右手にひょっこり烏ヶ山"})},
+   :num-photos 19,
+   :elapse "06:46",
+   :distance "7.4",
+   :activity-url "https://yamap.com/activities/33481365",
+   :act-date "2024.08.01(木)",
+   :altitude "780",
+   :heading "遠すぎたユートピア。三鈷峰撤退 2024-08-01(pon)"}]}
