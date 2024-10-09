@@ -5461,4 +5461,55 @@
    :activity-url "https://yamap.com/activities/33481365",
    :act-date "2024.08.01(木)",
    :altitude "780",
-   :heading "遠すぎたユートピア。三鈷峰撤退 2024-08-01(pon)"}]}
+   :heading "遠すぎたユートピア。三鈷峰撤退 2024-08-01(pon)"}
+  {:has-details? true,
+   :activity-id 34886562,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/image2.yamap.co.jp/production/4f460f16-a4f7-450a-a33c-c2c79d88ec8e?st=g7BetDrs1GaL7yfLbZNWnw&e=1728435600&t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/image2.yamap.co.jp/production/4f460f16-a4f7-450a-a33c-c2c79d88ec8e"
+     {:e "1728435600",
+      :h "1080",
+      :st "g7BetDrs1GaL7yfLbZNWnw",
+      :t "resize",
+      :w "1620",
+      :q "60"}
+     nil],
+    :rest-time "01:45",
+    :passed-points
+    (["" ["11:52"]]
+     ["東麓登山口" ["11:52"]]
+     ["東麓登山口駐車場" ["11:52" "11:53"]]
+     ["東麓登山口" ["11:53"]]
+     ["竜山" ["12:13" "12:49"]]
+     ["中野山" ["13:08" "13:29"]]
+     ["絵下山" ["14:40" "15:04"]]
+     ["東麓登山口" ["15:38"]]
+     ["東麓登山口駐車場" ["15:38"]]
+     ["" ["15:39"]]),
+    :sta-end-time ["11:52" "15:39"],
+    :description "2024-10-05(土)12:00 晴れ\n来週の吾妻山に備えて、体慣らしに絵下山へ",
+    :photos
+    ({:url-path "/activities/34886562/article#image-481043294",
+      :caption "竜山と…"}
+     {:url-path "/activities/34886562/article#image-481043316",
+      :caption "中野山に寄ってから…"}
+     {:url-path "/activities/34886562/article#image-481043334",
+      :caption "頂上広場で…"}
+     {:url-path "/activities/34886562/article#image-481043673",
+      :caption "昼メシ"}
+     {:url-path "/activities/34886562/article#image-481044452",
+      :caption "遠くに深入山"}
+     {:url-path "/activities/34886562/article#image-481044484",
+      :caption "絵下頭から真西。もうすぐ宮島と彗星のコラボ見れるかも"}
+     {:url-path "/activities/34886562/article#image-481044497",
+      :caption "キアゲハ?"})},
+   :num-photos 7,
+   :elapse "03:46",
+   :distance "4.8",
+   :activity-url "https://yamap.com/activities/34886562",
+   :act-date "2024.10.05(土)",
+   :altitude "427",
+   :heading "クーちゃんと。絵下山 2024-10-05(pon)"}]}
