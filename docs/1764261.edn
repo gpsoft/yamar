@@ -5512,4 +5512,89 @@
    :activity-url "https://yamap.com/activities/34886562",
    :act-date "2024.10.05(土)",
    :altitude "427",
-   :heading "クーちゃんと。絵下山 2024-10-05(pon)"}]}
+   :heading "クーちゃんと。絵下山 2024-10-05(pon)"}
+  {:has-details? true,
+   :activity-id 35701217,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/eb73761d-1bb2-4225-9de6-f5cf7d9e8f3e?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/eb73761d-1bb2-4225-9de6-f5cf7d9e8f3e"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "01:17",
+    :passed-points
+    (["" ["08:20"]]
+     ["ひろしま県民の森登山口" ["08:21" "08:29"]]
+     ["キャンプ場" ["08:43" "08:46"]]
+     ["キャンプ場" ["10:37" "10:40"]]
+     ["ひろしま県民の森登山口" ["10:49" "10:53"]]
+     ["牛曳山登山口" ["11:08" "11:11"]]
+     ["牛曳山登山口" ["12:06" "12:12"]]
+     ["ひろしま県民の森登山口" ["13:31" "13:40"]]
+     ["展望園地" ["14:27" "14:45"]]
+     ["ひろしま県民の森登山口" ["15:28" "15:30"]]
+     ["" ["15:30"]]),
+    :sta-end-time ["08:20" "15:30"],
+    :description
+    "2024-11-03(月)8:30 快晴\n紅葉を楽しみに、県民の森へ\n立烏帽子山と池の段を、越原(おっぱら)越経由で周回する計画\n\n午前中は雲多めで風も強いと予想して、左回りを選択\nところが前日の雨で増水した渡渉ポイントが誤算だった\n我々の装備とスキルでは、無傷で渡り切るのは難しい、\nと判断して撤退\n\nでも、牛曳山登山口近くの白樺と\n展望園地からの眺望を楽しんだ",
+    :photos
+    ({:url-path "/activities/35701217/article#image-490436347",
+      :caption "ここで撤退。少し上に登れば渡れそうだが、無理はすまい"}
+     {:url-path "/activities/35701217/article#image-491144416",
+      :caption "牛曳山登山口から約10分で白樺林に到着"}
+     {:url-path "/activities/35701217/article#image-491146069",
+      :caption ""}
+     {:url-path "/activities/35701217/article#image-491152832",
+      :caption "水源の滝"}
+     {:url-path "/activities/35701217/article#image-490436343",
+      :caption "展望園地から見える尖峰には名前が付いてないのかな?"})},
+   :num-photos 5,
+   :elapse "07:09",
+   :distance "11.4",
+   :activity-url "https://yamap.com/activities/35701217",
+   :act-date "2024.11.03(日)",
+   :altitude "581",
+   :heading "大誤算で撤退。立烏帽子山 2024-11-03"}
+  {:has-details? true,
+   :activity-id 35029479,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/5eb394d5-606d-4ad3-a72f-90210ab49300?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/5eb394d5-606d-4ad3-a72f-90210ab49300"
+     {:h "1080", :t "resize", :w "1620", :q "60"}
+     nil],
+    :rest-time "01:34",
+    :passed-points
+    (["" ["09:22"]]
+     ["吾妻山" ["11:08" "12:11"]]
+     ["吾妻山大膳原キャンプ場" ["13:11" "13:33"]]
+     ["" ["15:28"]]),
+    :sta-end-time ["09:22" "15:28"],
+    :description
+    "2024-10-11(金)9:30 晴れ\n秋のお出かけ第一弾は吾妻山\n\nむかし学校で習った中国山地を自分の脚で歩くなんて考えもしなかったな",
+    :photos
+    ({:url-path "/activities/35029479/article#image-482541247",
+      :caption "あとで登る小坊主"}
+     {:url-path "/activities/35029479/article#image-482541248",
+      :caption "午前中は雲多め"}
+     {:url-path "/activities/35029479/article#image-482542208",
+      :caption "朝は冷え込んだことでしょうね"}
+     {:url-path "/activities/35029479/article#image-482542210",
+      :caption "全員集合"}
+     {:url-path "/activities/35029479/article#image-482542380",
+      :caption ""}
+     {:url-path "/activities/35029479/article#image-482542620",
+      :caption "大膳原でススキに囲まれる"}
+     {:url-path "/activities/35029479/article#image-482542622",
+      :caption "透き通った緑。樹林帯歩きも楽しい"})},
+   :num-photos 7,
+   :elapse "06:06",
+   :distance "5.6",
+   :activity-url "https://yamap.com/activities/35029479",
+   :act-date "2024.10.11(金)",
+   :altitude "450",
+   :heading "中国山地の真ん中? 吾妻山 2024-10-11"}]}
