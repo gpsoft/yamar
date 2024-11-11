@@ -5597,4 +5597,42 @@
    :activity-url "https://yamap.com/activities/35029479",
    :act-date "2024.10.11(金)",
    :altitude "450",
-   :heading "中国山地の真ん中? 吾妻山 2024-10-11"}]}
+   :heading "中国山地の真ん中? 吾妻山 2024-10-11"}
+  {:has-details? true,
+   :activity-id 35814341,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/b0b5e059-69a6-4f71-94d8-121b55d01204?t=crop&w=300&h=300",
+   :year 2024,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/b0b5e059-69a6-4f71-94d8-121b55d01204"
+     {:h "1080", :t "resize", :w "1623", :q "60"}
+     nil],
+    :rest-time "01:18",
+    :passed-points
+    (["" ["13:16"]]
+     ["観音免公園" ["13:19"]]
+     ["日ノ浦山登山口（Dルート）" ["13:19" "13:21"]]
+     ["日浦山" ["15:00" "15:45"]]
+     ["" ["16:25"]]),
+    :sta-end-time ["13:16" "16:25"],
+    :description
+    "2024-11-09(土)13:00 秋晴れ\n引きこもる予定だったけど、昼に食べるものが無い\nこんなことが登山のモチベーションになるとは…\nカップ麺を買って日浦山へ\n\nCルートは暑そうなので、谷筋のDルートで登り、\n258mピークでランチ\n成本へ下山した\n\nそういえば、いつものホウキが見当たらなかったなぁ\nちと心配",
+    :photos
+    ({:url-path "/activities/35814341/article#image-492044610",
+      :caption "258mピークで"}
+     {:url-path "/activities/35814341/article#image-492044614",
+      :caption "さんちょー"}
+     {:url-path "/activities/35814341/article#image-492044612",
+      :caption "窓ヶ山"}
+     {:url-path "/activities/35814341/article#image-492044618",
+      :caption "15:33発さくら556号"}
+     {:url-path "/activities/35814341/article#image-492044609",
+      :caption "いつのまにか雲が増えてしまった"})},
+   :num-photos 5,
+   :elapse "03:09",
+   :distance "3.9",
+   :activity-url "https://yamap.com/activities/35814341",
+   :act-date "2024.11.09(土)",
+   :altitude "443",
+   :heading "ホウキはどこへ? 日浦山 2024-11-09(pon)"}]}
