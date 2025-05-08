@@ -45,9 +45,9 @@
   [act-node]
   (let [f (sel1 act-node [:a.css-192jaxu :img.css-kjzr73])
         src (attr1 f :src)]
-    ;; data-src属性値がURLなんだけど、
-    ;; これはJSで作ってるので、取れない。
-    src))
+    ;; src属性値をJSで改変する仕組みなので、
+    ;; ここではnilにしとく。
+    nil))
 
 (defn- counter-text
   [act-node ix]
@@ -103,8 +103,8 @@
 (defn- cover-url
   [page]
   (-> page
-      (sel1 [:div.ActivityDetailTabLayout__Image :img])
-      (attr1 :src)
+      (sel1 [:div.ActivityDetailTabLayout__Image])
+      (attr1 :data-src)
       (u/split-url)
       #_first))
 
@@ -158,6 +158,11 @@
   (-> page
       (en/select [:.ActivitiesId__Photo])
       (->> (map photo))))
+
+(defn act-id
+  [page]
+  (let [url (attr1 (sel1 page [:a.ActivityDetailTabLayout__TabItem]) :href)]
+    (u/to-int (last (str/split url #"/")))))
 
 (defn details
   [page]

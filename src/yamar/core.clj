@@ -12,6 +12,7 @@
 (def ^:private yamap-url-base "https://yamap.com")
 (def ^:private limit-page-no 10)
 (def ^:private fpath-index "/home/maru/Desktop/a.html")
+(def ^:private fpath-details "/home/maru/Desktop/b.html")
 
 (def ^:private cli-options
   [["-d" "--destination DIR" "Destination directory"
@@ -102,8 +103,7 @@
          act-list (get db :activities [])
          id-set (set (map :activity-id act-list))]
     (progress "Fetching index page #" page-no "...")
-    (let [page (let [fpath fpath-index]
-             (fetch! fpath))
+    (let [page (fetch! fpath-index)
           #_(-> user-id
                 (index-url page-no)
                 (fetch!))
@@ -121,23 +121,19 @@
          (recur (inc page-no) act-list id-set))))))
 
 (defn scrape-details!
-  [act]
-  (if (:has-details? act)
+  [page act-id act]
+  (if (or (not= (:activity-id act) act-id)
+           (:has-details? act))
     act
-    (let [act-id (:activity-id act)
-          _ (progress "Fetching activity page for " act-id)
-          page (-> act-id
-                   (act-url)
-                   (fetch!))
-          _ (Thread/sleep 5000)
-          details (scrape/details page)]
+    (let [details (scrape/details page)]
       (assoc act
              :has-details? (some? details)
              :details details))))
 
 (defn save-cover!
   [dir act]
-  (if (:thumbnail-url act)
+  (if (or (not (:has-details? act))
+          (:thumbnail-url act))
     act
     (let [cover-url (get-in act [:details :cover-url])
           act-id (:activity-id act)
@@ -145,7 +141,8 @@
           _ (progress "Fetching cover image for " act-id)
           thumb-url (u/wget (u/tap! (thumbnail-url cover-url))
                             thumb-file)
-          _ (Thread/sleep 5000)]
+          ; _ (Thread/sleep 5000)
+          ]
       (if thumb-url
         (assoc act
                :thumbnail-url thumb-url)
@@ -154,11 +151,13 @@
          act)))))
 
 (defn go-details! [db]
-  (let [act-list (:activities db)]
+  (let [act-list (:activities db)
+        page (fetch! fpath-details)
+        act-id (scrape/act-id page)]
     (if (empty? act-list)
       db
       (assoc db
-             :activities (mapv scrape-details! act-list)))))
+             :activities (mapv #(scrape-details! page act-id %) act-list)))))
 
 (defn go-covers! [cover-dir db]
   (let [act-list (:activities db)]
@@ -246,9 +245,13 @@
         (spit "index.html")))
 
  (act-url 23213302)
- (def page (let [url (act-url 22343551)]
-             (fetch! url)))
+ (def page (let [fpath fpath-details]
+             (fetch! fpath)))
+
+ (scrape/act-id page)
  (scrape/details page)
+
+ (go! 1764261 "docs/" true)
 
  (cli/parse-opts
   ["--help"
