@@ -11,6 +11,7 @@
 
 (def ^:private yamap-url-base "https://yamap.com")
 (def ^:private limit-page-no 10)
+(def ^:private fpath-index "/home/maru/Desktop/a.html")
 
 (def ^:private cli-options
   [["-d" "--destination DIR" "Destination directory"
@@ -46,15 +47,10 @@
                          :h 300})))
 
 (defn- fetch!
-  [url]
-  #_(let [html-raw (slurp url)
-          html-nodes (en/html-snippet html-raw)]
-      [html-raw html-nodes])
-  (try
-   (en/html-resource (java.net.URL. url))
-   (catch Exception e
-     (progress "** Failed!")
-     nil)))
+  [fpath]
+  (let [html-raw (slurp fpath)
+        html-nodes (en/html-snippet html-raw)]
+      html-nodes))
 
 (defn- mk-activity
   [act-node]
@@ -101,25 +97,27 @@
     (or found-dup? done-with-all-pages too-many-pages)))
 
 (defn scrape!
-  [user-id db]
+  [fpath user-id db]
   (loop [page-no 1
          act-list (get db :activities [])
          id-set (set (map :activity-id act-list))]
     (progress "Fetching index page #" page-no "...")
-    (let [page (-> user-id
-                   (index-url page-no)
-                   (fetch!))
-          max-page-no (scrape/max-page-no page)
+    (let [page (let [fpath fpath-index]
+             (fetch! fpath))
+          #_(-> user-id
+                (index-url page-no)
+                (fetch!))
+          ; max-page-no (scrape/max-page-no page)
           page-act-list (map mk-activity (scrape/act-node-list page))
           [act-list id-set found-dup?]
           (append-activities act-list id-set page-act-list )]
-      (if (done? page-no max-page-no found-dup?)
+      (if true #_(done? page-no max-page-no found-dup?)
         {:user-id user-id
          :user-name (scrape/user-name page)
          :mypage-url (index-url user-id)
          :activities act-list}
         (do
-         (progress "More index pages to go(max will be #" max-page-no ")")
+         #_(progress "More index pages to go(max will be #" max-page-no ")")
          (recur (inc page-no) act-list id-set))))))
 
 (defn scrape-details!
@@ -172,11 +170,11 @@
 (defn go! [user-id dest details?]
   (let [edn-file (u/resolve-path dest (str user-id ".edn"))
         html-file (u/resolve-path dest (str user-id ".html"))
-        cover-dir (u/resolve-path dest user-id)
+        cover-dir (u/resolve-path dest (str user-id))
         db (db! edn-file)
         db (if details?
              (go-details! db)
-             (scrape! user-id db))
+             (scrape! fpath-index user-id db))
         db (if details?
              (do
               (u/mkdir cover-dir)
@@ -219,8 +217,8 @@
 
  (index-url 1764261)
 
- (def page (let [url (index-url 1764261)]
-             (fetch! url)))
+ (def page (let [fpath fpath-index]
+             (fetch! fpath)))
 
  (map scrape/activity-id (scrape/act-node-list page))
  (map scrape/thumbnail-url (scrape/act-node-list page))
@@ -237,7 +235,7 @@
 
  (go! 1764261 "docs/" false)
 
- (def ar (scrape! 1764261 {}))
+ (def ar (scrape! fpath-index 1764261 {}))
 
  (pp/pprint ar)
  (spit "index.html" (render/render (:activities ar)))

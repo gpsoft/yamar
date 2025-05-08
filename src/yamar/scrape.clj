@@ -26,16 +26,16 @@
 
 (defn user-name
   [page]
-  (let [h1 (sel1 page [:.UsersId__FaceInfo__Name])]
+  (let [h1 (sel1 page [:.css-jctfiw])]
     (en/text h1)))
 
 (defn act-node-list
   [page]
-  (en/select page [:ul.UserActivityList__List :li :article]))
+  (en/select page [:ul.css-qksbms :li :article]))
 
 (defn activity-id
   [act-node]
-  (let [a (sel1 act-node [:a.ActivityItem__Thumbnail])
+  (let [a (sel1 act-node [:a.css-192jaxu])
         href (attr1 a :href)
         match (re-find #"/(\d+)$" href)]
     (when match
@@ -43,8 +43,8 @@
 
 (defn thumbnail-url
   [act-node]
-  (let [f (sel1 act-node [:a.ActivityItem__Thumbnail :figure.ActivityItem__Thumbnail__Img])
-        src (attr1 f :data-src)]
+  (let [f (sel1 act-node [:a.css-192jaxu :img.css-kjzr73])
+        src (attr1 f :src)]
     ;; data-src属性値がURLなんだけど、
     ;; これはJSで作ってるので、取れない。
     src))
@@ -63,34 +63,32 @@
 
 (defn num-photos
   [act-node]
-  (let [txt (counter-text act-node 0)]
+  (let [txt (nth (:content (sel1 act-node [:div.css-1daphfi :span.css-1xxe9l9])) 1)]
     (u/to-int txt)))
 
 (defn elapse
   [act-node]
-  (let [txt (record-text act-node 0)]
+  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 0))]
     txt))
 
 (defn distance
   [act-node]
-  (let [txt (record-text act-node 1)]
-    (nth-str txt 1)))
+  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 1))]
+    txt))
 
 (defn altitude
   [act-node]
-  (let [txt (record-text act-node 2)]
-    (nth-str txt 1)))
+  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 2))]
+    txt))
 
 (defn heading
   [act-node]
-  (let [h (sel1 act-node [:h3.ActivityItem__Heading])]
+  (let [h (sel1 act-node [:h3 :a.css-1pla16])]
     (en/text h)))
 
 (defn act-date
   [act-node]
-  (let [s (sel1 act-node [:span.ActivityItem__Date])
-        txt (en/text s)
-        date-str (nth-str txt 1)]
+  (let [date-str (en/text (sel1 act-node [:span.css-125iqyy]))]
     [date-str (to-year date-str)]))
 
 (defn max-page-no
