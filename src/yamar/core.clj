@@ -214,13 +214,12 @@
 
 (comment
 
- (index-url 1764261)
-
+ ;; latest version
  (def page (let [fpath fpath-index]
              (fetch! fpath)))
-
+ (scrape/user-name page)
  (map scrape/activity-id (scrape/act-node-list page))
- (map scrape/thumbnail-url (scrape/act-node-list page))
+ (map scrape/thumbnail-url (scrape/act-node-list page))   ; should be nil
  (map scrape/num-photos (scrape/act-node-list page))
  (map scrape/elapse (scrape/act-node-list page))
  (map scrape/distance (scrape/act-node-list page))
@@ -229,29 +228,28 @@
  (map scrape/act-date (scrape/act-node-list page))
  (map mk-activity (scrape/act-node-list page))
 
- (scrape/max-page-no page)
- (scrape/user-name page)
-
  (go! 1764261 "docs/" false)
 
- (def ar (scrape! fpath-index 1764261 {}))
-
- (pp/pprint ar)
- (spit "index.html" (render/render (:activities ar)))
-
- (let [ar (u/read-edn! "docs/1764261.edn" {})]
-   (->> ar
-        (render/render)
-        (spit "index.html")))
-
- (act-url 23213302)
  (def page (let [fpath fpath-details]
              (fetch! fpath)))
 
  (scrape/act-id page)
- (scrape/details page)
+ (pp/pprint (scrape/details page))
 
  (go! 1764261 "docs/" true)
+
+
+ ;; older version
+ (index-url 1764261)
+ (scrape/max-page-no page)
+ (def ar (scrape! fpath-index 1764261 {}))
+ (pp/pprint ar)
+ (spit "index.html" (render/render (:activities ar)))
+ (let [ar (u/read-edn! "docs/1764261.edn" {})]
+   (->> ar
+        (render/render)
+        (spit "index.html")))
+ (act-url 23213302)
 
  (cli/parse-opts
   ["--help"

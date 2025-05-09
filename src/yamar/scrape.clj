@@ -74,12 +74,12 @@
 (defn distance
   [act-node]
   (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 1))]
-    txt))
+    (str/replace txt #" km" "")))
 
 (defn altitude
   [act-node]
   (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 2))]
-    txt))
+    (str/replace txt #" m" "")))
 
 (defn heading
   [act-node]
@@ -89,7 +89,7 @@
 (defn act-date
   [act-node]
   (let [date-str (en/text (sel1 act-node [:span.css-125iqyy]))]
-    [date-str (to-year date-str)]))
+    [(str/replace date-str #" " "") (to-year date-str)]))
 
 (defn max-page-no
   [page]
