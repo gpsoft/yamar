@@ -5691,71 +5691,11 @@
       :caption ""})},
    :num-photos 8,
    :elapse "05:07",
-   :distance "9.8 km",
+   :distance "9.8",
    :activity-url "https://yamap.com/activities/39741136",
-   :act-date "2025.05.04 (日)",
-   :altitude "196 m",
+   :act-date "2025.05.04(日)",
+   :altitude "196",
    :heading "無料開放。備北丘陵公園 2025-05-04"}
-  {:has-details? true,
-   :activity-id 39539812,
-   :thumbnail-url
-   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/36eddef1-b6af-4174-87f4-485fa7211064?t=crop&w=300&h=300",
-   :year 2025,
-   :details
-   {:cover-url
-    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/36eddef1-b6af-4174-87f4-485fa7211064"
-     {:h "1080", :q ["50" "60"], :t "resize", :w "1623"}
-     nil],
-    :rest-time "01:46",
-    :passed-points
-    (["" ["08:05"]]
-     ["長者ヶ森登山口" ["08:05"]]
-     ["長者ヶ森駐車場" ["08:05" "08:20"]]
-     ["長者ヶ峯" ["08:43" "09:00"]]
-     ["長者ヶ森駐車場" ["09:18" "09:21"]]
-     ["長者ヶ森登山口" ["09:21" "09:24"]]
-     ["冠山" ["10:01" "10:41"]]
-     ["地獄台" ["11:10" "11:27"]]
-     ["烏帽子岳" ["11:50" "12:27"]]
-     ["北山" ["13:18" "13:44"]]
-     ["長者ヶ森登山口" ["13:57" "13:58"]]
-     ["長者ヶ森駐車場" ["13:58"]]
-     ["" ["13:58"]]),
-    :sta-end-time ["08:05" "13:58"],
-    :description
-    "2025-04-29(火)8:00 晴れ\n日帰り遠征で秋吉台へ\n北寄りの5座を周回する\n\n平尾台と比べると、広さは10倍\nルートの高低差は控えめだが、\n点在するドリーネが、眺望のダイナミック感を倍増させる\n\n山焼きを免れた枯れ草が光り輝き、\n控えめな新緑の緑と混ざった柔らかな色調が目に優しい\n\n遠景には、見渡す限りの山と青空\n\n絵画のような美しさだった",
-    :photos
-    ({:url-path
-      "https://yamap.com/activities/39539812/article#image-539457802",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539454617",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539454109",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539453637",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539474978",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539453048",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539474831",
-      :caption ""}
-     {:url-path
-      "https://yamap.com/activities/39539812/article#image-539452565",
-      :caption ""})},
-   :num-photos 8,
-   :elapse "05:52",
-   :distance "7.8 km",
-   :activity-url "https://yamap.com/activities/39539812",
-   :act-date "2025.04.29 (火)",
-   :altitude "369 m",
-   :heading "絵のように美しい。秋吉台 2025-04-29"}
   {:has-details? true,
    :activity-id 39419521,
    :thumbnail-url
@@ -5809,10 +5749,10 @@
       :caption ""})},
    :num-photos 9,
    :elapse "04:20",
-   :distance "6.8 km",
+   :distance "6.8",
    :activity-url "https://yamap.com/activities/39419521",
-   :act-date "2025.04.26 (土)",
-   :altitude "609 m",
+   :act-date "2025.04.26(土)",
+   :altitude "609",
    :heading "4つの登山口。日浦山 2025-04-26(pon)"}
   {:has-details? true,
    :activity-id 39176808,
@@ -5854,10 +5794,10 @@
       :caption ""})},
    :num-photos 5,
    :elapse "05:18",
-   :distance "10.5 km",
+   :distance "10.5",
    :activity-url "https://yamap.com/activities/39176808",
-   :act-date "2025.04.17 (木)",
-   :altitude "766 m",
+   :act-date "2025.04.17(木)",
+   :altitude "766",
    :heading "明神クン、性格変わった? 矢野三山 2025-04-17(pon)"}
   {:has-details? true,
    :activity-id 38976769,
@@ -5915,10 +5855,10 @@
       :caption ""})},
    :num-photos 10,
    :elapse "03:36",
-   :distance "7.4 km",
+   :distance "7.4",
    :activity-url "https://yamap.com/activities/38976769",
-   :act-date "2025.04.07 (月)",
-   :altitude "93 m",
+   :act-date "2025.04.07(月)",
+   :altitude "93",
    :heading "東部サクラドライブ。美波羅川・白竜湖・鏡山 2025-04-07"}
   {:has-details? true,
    :activity-id 38795538,
@@ -5963,10 +5903,10 @@
       :caption ""})},
    :num-photos 8,
    :elapse "03:39",
-   :distance "7.5 km",
+   :distance "7.5",
    :activity-url "https://yamap.com/activities/38795538",
-   :act-date "2025.03.30 (日)",
-   :altitude "224 m",
+   :act-date "2025.03.30(日)",
+   :altitude "224",
    :heading "桜スポット巡り。坂町 2025-03-30"}
   {:has-details? true,
    :activity-id 37917434,
@@ -6014,10 +5954,10 @@
       :caption ""})},
    :num-photos 7,
    :elapse "03:27",
-   :distance "3.7 km",
+   :distance "3.7",
    :activity-url "https://yamap.com/activities/37917434",
-   :act-date "2025.02.16 (日)",
-   :altitude "398 m",
+   :act-date "2025.02.16(日)",
+   :altitude "398",
    :heading "いつもの。日浦山 2025-02-16(pon)"}
   {:has-details? true,
    :activity-id 36955225,
@@ -6065,10 +6005,10 @@
       :caption ""})},
    :num-photos 6,
    :elapse "04:33",
-   :distance "5.1 km",
+   :distance "5.1",
    :activity-url "https://yamap.com/activities/36955225",
-   :act-date "2025.01.01 (水)",
-   :altitude "461 m",
+   :act-date "2025.01.01(水)",
+   :altitude "461",
    :heading "登り初め。絵下山 2025-01-01"}
   {:has-details? true,
    :activity-id 36803671,
@@ -6123,10 +6063,10 @@
       :caption ""})},
    :num-photos 10,
    :elapse "02:22",
-   :distance "3.4 km",
+   :distance "3.4",
    :activity-url "https://yamap.com/activities/36803671",
-   :act-date "2024.12.28 (土)",
-   :altitude "373 m",
+   :act-date "2024.12.28(土)",
+   :altitude "373",
    :heading "登り納め。日浦山 2024-12-28(pon)"}
   {:has-details? true,
    :activity-id 36189340,
@@ -6168,8 +6108,68 @@
       :caption ""})},
    :num-photos 2,
    :elapse "06:24",
-   :distance "9.7 km",
+   :distance "9.7",
    :activity-url "https://yamap.com/activities/36189340",
-   :act-date "2024.11.24 (日)",
-   :altitude "950 m",
-   :heading "お手頃縦走7座。天狗城山～明神山 2024-11-24(pon)"}]}
+   :act-date "2024.11.24(日)",
+   :altitude "950",
+   :heading "お手頃縦走7座。天狗城山～明神山 2024-11-24(pon)"}
+  {:has-details? true,
+   :activity-id 39539812,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/36eddef1-b6af-4174-87f4-485fa7211064?t=crop&w=300&h=300",
+   :year 2025,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/public/image2.yamap.co.jp/production/36eddef1-b6af-4174-87f4-485fa7211064"
+     {:h "1080", :q ["50" "60"], :t "resize", :w "1623"}
+     nil],
+    :rest-time "01:46",
+    :passed-points
+    (["" ["08:05"]]
+     ["長者ヶ森登山口" ["08:05"]]
+     ["長者ヶ森駐車場" ["08:05" "08:20"]]
+     ["長者ヶ峯" ["08:43" "09:00"]]
+     ["長者ヶ森駐車場" ["09:18" "09:21"]]
+     ["長者ヶ森登山口" ["09:21" "09:24"]]
+     ["冠山" ["10:01" "10:41"]]
+     ["地獄台" ["11:10" "11:27"]]
+     ["烏帽子岳" ["11:50" "12:27"]]
+     ["北山" ["13:18" "13:44"]]
+     ["長者ヶ森登山口" ["13:57" "13:58"]]
+     ["長者ヶ森駐車場" ["13:58"]]
+     ["" ["13:58"]]),
+    :sta-end-time ["08:05" "13:58"],
+    :description
+    "2025-04-29(火)8:00 晴れ\n日帰り遠征で秋吉台へ\n北寄りの5座を周回する\n\n平尾台と比べると、広さは10倍\nルートの高低差は控えめだが、\n点在するドリーネが、眺望のダイナミック感を倍増させる\n\n山焼きを免れた枯れ草が光り輝き、\n控えめな新緑の緑と混ざった柔らかな色調が目に優しい\n\n遠景には、見渡す限りの山と青空\n\n絵画のような美しさだった",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/39539812/article#image-539457802",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539454617",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539454109",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539453637",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539474978",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539453048",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539474831",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/39539812/article#image-539452565",
+      :caption ""})},
+   :num-photos 8,
+   :elapse "05:52",
+   :distance "7.8",
+   :activity-url "https://yamap.com/activities/39539812",
+   :act-date "2025.04.29(火)",
+   :altitude "369",
+   :heading "絵のように美しい。秋吉台 2025-04-29"}]}
