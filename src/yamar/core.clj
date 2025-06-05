@@ -41,11 +41,13 @@
   (let [url-str (if (vector? cover-url) (first cover-url) cover-url)
         st (:st (second cover-url))
         e (:e (second cover-url))]
-    (u/join-url url-str {:st st
-                         :e e
+    (u/join-url url-str {:e e
+                         :st st
+                         :f "webp"
+                         :q 60
                          :t "crop"
-                         :w 300
-                         :h 300})))
+                         :w 600
+                         :h 450})))
 
 (defn- fetch!
   [fpath]
@@ -174,11 +176,13 @@
         db (if details?
              (go-details! db)
              (scrape! fpath-index user-id db))
-        db (if details?
-             (do
-              (u/mkdir cover-dir)
-              (go-covers! cover-dir db))
-             db)]
+        ;;; coverは取れなくなりました(403)。
+        ;db (if details?
+        ;     (do
+        ;      (u/mkdir cover-dir)
+        ;      (go-covers! cover-dir db))
+        ;     db)
+        ]
     (progress "Saving edn: " edn-file)
     (u/mkdir dest)
     (u/write-edn! edn-file db)

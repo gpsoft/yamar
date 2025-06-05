@@ -26,16 +26,16 @@
 
 (defn user-name
   [page]
-  (let [h1 (sel1 page [:.css-jctfiw])]
+  (let [h1 (sel1 page [:.ActivityItem__UserName])]
     (en/text h1)))
 
 (defn act-node-list
   [page]
-  (en/select page [:ul.css-qksbms :li :article]))
+  (en/select page [:ul.UserActivityList__List :li :article]))
 
 (defn activity-id
   [act-node]
-  (let [a (sel1 act-node [:a.css-192jaxu])
+  (let [a (sel1 act-node [:a.ActivityItem__Thumbnail])
         href (attr1 a :href)
         match (re-find #"/(\d+)$" href)]
     (when match
@@ -43,9 +43,8 @@
 
 (defn thumbnail-url
   [act-node]
-  (let [f (sel1 act-node [:a.css-192jaxu :img.css-kjzr73])
-        src (attr1 f :src)]
-    ;; src属性値をJSで改変する仕組みなので、
+  (let [f (sel1 act-node [:a.ActivityItem__Thumbnail :figure])]
+    ;; style属性値の中に埋もれて取り出しにくい。
     ;; ここではnilにしとく。
     nil))
 
@@ -63,33 +62,34 @@
 
 (defn num-photos
   [act-node]
-  (let [txt (nth (:content (sel1 act-node [:div.css-1daphfi :span.css-1xxe9l9])) 1)]
+  (let [txt (nth (:content (sel1 act-node [:div.ActivityCounters__Capsule :span.CounterCapsule__Count])) 0)]
     (u/to-int txt)))
 
 (defn elapse
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 0))]
+  (let [txt (en/text (nth (en/select act-node [:.ActivityCounters__Count__Inner :.ActivityCounters__Count__Record]) 0))]
     txt))
 
 (defn distance
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 1))]
-    (str/replace txt #" km" "")))
+  (let [txt (en/text (nth (en/select act-node [:.ActivityCounters__Count__Inner :.ActivityCounters__Count__Record]) 1))]
+    (str/replace txt #"[\s\nkm]" "")))
 
 (defn altitude
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-n261p7 :span.css-1xxe9l9]) 2))]
-    (str/replace txt #" m" "")))
+  (let [txt (en/text (nth (en/select act-node [:.ActivityCounters__Count__Inner :.ActivityCounters__Count__Record]) 2))]
+    (str/replace txt #"[\s\nm]" "")))
 
 (defn heading
   [act-node]
-  (let [h (sel1 act-node [:h3 :a.css-1pla16])]
+  (let [h (sel1 act-node [:.ActivityItem__Heading])]
     (en/text h)))
 
 (defn act-date
   [act-node]
-  (let [date-str (en/text (sel1 act-node [:span.css-125iqyy]))]
-    [(str/replace date-str #" " "") (to-year date-str)]))
+  (let [date-str (en/text (sel1 act-node [:span.ActivityItem__Date]))
+        date-str (str/replace date-str #"[\s\n]" "")]
+    [date-str (to-year date-str)]))
 
 (defn max-page-no
   [page]
@@ -103,7 +103,7 @@
 (defn- cover-url
   [page]
   (-> page
-      (sel1 [:div.ActivityDetailTabLayout__Image])
+      (sel1 [:img.ActivitiesId__Photo__Image])
       (attr1 :data-src)
       (u/split-url)
       #_first))
