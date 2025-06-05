@@ -6172,4 +6172,58 @@
    :activity-url "https://yamap.com/activities/39539812",
    :act-date "2025.04.29(火)",
    :altitude "369",
-   :heading "絵のように美しい。秋吉台 2025-04-29"}]}
+   :heading "絵のように美しい。秋吉台 2025-04-29"}
+  {:has-details? true,
+   :activity-id 40368960,
+   :thumbnail-url nil,
+   :year 2025,
+   :details
+   {:cover-url
+    ["https://cdn.yamap.co.jp/image2.yamap.co.jp/production/60dcdc98-7e9c-4700-b068-60dfba8d21ce"
+     {:e "1749049200",
+      :h "1080",
+      :q ["50" "60"],
+      :st "uw0Hfprlnwzh2YdEPS7PBA",
+      :t "resize",
+      :w "1620"}
+     nil],
+    :rest-time "02:05",
+    :passed-points
+    (["" ["07:35"]]
+     ["南登山口" ["11:30" "11:31"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["11:31" "11:33"]]
+     ["深入山グリーンシャワー管理棟" ["11:33" "11:35"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["11:35" "11:36"]]
+     ["東屋" ["13:00" "13:04"]]
+     ["深入山グリーンシャワー管理棟" ["13:59"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["13:59"]]
+     ["" ["13:59"]]),
+    :sta-end-time ["07:35" "13:59"],
+    :description
+    "2025-05-31(土)7:30 快晴\nGW前からずっとチャンスをうかがっていた草原の山\nギリギリ前日になって天気予報が好転\n風速10m/s超ってことで、てんくら判定はCだけど、決行\n\n結果は大成功\n山頂は、笑ってしまうほどの強風だけど、\nほどほどの気温とソフトシェルのおかげで全く苦にならない\n東ルートも、南ルートも、セラピーロードも、\n全部満喫した",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/40368960/article#image-551024501",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/40368960/article#image-551024239",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/40368960/article#image-551024538",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/40368960/article#image-551024610",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/40368960/article#image-551024630",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/40368960/article#image-551024704",
+      :caption ""})},
+   :num-photos 6,
+   :elapse "06:23",
+   :distance "5.6",
+   :activity-url "https://yamap.com/activities/40368960",
+   :act-date "2025.05.31(土)",
+   :altitude "520",
+   :heading "心地よい爆風! 深入山 2025-05-31"}]}
