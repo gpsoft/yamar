@@ -141,7 +141,7 @@
           act-id (:activity-id act)
           thumb-file (u/resolve-path dir (str act-id ".jpg"))
           _ (progress "Fetching cover image for " act-id)
-          thumb-url (u/wget (u/tap! (thumbnail-url cover-url))
+          thumb-url (u/wget (thumbnail-url cover-url)
                             thumb-file)
           ; _ (Thread/sleep 5000)
           ]
@@ -176,12 +176,11 @@
         db (if details?
              (go-details! db)
              (scrape! fpath-index user-id db))
-        ;;; coverは取れなくなりました(403)。
-        ;db (if details?
-        ;     (do
-        ;      (u/mkdir cover-dir)
-        ;      (go-covers! cover-dir db))
-        ;     db)
+        db (if details?
+             (do
+              (u/mkdir cover-dir)
+              (go-covers! cover-dir db))
+             db)
         ]
     (progress "Saving edn: " edn-file)
     (u/mkdir dest)
