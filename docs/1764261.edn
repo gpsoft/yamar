@@ -6728,4 +6728,55 @@
    :activity-url "https://yamap.com/activities/43028125",
    :act-date "2025.09.21(日)",
    :altitude "54",
-   :heading "散歩。龍王山総合公園(黒瀬) 2025-09-21"}]}
+   :heading "散歩。龍王山総合公園(黒瀬) 2025-09-21"}
+  {:has-details? true,
+   :activity-id 48056049,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/eC6q7xXFhnsbnE9Vo-uXdeL7DtD0SigruyiUeRuG7bk/rs:fit:1623:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Q4/NmUzZjBiLWE3NjYt/NDlkZC05OWY4LWMz/Y2VhNWMzM2EzYg?f=webp&q=60&t=crop&w=600&h=450",
+   :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/eC6q7xXFhnsbnE9Vo-uXdeL7DtD0SigruyiUeRuG7bk/rs:fit:1623:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Q4/NmUzZjBiLWE3NjYt/NDlkZC05OWY4LWMz/Y2VhNWMzM2EzYg",
+    :rest-time "02:59",
+    :passed-points
+    (["" ["09:19"]]
+     ["駐車場" ["09:34" "09:35"]]
+     ["用倉山" ["11:05" "11:09"]]
+     ["その他" ["11:09" "11:12"]]
+     ["用倉山" ["11:12" "11:44"]]
+     ["その他" ["11:44" "12:13"]]
+     ["用倉山" ["12:13" "12:16"]]
+     ["駐車場" ["12:21" "12:23"]]
+     ["" ["15:31"]]),
+    :sta-end-time ["09:19" "15:31"],
+    :description
+    "2026-05-05(火)9:00 快晴\nこどもの日に、広島空港、中央森林公園、三景園を散策する\n\n飛行機の写真を撮りつつ、公園内を隅々まで歩く予定だったが、\n飛行機撮影が楽しくて、午前中を費やした\nこんなに乗り物好きだったっけ?\n\n一日じゃ足りない\n芝広場の「飛行機の見える丘」をスキップしてしまったのが心残り\n\n思ってたより敷地が広く、移動に時間がかかるので注意\n空港3Fの展望デッキは無料になってた",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/48056049/article#image-653434373",
+      :caption "JALのボーイング737-800。180席"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653409262",
+      :caption "チェジュ航空。これもボーイング737"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653409276",
+      :caption "IBEXの仙台行き? 68席のリージョナルジェット"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653409270",
+      :caption "ANAのボーイング777-200。405席"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653437115",
+      :caption "JALのボーイング767-300。252席"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653409285",
+      :caption "チャイナエアラインのエアバスA321neo。240席"}
+     {:url-path
+      "https://yamap.com/activities/48056049/article#image-653420964",
+      :caption "八天堂ビレッジのマロンくん。乗り物ではありません"})},
+   :num-photos 7,
+   :elapse "06:11",
+   :distance "7.8",
+   :activity-url "https://yamap.com/activities/48056049",
+   :act-date "2026.05.05(火)",
+   :altitude "234",
+   :heading "童心に返るこどもの日。中央森林公園(用倉山) 2026-05-05"}]}
