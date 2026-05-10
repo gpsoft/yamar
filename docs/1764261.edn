@@ -6779,4 +6779,63 @@
    :activity-url "https://yamap.com/activities/48056049",
    :act-date "2026.05.05(火)",
    :altitude "234",
-   :heading "童心に返るこどもの日。中央森林公園(用倉山) 2026-05-05"}]}
+   :heading "童心に返るこどもの日。中央森林公園(用倉山) 2026-05-05"}
+  {:has-details? true,
+   :activity-id 48196299,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/SmPsZSAatOl1X9shzXh_FokkRKv9DIs51m-JC4z9tQg/rs:fit:1620:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uLzFh/NmE0OTlkLWRlMDct/NGE3Yi04NzljLTAw/YTdlZGQyMzBiMg?f=webp&q=60&t=crop&w=600&h=450",
+   :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/SmPsZSAatOl1X9shzXh_FokkRKv9DIs51m-JC4z9tQg/rs:fit:1620:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uLzFh/NmE0OTlkLWRlMDct/NGE3Yi04NzljLTAw/YTdlZGQyMzBiMg",
+    :rest-time "01:19",
+    :passed-points
+    (["" ["10:52"]]
+     ["観音免公園" ["11:02"]]
+     ["日ノ浦山登山口（Dルート）" ["11:02" "11:09"]]
+     ["観音免公園" ["11:09" "11:10"]]
+     ["日浦山コース影登山口" ["13:18" "13:21"]]
+     ["日浦山" ["14:37" "15:33"]]
+     ["日ノ浦山登山口（Dルート）" ["16:35"]]
+     ["観音免公園" ["16:35" "16:38"]]
+     ["" ["16:47"]]),
+    :sta-end-time ["10:52" "16:47"],
+    :description "2026-05-09(土)11:00 快晴\n黄砂が晴れたので新緑の日浦山へ",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/48196299/article#image-655045864",
+      :caption "ひのうらばしから"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045855",
+      :caption "今日もCルートで登る"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045860",
+      :caption "ビュースポットから見る新緑が好き"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045863",
+      :caption "✨"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045862",
+      :caption "新幹線を見下ろせるベンチ"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655072254",
+      :caption "258mピーク。相棒はククシロちゃん"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045859",
+      :caption "一旦、影に下山。しばらく見ないうちに、草増えたなぁ"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045858",
+      :caption "登ってきたCルートの尾根"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045873",
+      :caption "山頂"}
+     {:url-path
+      "https://yamap.com/activities/48196299/article#image-655045846",
+      :caption "今日は視界良し"})},
+   :num-photos 10,
+   :elapse "05:55",
+   :distance "6.4",
+   :activity-url "https://yamap.com/activities/48196299",
+   :act-date "2026.05.09(土)",
+   :altitude "645",
+   :heading "CD+影。日浦山 2026-05-09(pon)"}]}
