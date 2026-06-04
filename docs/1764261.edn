@@ -6838,4 +6838,66 @@
    :activity-url "https://yamap.com/activities/48196299",
    :act-date "2026.05.09(土)",
    :altitude "645",
-   :heading "CD+影。日浦山 2026-05-09(pon)"}]}
+   :heading "CD+影。日浦山 2026-05-09(pon)"}
+  {:has-details? true,
+   :activity-id 48778366,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/EaAnhR8dxo2FuA4zGpUzdK4s3Lcbv3I7bn8oo9dIuzs/rs:fit:1620:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Ji/ODk0MjM2LWQ0NDMt/NDI1ZS1iNzg1LTkx/NjVmZGNiNzAwMA?f=webp&q=60&t=crop&w=600&h=450",
+   :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/EaAnhR8dxo2FuA4zGpUzdK4s3Lcbv3I7bn8oo9dIuzs/rs:fit:1620:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Ji/ODk0MjM2LWQ0NDMt/NDI1ZS1iNzg1LTkx/NjVmZGNiNzAwMA",
+    :rest-time "01:58",
+    :passed-points
+    (["" ["07:20"]]
+     ["南登山口" ["07:20"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["07:20" "07:21"]]
+     ["南登山口" ["07:21" "07:22"]]
+     ["東屋" ["08:13" "08:14"]]
+     ["展望ポイント" ["08:46" "08:52"]]
+     ["東屋" ["09:07" "09:10"]]
+     ["東屋" ["09:36" "09:39"]]
+     ["深入山" ["09:42" "10:32"]]
+     ["東登山口" ["12:35" "12:37"]]
+     ["いこいの村ひろしま駐車場" ["12:37" "12:38"]]
+     ["東登山口" ["12:38"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["12:57"]]
+     ["深入山グリーンシャワー管理棟" ["12:57"]]
+     ["南登山口" ["12:57" "12:58"]]
+     ["安芸太田町深入山グリーンシャワー駐車場" ["12:58"]]
+     ["" ["12:58"]]),
+    :sta-end-time ["07:20" "12:58"],
+    :description
+    "2026-05-31(日)7:15 快晴\n山焼きが無かったせいか、ようやく、きれいに色づいてきた感じの深入山へ\n\n東口からのルートとセラピーロード側のルートが好きなんだけど、\nちょっと時間的、距離的に、物足りないんだよね\nかといって、直登で百畳岩ピストンを追加するのは厳しい",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/48778366/article#image-664049900",
+      :caption "セラピーを抜けた、この景色が好き"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049897",
+      :caption "なんの木か、さっぱり分からないのが悲しい"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049904",
+      :caption "いつも撮る構図"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049881",
+      :caption "2年連続、山焼きは中止に"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049899",
+      :caption "百畳岩を見下ろす"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049898",
+      :caption "団体さんの撮影会"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049893",
+      :caption "深入ブルーとか言ったりするのかな?"}
+     {:url-path
+      "https://yamap.com/activities/48778366/article#image-664049892",
+      :caption "東口へ下山"})},
+   :num-photos 8,
+   :elapse "05:38",
+   :distance "5.2",
+   :activity-url "https://yamap.com/activities/48778366",
+   :act-date "2026.05.31(日)",
+   :altitude "398",
+   :heading "深入山 2026-05-31"}]}
