@@ -62,7 +62,7 @@
 
 (defn num-photos
   [act-node]
-  (let [txt (nth (:content (sel1 act-node [:div.css-1xiqe1k :span.css-1xxe9l9])) 1)]
+  (let [txt (en/text (sel1 act-node [:div.css-c70qd3 :span.css-1xxe9l9]))]
     (u/to-int txt)))
 
 (defn elapse
