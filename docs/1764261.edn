@@ -6900,4 +6900,24 @@
    :activity-url "https://yamap.com/activities/48778366",
    :act-date "2026.05.31(日)",
    :altitude "398",
-   :heading "暑熱順化。深入山 2026-05-31"}]}
+   :heading "暑熱順化。深入山 2026-05-31"}
+  {:activity-id 52322669,
+   :thumbnail-url nil,
+   :year 2026,
+   :num-photos 6,
+   :elapse "07:38",
+   :distance "10.9",
+   :activity-url "https://yamap.com/activities/52322669",
+   :act-date "2026年10月31日(土)",
+   :altitude "721",
+   :heading "念願の。立烏帽子山 2026-10-31"}
+  {:activity-id 51529696,
+   :thumbnail-url nil,
+   :year 2026,
+   :num-photos 8,
+   :elapse "06:40",
+   :distance "8.5",
+   :activity-url "https://yamap.com/activities/51529696",
+   :act-date "2026年10月2日(金)",
+   :altitude "538",
+   :heading "ククちゃんと。絵下山 2026-10-02(pon)"}]}
