@@ -26,16 +26,16 @@
 
 (defn user-name
   [page]
-  (let [h1 (sel1 page [:div.css-126zbgb :h1])]
+  (let [h1 (sel1 page [:h1.css-1u3x0bx])]
     (en/text h1)))
 
 (defn act-node-list
   [page]
-  (en/select page [:ul.css-qksbms :li :article]))
+  (en/select page [:ul.css-4anh0l :li :article]))
 
 (defn activity-id
   [act-node]
-  (let [a (sel1 act-node [:h3.css-m9icgg :a])
+  (let [a (sel1 act-node [:a.css-ezibo1])
         href (attr1 a :href)
         match (re-find #"/(\d+)$" href)]
     (when match
@@ -62,32 +62,32 @@
 
 (defn num-photos
   [act-node]
-  (let [txt (en/text (sel1 act-node [:div.css-c70qd3 :span.css-1xxe9l9]))]
+  (let [txt (en/text (sel1 act-node [:div.css-vz5jps :span.css-in3yi3]))]
     (u/to-int txt)))
 
 (defn elapse
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-13ntvfi :span.css-1xxe9l9]) 0))]
+  (let [txt (en/text (nth (en/select act-node [:div.css-sh0fqq :span.css-in3yi3]) 0))]
     txt))
 
 (defn distance
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-13ntvfi :span.css-1xxe9l9]) 1))]
+  (let [txt (en/text (nth (en/select act-node [#_:span.css-19gv6gn :span.css-in3yi3]) 3))]
     (str/replace txt #"[\s\nkm]" "")))
 
 (defn altitude
   [act-node]
-  (let [txt (en/text (nth (en/select act-node [:div.css-13ntvfi :span.css-1xxe9l9]) 2))]
+  (let [txt (en/text (nth (en/select act-node [#_:span.css-19gv6gn :span.css-in3yi3]) 4))]
     (str/replace txt #"[\s\nm]" "")))
 
 (defn heading
   [act-node]
-  (let [h (sel1 act-node [:a.css-1pla16])]
+  (let [h (sel1 act-node [:a.css-vzt7ok])]
     (en/text h)))
 
 (defn act-date
   [act-node]
-  (let [date-str (en/text (sel1 act-node [:span.css-125iqyy]))
+  (let [date-str (en/text (sel1 act-node [:span.css-8e72v8]))
         date-str (str/replace date-str #"[\s\n]" "")]
     [date-str (to-year date-str)]))
 
@@ -161,7 +161,7 @@
 
 (defn act-id
   [page]
-  (let [url (attr1 (sel1 page [:a.ActivityDetailTabLayout__TabItem]) :href)]
+  (let [url (attr1 (sel1 page [:a.css-cvl8o3]) :href)]
     (u/to-int (last (str/split url #"/")))))
 
 (defn details
