@@ -149,9 +149,8 @@
 (defn description
   [page]
   (-> page
-      (en/select [:.ActivitiesId__Description :.ActivitiesId__Description__Body :> :*])
-      (->> (map en/text)
-           (str/join ""))))
+      (sel1 [:p.css-61ww83])
+      (en/text)))
 
 (defn- photo
   [photo-node]
