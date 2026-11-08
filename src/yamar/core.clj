@@ -222,13 +222,13 @@
              (fetch! fpath)))
  (scrape/user-name page)
  (map scrape/activity-id (scrape/act-node-list page))
- (map scrape/thumbnail-url (scrape/act-node-list page))   ; should be nil
- (map scrape/num-photos (scrape/act-node-list page))
- (map scrape/elapse (scrape/act-node-list page))
- (map scrape/distance (scrape/act-node-list page))
- (map scrape/altitude (scrape/act-node-list page))
+ (map scrape/thumbnail-url (scrape/act-node-list page)) ; should be nil
+ (map scrape/num-photos (scrape/act-node-list page)) ; int w/out unit
+ (map scrape/elapse (scrape/act-node-list page))     ; like "12:00"
+ (map scrape/distance (scrape/act-node-list page)) ; string w/out unit
+ (map scrape/altitude (scrape/act-node-list page)) ; string w/out unit
  (map scrape/heading (scrape/act-node-list page))
- (map scrape/act-date (scrape/act-node-list page))
+ (map scrape/act-date (scrape/act-node-list page)) ; like "2026年11月7日(土)"
  (map mk-activity (scrape/act-node-list page))
 
  (go! 1764261 "docs/" false)
@@ -237,6 +237,11 @@
              (fetch! fpath)))
 
  (scrape/act-id page)
+ (scrape/photo-list page)
+ (scrape/passed-point-list page)
+ (scrape/cover-url page)
+ (scrape/rest-time page)
+ (scrape/description page)
  (pp/pprint (scrape/details page))
 
  (go! 1764261 "docs/" true)

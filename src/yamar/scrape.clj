@@ -100,36 +100,43 @@
         (cons 0)  ; need at least one element for max
         (apply max))))
 
-(defn- cover-url
+(defn cover-url
   [page]
   (-> page
-      (sel1 [:div.ActivityDetailTabLayout__Image])
-      (attr1 :data-src)
-      (u/split-url)
-      first))
+      (sel1 [[:meta (en/attr= :property "og:image")]])
+      (attr1 :content)
+      #_(u/split-url)
+      #_first))
 
 (defn- mk-time
   ([m] (mk-time "00" m))
   ([h m]
    (str (u/pad00 h) ":" (u/pad00 m))))
 
-(defn- rest-time
+(defn format-duration [s]
+  (let [[_ hours minutes] (re-matches #"(?:(\d+)時間)?(\d+)分" s)
+        hours (or hours "0")]
+    (format "%02d:%02d"
+            (Integer/parseInt hours)
+            (Integer/parseInt minutes))))
+
+(defn rest-time
   [page]
   (-> page
-      (en/select [:.CourseTimeItem__Total__RestTime :.CourseTimeItem__Total__Number])
-      (->> (map en/text)
-           (apply mk-time))))
+      (sel1 [:div.css-ktw0g7 :div.css-l0ue95 :time.css-qnn6ou])
+      (en/text)
+      format-duration))
 
 (defn- passed-point
   [pp-node]
-  (let [nm (sel1 pp-node [:.CourseTimeItem__PassedPoint__Name])
-        times (en/select pp-node [:.CourseTimeItem__PassedPoint__Time])]
-    [(second-text nm) (mapv second-text times)]))
+  (let [nm (sel1 pp-node [:a.css-1v9130b])
+        times (en/select pp-node [:time.css-j04ele])]
+    [(en/text nm) (mapv en/text times)]))
 
-(defn- passed-point-list
+(defn passed-point-list
   [page]
   (-> page
-      (en/select [:.CourseTimeItem__PassedPoint])
+      (en/select [:div.css-1yuhvjn :div.css-kjdmu4 :div.css-uqzade])
       (->> (map passed-point))))
 
 (defn- sta-end-time
@@ -139,7 +146,7 @@
     (when (and sta end)
       [sta end])))
 
-(defn- description
+(defn description
   [page]
   (-> page
       (en/select [:.ActivitiesId__Description :.ActivitiesId__Description__Body :> :*])
@@ -148,15 +155,15 @@
 
 (defn- photo
   [photo-node]
-  (let [path (sel1 photo-node [:.ActivitiesId__Photo__Link])
-        caption (sel1 photo-node [:.ActivitiesId__Photo__Caption])]
+  (let [path (sel1 photo-node [:.Yn1glG_photoLink])
+        caption (sel1 photo-node [:.Yn1glG_photoCaption])]
     {:url-path (attr1 path :href)
      :caption (en/text caption)}))
 
-(defn- photo-list
+(defn photo-list
   [page]
   (-> page
-      (en/select [:.ActivitiesId__Photo])
+      (en/select [:.Yn1glG_photoFigure])
       (->> (map photo))))
 
 (defn act-id
