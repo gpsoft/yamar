@@ -6901,9 +6901,54 @@
    :act-date "2026.05.31(日)",
    :altitude "398",
    :heading "暑熱順化。深入山 2026-05-31"}
-  {:activity-id 52322669,
-   :thumbnail-url nil,
+  {:has-details? true,
+   :activity-id 52322669,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/vifdWcy1YJG7AqCitU45qUOg2z2uBco83IY_9Dkh8kg/rs:fit:1622:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Q3/ZjM4MTZkLTk0YWEt/NDI4Zi1iZWNkLWY0/MzRiOTAxNGI2YQ?f=webp&q=60&t=crop&w=600&h=450",
    :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/vifdWcy1YJG7AqCitU45qUOg2z2uBco83IY_9Dkh8kg/rs:fit:1622:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Q3/ZjM4MTZkLTk0YWEt/NDI4Zi1iZWNkLWY0/MzRiOTAxNGI2YQ",
+    :rest-time "01:38",
+    :passed-points
+    (["" ["08:19"]]
+     ["ひろしま県民の森 公園センター駐車場›" ["08:19"]]
+     ["ひろしま県民の森 公園センター›" ["08:19" "08:20"]]
+     ["ひろしま県民の森登山口›" ["08:20" "08:21"]]
+     ["ひろしま県民の森 公園センター›" ["08:21"]]
+     ["展望園地›" ["08:56" "09:05"]]
+     ["立烏帽子駐車場›" ["10:18" "10:26"]]
+     ["立烏帽子山›" ["10:38" "11:01"]]
+     ["池ノ段›" ["11:56" "12:07"]]
+     ["越原越›" ["13:33" "13:37"]]
+     ["比婆山›" ["14:05" "14:13"]]
+     ["ひろしま県民の森 公園センター›" ["15:56"]]
+     ["ひろしま県民の森 公園センター駐車場›" ["15:56" "15:57"]]
+     ["ひろしま県民の森登山口›" ["15:57"]]
+     ["ひろしま県民の森 公園センター駐車場›" ["15:57"]]
+     ["" ["15:57"]]),
+    :sta-end-time ["08:19" "15:57"],
+    :description
+    "2026-10-31(土)8:15 晴のち曇\n2年越しで念願のホツツジを目指す\n\nおととしは、雨で増水した渡渉ポイントで撤退\n昨年は、ターちゃんの体調不良でドタキャン\n今年もいろいろあったが、念願のホツツジを自分の目で見ることができた\n感動すると同時に、ようやく達成できてホッとした感じ",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/52322669/article#image-713451421",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52322669/article#image-713451422",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52322669/article#image-713451423",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52322669/article#image-713451426",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52322669/article#image-713451425",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52322669/article#image-713451424",
+      :caption ""})},
    :num-photos 6,
    :elapse "07:38",
    :distance "10.9",
@@ -6911,13 +6956,110 @@
    :act-date "2026年10月31日(土)",
    :altitude "721",
    :heading "念願の。立烏帽子山 2026-10-31"}
-  {:activity-id 51529696,
-   :thumbnail-url nil,
+  {:has-details? true,
+   :activity-id 51529696,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/_9gjahOxcm6zLdJ7OlcRpjoYn0YT1v-EJ5CmiIF0jYY/rs:fit:1440:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Ji/MzhlODBjLTdkZDEt/NDkzMy05ODk5LTY4/ZGY5MTk0YjY0Ng?f=webp&q=60&t=crop&w=600&h=450",
    :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/_9gjahOxcm6zLdJ7OlcRpjoYn0YT1v-EJ5CmiIF0jYY/rs:fit:1440:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uL2Ji/MzhlODBjLTdkZDEt/NDkzMy05ODk5LTY4/ZGY5MTk0YjY0Ng",
+    :rest-time "02:07",
+    :passed-points
+    (["" ["09:56"]]
+     ["竜山›" ["10:36" "11:09"]]
+     ["中野山›" ["11:27" "12:12"]]
+     ["絵下山›" ["12:36" "12:51"]]
+     ["東屋›" ["13:51" "13:52"]]
+     ["東屋›" ["13:58" "13:59"]]
+     ["明神山›" ["14:27" "14:39"]]
+     ["明神山（三角点）›" ["15:15" "15:16"]]
+     ["展望台›" ["15:25"]]
+     ["高尾山城跡›" ["15:25" "15:34"]]
+     ["矢野下登山口（絵下山コース）›" ["15:43" "15:45"]]
+     ["矢野駅›" ["16:36"]]
+     ["" ["16:36"]]),
+    :sta-end-time ["09:56" "16:36"],
+    :description
+    "2026-10-02(金)10:00 快晴\nいつもと違うルートで絵下山へ\n\n矢野駅から3-3のバスで、終点の絵下山入口まで移動(25分320円)\nそこから、竜山、中野山、絵下頭、明神山、茶臼山、と縦走して矢野駅へ戻る作戦",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/51529696/article#image-701881518",
+      :caption "「りゅう」じゃなくて「たつ」と読むらしい"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881524",
+      :caption "中野山で昼メシ"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881522",
+      :caption "2年前はクーちゃんと来たね"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881517",
+      :caption "奥のベンチが落ち着く"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881523",
+      :caption "隙間から石鎚山見えた"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881521",
+      :caption "ここに着くまでに、イノシシと二度遭遇"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881519",
+      :caption "気持ちいい天気だね、"}
+     {:url-path
+      "https://yamap.com/activities/51529696/article#image-701881556",
+      :caption "ククちゃん"})},
    :num-photos 8,
    :elapse "06:40",
    :distance "8.5",
    :activity-url "https://yamap.com/activities/51529696",
    :act-date "2026年10月2日(金)",
    :altitude "538",
-   :heading "ククちゃんと。絵下山 2026-10-02(pon)"}]}
+   :heading "ククちゃんと。絵下山 2026-10-02(pon)"}
+  {:has-details? true,
+   :activity-id 52533961,
+   :thumbnail-url
+   "https://cdn.yamap.co.jp/imgproxy/public/uKzhkBfg2QFZrPgJ05Qt8dfjoB6pMYBvh1pHNohwSuQ/rs:fit:1440:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uLzEy/YTRmZjdmLTY3ZmEt/NDA5My04MmJiLThj/MzhmZTU3ZDQyMw?f=webp&q=60&t=crop&w=600&h=450",
+   :year 2026,
+   :details
+   {:cover-url
+    "https://cdn.yamap.co.jp/imgproxy/public/uKzhkBfg2QFZrPgJ05Qt8dfjoB6pMYBvh1pHNohwSuQ/rs:fit:1440:1080/q:50/aHR0cHM6Ly9zMy1h/cC1ub3J0aGVhc3Qt/MS5hbWF6b25hd3Mu/Y29tL2ltYWdlMi55/YW1hcC5jby5qcC9w/cm9kdWN0aW9uLzEy/YTRmZjdmLTY3ZmEt/NDA5My04MmJiLThj/MzhmZTU3ZDQyMw",
+    :rest-time "01:22",
+    :passed-points
+    (["" ["11:05"]]
+     ["観音免公園›" ["11:18"]]
+     ["日ノ浦山登山口（Dルート）›" ["11:18" "11:20"]]
+     ["観音免公園›" ["11:20" "11:22"]]
+     ["日浦山›" ["12:56" "13:32"]]
+     ["日浦山登山口（Bルート合流）›" ["14:08" "14:14"]]
+     ["日浦山›" ["14:38" "14:54"]]
+     ["地獄岩›" ["15:00" "15:12"]]
+     ["日浦山登山口（Aルート）›" ["15:48" "15:49"]]
+     ["" ["16:26"]]),
+    :sta-end-time ["11:05" "16:26"],
+    :description
+    "2026-11-07(土)11:00 晴れ\n運動不足なので日浦山へ\n\nCルートで登る\n数カ所、倒木が道をふさいでいた(いずれも迂回可能)\n尾根に出る手前でイノシシ3頭と遭遇\n\n為角へ下山し、中国自然歩道を西へ\n\n上為角から登り返す\nBルートに合流する手前で、ここにも倒木(またげる)\n\nショックだったのは、地獄岩から成本尾根へ下山する分岐に、\n遭難者が出たため「ルート外の下山禁止」のプレートが設置されてたこと\n米国人女性が、意図せずにAルートから外れて迷ってしまったらしい\n",
+    :photos
+    ({:url-path
+      "https://yamap.com/activities/52533961/article#image-715323572",
+      :caption "Cルートに新しい倒木。左へ迂回できた"}
+     {:url-path
+      "https://yamap.com/activities/52533961/article#image-715323581",
+      :caption "Cルートから見る、この斜面が好き"}
+     {:url-path
+      "https://yamap.com/activities/52533961/article#image-715323571",
+      :caption "258mピークで昼メシ"}
+     {:url-path
+      "https://yamap.com/activities/52533961/article#image-715323584",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52533961/article#image-715323567",
+      :caption ""}
+     {:url-path
+      "https://yamap.com/activities/52533961/article#image-715323585",
+      :caption ""})},
+   :num-photos 6,
+   :elapse "05:20",
+   :distance "8.7",
+   :activity-url "https://yamap.com/activities/52533961",
+   :act-date "2026年11月7日(土)",
+   :altitude "675",
+   :heading "Cルートは少し注意。日浦山 2026-11-07(pon)"}]}
